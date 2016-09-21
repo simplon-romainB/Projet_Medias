@@ -35,20 +35,27 @@
             <div id="wrap">
                 <!-- Div Video -->
                 <div id="video">
+                  <!-- TODO A tester, mettre le height = 500px par exemple et aligner 3 vidéos avec 3 effets différents: scroll, random, et autre -->
                   <video width="100%" height="auto" autoplay="true" loop src="videos/video.mp4">
                       Your browser does not support this video tag or this format.
                   </video>
+
+                  <p id="videoText">AUDIO / VIDEO</p>
                 </div>
                 <!-- Fin div Video -->
                 <!-- Introduction -->
                 <div id="intro">
                     <h1>Au commencement...</h1>
-                    <p>Un sigle barbare est devenu de plus en plus fréquent sur les internets moderne ; l’User Generated Content (UGC). L’explosion de YouTube depuis une dizaine d’années ainsi que la facilité a héberger des fichiers mp3 a permis a l’utilisateur moyen de  devenir un créateur de contenu, se réappropriant ce qui était jusque la réservé à une oligarchie audio-visuelle.</p>
                     <p>
-                    Depuis l’arrivée de HTML5 en 2011 l’intégration vidéo a pu se passer de Flash et de nouvelles méthodes se sont mises en place tant pour l’audio que pour la vidéo . La nécessité du plugin Flash pouvait poser des problèmes auparavant (en particulier avec les appareils IOS ). Tout se fait désormais nativement avec une balise <code>video</code> ce qui améliore entre autre les performances. Cette nouvelle norme a aussi amené de nombreuses balises inédites ainsi qu’une déclaration de  Doctype simplifiée et mémorisable ! En outre HTML5 permet de travailler hors ligne.
+                      Rien ne semble plus naturel que de lancer un fichier vidéo ou audio sur le web,  pourtant on oublie souvent qu’avant d’arriver à maturité, notre environnement multi-média internet a subi une longue évolution, fruit d’une âpre concurrence entre les principaux acteurs du marché.
                     </p>
                     <p>
-                    Cette page aura pour but de découvrir comment fonctionne l’intégration multi-média sous HTML5 et de faire participer (de façon plus ou moins ludique) les membres de la promotion 2 de simplon Lyon dans le carde d’un atelier.
+                    Depuis l’arrivée de HTML5 en 2011 l’intégration vidéo a pu se passer de Flash et de nouvelles méthodes se sont mises en place tant pour l’audio que pour la vidéo . La nécessité du plugin Flash pouvait poser des problèmes auparavant (en particulier avec les appareils IOS ). Tout se fait désormais nativement avec une balise <code>video</code> ce qui améliore entre autre les performances. Cette nouvelle norme a aussi amené de nombreuses balises inédites ainsi qu’une déclaration de  Doctype simplifiée et mémorisable ! En outre HTML5 permet de travailler hors ligne.
+                    Depuis 2014 le HTML5 va permettre d’intégrer directement du contenu multi-média et  devenir le nouveau standard d’intégration multi-média.
+                    </p>
+                    <p>Un sigle barbare est devenu de plus en plus fréquent sur les internets moderne ; l’User Generated Content (UGC). L’explosion de YouTube depuis une dizaine d’années ainsi que la facilité a héberger des fichiers mp3 a permis a l’utilisateur moyen de  devenir un créateur de contenu, se réappropriant ce qui était jusque la réservé à une oligarchie audio-visuelle.</p>
+                    <p>
+                    Cette page aura pour but de découvrir comment fonctionne l’intégration multi-média sous HTML5 et de faire participer (de façon plus ou moins ludique) les membres de la promotion 2 de Simplon.co Lyon dans le cadre d’un atelier.
                     </p>
                 </div>
                 <!-- Délimitation entre Intro et Section -->
@@ -58,119 +65,219 @@
                 <section>
                     <!-- Partie Gauche -->
                     <div id="left" class="side">
+                        <!-- Partie Histoire de la Vidéo 1 -->
+                        <div id="videoHistory1" class="slide">
+                          <div class="texte">
+                            <h2>La vidéo</h2>
+                            <p>Il faut remonter à la toute fin des années 80 pour assister aux balbutiements du multi-média sur  la toile. Développé par Apple en 1989 Quicktime apparaît sur Mac dès 1991 , puis en 1992 sur Windows.Il va connaître un grand succès dans les années 90 même si il sera concurrencé par Realplayer à partir de 1995. Premier lecteur à pouvoir lire des vidéos en streaming, ce logiciel open-source sera très présent à la fin des années 90. Durant cette période pionnière il n’existait pas de lecteur universel, chacun avait ses propres CODECS et technologies ce qui a compliqué le développement de la vidéo en streaming. Si le MP3 et le MPEG1 sont supportés très tôt Real a son propre CODEC le RealMedia (qui regroupe CODECS vidéos et audios) tandis que le lecteur d’Apple possède de son côté le format de fichier .mov.</p>
+                          </div>
+                        </div>
+                        <!-- Partie Histoire de l'Audio 1 -->
+                        <div id="audioHistory1" class="slide">
+                          <div class="texte">
+                            <h2>L' audio</h2>
+                            <p>L’industrie musicale  a subi plus de mutations  en  une petite quinzaine d’années que durant les cinq décennies précédentes. L’explosion des communications en général et d’internet en particulier en est le principal facteur, bousculant nos modes de consommation et transformant en service ce qui a pendant des années été lié à un support physique fort ( la même constatation pourrait être faite pour le cinéma et dans une moindre mesure la littérature).</p>
+                          </div>
+                        </div>
                         <!-- Partie "Balises et Attribut" -->
                         <div id="attribut" class="slide">
                             <div class="texte">
+                              <h2>Les balises et attributs</h2>
                                 <p>
                                     La prise en compte de la lecture de l'élement <code>video</code> et <code>audio</code> sans plug-in n'est effective qu'à partir de la version 9.0 de Internet Explorer, et ça n'est toujours pas le cas pour Opéra mini.
                                 </p>
                                 <p>
                                     Les deux balises <code>audio</code> et <code>video</code> s'emploient de la même manière. La bonne pratique nous amènera à préférer la balise <code>source</code> à l'attribut <code>src</code> de la balise mère qui permettra au navigateur de choisir son format. La balise <code>video</code> permet en plus l'usage d'un attribut <code>poster</code>.
                                 </p>
+                                <p>Les attributs disponibles :</p>
                                 <ul>
                                     <li><code>autoplay</code></li>
+                                    <p>lecture auto du média dès chargement de la page</p>
                                     <li><code>loop</code></li>
+                                    <p>lecture en boucle du média</p>
                                     <li><code>preload</code></li>
+                                    <p>contrôle le chargement</p>
+                                        <ul>
+                                            <li><code>none</code></li>
+                                            <li><code>metadata</code></li>
+                                            <li><code>auto</code></li>
+                                        </ul>
                                     <li><code>controls</code></li>
+                                    <p>barre de contrôle de lecture du navigateur</p>
                                     <li><code>poster</code></li>
+                                    <p>affiche une image définie (vidéo seulement)</p>
                                     <li><code>muted</code></li>
+                                    <p>état par défaut du son (et conseillé)</p>
                                 </ul>
                             </div>
                         </div>
                         <div id="formats_Illust" class="slide">
-                          <div id="formats_img">
+                          <div id="formats_img" class="texte visual">
                             <!-- TODO Screen tableau comparatif des différents formats -->
                             <!-- TODO Ou faire un tableau -->
                             <img src="" alt="Tableau formats" />
                           </div>
                         </div>
                         <div id="fallback" class="slide">
-                          <p>Type MIME et Fallback</p>
-                          <p>Différents formats à mettre en source</p>
-                          <p>Prévoir un fallback si la balise ou le format ne sont pas reconnus pas le navigateur</p>
+                          <div class="texte">
+                            <h2>Type MIME et Fallback</h2>
+                            <p>La balise <code>source</code> doit pointer vers le fichier de base mais doit aussi indiquer le type MIME utilisé. Le type MIME est <quote>un identifiant de format de données composé de deux parties</quote>: un <em>type</em> et un <em>sous-type</em>. Pour plus d'informations : <a href="https://fr.wikipedia.org/wiki/Type_MIME">Type MIME</a></p>
+                            <p>Pour la vidéo, il faut préciser le conteneur et le codec e préférence. Le navigateur s'occupera de lire le format qui lui correspond. Afin d'optimiser au mieux, l'odre des balises est important.</p>
+                            <p>Aussi, mieux vaut prévoir un fallback si la balise ou le format ne sont pas reconnus pas le navigateur. Un <em>fallback</em> est une information ou alternative textuelle, que l'on ajoute après les balises <code>source</code>, de façon à ce qu'elle soit lu en dernier recours</p>
+                          </div>
                         </div>
                         <div id="fluxJS_Illust" class="slide">
-                          <div id="">
+                          <div id="" class="texte visual">
                               <!-- Code Flux JS -->
                               <img src="" alt="Code Flux JS">
-                              <!-- Code TEST Prism
-                              <pre><code class="language-css">p { color: red }</code></pre>
-                              <pre><code class="language-html">audio</code></pre>
-                          -->
+
                           </div>
                         </div>
                         <div id="api" class="slide">
-                          <p>Il n'est pas nécessaire d'utiliser les élements audio et vidéo</p>
-                          <p>On peut tout gérer depuis JS :</p>
-                          <p>Soit en ajoutant source sur le DOM et en pointant vers les différents fichiers</p>
-                          <p>Soit avec canPlayType, qui nous dira si il prend tel ou tel format en compte</p>
+                          <div class="texte">
+                            <h2>API native</h2>
+                            <p>Enfin, Il n'est pas nécessaire d'utiliser les élements audio et vidéo. On peut s'amuser à tout créer depuis JavaScript!</p>
+                            <p>On peut le faire à l'aide de l' API native des éléments <code>audio</code> et <code>video</code>. Il faut tout de même s'assurer que le navigateur interprète le format <code>video</code> avec son <code>codec</code> aussi. Il y a deux manière de procéder: </p>
+                            <ul>
+                              <li>en employant des éléments <code>source</code>que nous ajouterions au DOM en pointant vers les divers fichiers nécessaires, </li>
+                              <li>ou avec <code>canPlayType</code>, qui nous dira si il prend tel ou tel format en compte</li>
+                            </ul>
+                            <p>Par exemple, avec le type <code>webm</code>, on veut vérifier si le navigateur est capable de le lire, on fera : <code>if (videoAPI.canPlayType("video/webm")) { execution du code}</code></p>
+                            <p>Illustrons ça à droite avec du code.</p>
                         </div>
+                        </div>
+                        <!-- PARTIE BALISE TRACK EN OPTION
                         <div id="track_Illust" class="slide">
                           <div id="">
-                              <!-- TODO: code track balise  -->
+                              <!-- TODO: code track balise
                               <img src="" alt="Code track">
                           </div>
                         </div>
+                      -->
                     </div>
                     <!-- Fin Partie Gauche -->
                     <!-- Partie Droite -->
                     <div id="right" class="side">
+                        <!-- Partie Histoire de la Vidéo 2 -->
+                        <div id="videoHistory2" class="slide">
+                          <div class="texte">
+                            <p>En 1993 une petite Startup du nom de FutureWave crée un logiciel de dessin vectoriel, Smartsketch, remanié en 1995 ce soft intéressera  Macromedia qui un an plus tard rachetera la société ; ainsi va naître la révolution Flash. Le phénomène prend très rapidement de l’ampleur, devenant une des technologies majeures des internets dès le début des années 2000. En 2002 près de 92 % des internautes sont en contact avec Flash qui bien au-delà du dessin vectoriel est devenu à la fois un environnement de développement intégré, un lecteur vidéo et un logiciel d’animation.</p>
+                            <p>Durant la première moitié de la décennie 2000 Flashplayer va devenir le principal vecteur de contenu vidéo sur la toile. Supportant le MP3 dès la fin des années 90 il faudra pourtant attendre 2006 pour lire le h264 sur Flashplayer.</p>
+                            <p>Malgré de nombreux avantages la technologie Flash posait de sérieux problèmes de sécurité si bien qu’Apple décidera de ne pas l’utiliser pour ses téléphones et tablettes ce qui marquera  le début de l’abandon progressif de la technologie.  Parallèlement un petit site de vidéos en streaming va apparaître en 2005 et bousculer un peu les habitudes, et même si il n’est pas pionnier Youtube saura très vite s’imposer, d’autant plus après son rachat par Google en 2006. Grâce à ses fonctionnalités d’intégration il va devenir très facile d’utiliser de la vidéo sur un site perso/blog.</p>
+                          </div>
+                        </div>
+                        <!-- Partie Histoire de l'Audio 2 -->
+                        <div id="audioHistory2" class="slide">
+                          <div class="texte">
+                            <p>Si la musique a su devenir omniprésente sur la toile c’est en grande partie grâce aux formats de compression que l’on peut classer en deux grandes familles, avec ou sans pertes. Le principal représentant de la compression sans pertes est le FLAC( Free Lossless Audio Codec, 2003). Format ouvert et réduisant la taille des fichiers de 30 à 70 % selon le type (les ondes régulières auront un meilleur taux de compression) il est très utilisé pour l’archivage des données.</p>
+                            <p>
+                            Toutefois ce seront les formats avec pertes qui vont vraiment permettre la diffusion et l’échange (parfois illégal) de fichiers musicaux de façon massive. Issu du projet Digital Audio Broadcasting et finalisé en 1992 Le Mpeg 1/-Audio Layer 3 (plus connu sous le sobriquet de MP3) est sans aucun doute le plus connu.Permettant une compression de l’ordre de 10 pour 1 il sera utilisé principalement entre les fréquences de 192kbits(1/7.5) et 320kbits(1/4.4), durant les années 2000 d’autres formats plus performant vont voir le jour (OGG vorbis en particulier) mais n’arriveront pas a s’imposer massivement vu l’omniprésence du mp3.</p>
+
+                            <p>La légèreté des fichiers sons leur permet d’être intégrés facilement dans des sites web et la lecture en streaming est petit à petit devenu la norme.
+                            </p>
+                          </div>
+                        </div>
                         <!-- Partie Illustration "Balise et Attribut" -->
                         <div id="attribut_Illust" class="slide">
-                            <div id="caniuse_img">
-                                <!-- TODO: modifier dimension  -->
-                                <img src="" alt="Screen Can I Use">
-                            </div>
-                            <div id="attribut_img">
-                                <!-- TODO: modifier dimension  -->
-                                <img src="" alt="Code video">
+                            <div class="texte visual">
+                              <div id="caniuse_img">
+                                  <!-- TODO: modifier dimension  -->
+                                  <img width="50%"  src="img/caniuse_video.png" alt="Screen Can I Use">
+                              </div>
+                              <div id="attributCode" >
+                                <pre>
+                                  &lsaquo;video controls poster="image.png"&rsaquo;
+                                    &lsaquo;source src="video.mp4" /&lrsaquo;
+                                    &lsaquo;source src="video.webm" /&lrsaquo;
+                                    &lsaquo;source src="video.ogv" /&lrsaquo;
+                                  &lsaquo;/video&rsaquo;
+
+                                  &lsaquo;audio controls&rsaquo;
+                                    &lsaquo;source src="audio.ogg" /&rsaquo;
+                                    &lsaquo;source src="audio.mp3" /&rsaquo;
+                                  &lsaquo;/audio&rsaquo;
+                                </pre>
+                                  <!-- TODO: modifier dimension  -->
+                                  <!-- FIXME EDITEUR PRISM
+                                  <pre class="language-javascript">
+                                      <code class=" language-javascript">
+  &lsaquo;video controls poster="image.png">
+      &lsaquo;source src="video.mp4">
+      &lsaquo;source src="video.webm">
+      &lsaquo;source src="video.ogv">
+  &lsaquo;/video>
+                                      </code>
+                              </pre>
+                            -->
+                              </div>
                             </div>
                         </div>
                         <div id="formats" class="slide">
-                          <p>
-                            En natif audio, le format "Wave"(Window) est le plus répandu et lisible par tous les navigateurs, à l'instar du format "AIFF"(Mac).
-                            Cependant, Wave = trop lourd et déconseillé pour le web
-                            Il existe donc les formats compressés et le plus connu est le format "mp3".
-                            Cependant, mp3 fonctionne mal avec Mozilla.
-                            Alternative ==> - AAC
-                                                        - OGG
-                            Du côté de la Video, il faut prendre en compte deux choses:
-                            Le format vidéo se présente sous deux aspects:  - le conteneur (.avi, .mp4, .ogv...); - le codec (divx, xvid,...) De plus,  la Video contient de l'audio (codec particulier)
-                          </p>
+                          <div class="texte">
+                            <h2>Les formats Audio/Vidéo et conversions</h2>
+                            <p>Deux types de flux.</p>
+
+                            <p>
+                              En natif audio, le format <code>wave</code>(Window) est le plus répandu et lisible par tous les navigateurs, à l'instar du format <code>AIFF</code>(Mac).
+                              Cependant, le <code>wave</code> est trop lourd et déconseillé pour le web.
+                              Il existe donc les formats compressés et le plus connu est le format <code>mp3</code>.
+                              Cependant, mp3 fonctionne mal avec Mozilla.
+                              Les alternatives :
+                              <ul>
+                                  <li>AAC</li>
+                                  <li> OGG</li>
+                              </ul>
+                              <p>Les fichiers musicaux auxquels on accède sur internet sont définis par trois principales caractéristiques: la quantification, la fréquence échantillonage et le nombre de voies. </p>
+                              <p>La quantification s'exprime en bits (8, 16 ou 24) et la fréquence d'échantillonnage en Hz, la qualité sonore d'une piste correspondra au produit de ces deux éléments. Le nombre de voies est plus explicite et définit... le nombre de voies!
+                              </p>
+                              Du côté de la Video, il faut prendre en compte deux choses:
+                              Le format vidéo se présente sous deux aspects:  - le conteneur (.avi, .mp4, .ogv...); - le codec (divx, xvid,...) De plus,  la Video contient de l'audio (codec particulier).
+                            </p>
+                            <p>Les paramètres sur lesquels il faut s'attarder :</p>
+                            <ul>
+                              <li>Audio : fréquence d'échantillonnage (11,025Khz, 22,050Khz, 44,100Khz)</li>
+                              <li>Audio: encodage 8 (bruit de fond), 16 (qualité CD) ou 24 bits (qualité studio)</li>
+                              <li>Audio : mono ou stéréo (2x plus lourde)</li>
+                              <li>Vidéo : nombre d'image clé (25 images/s en PAL et 30 pour le NTSC)</li>
+                              <li>Vidéo : réduire la taille de l'image (éviter la grande résolution)</li>
+                              <li>Vidéo : débit des données (Ko ou Kbit)</li>
+                            </ul>
+                          </div>
                         </div>
                         <div id="fallback_Illust" class="slide">
-                          <div id="mime">
-                              <!-- TODO: modifier dimension  -->
-                              <img src="" alt="Code TYPE MIME">
-                          </div>
-                          <div id="fallback">
-                              <!-- TODO: modifier dimension  -->
-                              <img src="" alt="Code Fallback">
-                              <pre class="line-numbers language-javascript">
-                                  <code>
-                                      var x = 0;
-                                      function pouet() {
-                                          console.log("poue");
-                                      }
-                                  </code>
-                              </pre>
+                          <div class="texte visual">
+                            <div id="mime">
+                                <!-- TODO: modifier dimension  -->
+                                <img src="" alt="Code TYPE MIME">
+                            </div>
+                            <div id="fallback">
+                                <!-- TODO: modifier dimension  -->
+                                <img src="" alt="Code Fallback">
+
+                            </div>
                           </div>
                         </div>
                         <div id="fluxJS" class="slide">
-                          <p>Contrôler le flux par JS</p>
-                          <p>On peut intervenir sur les éléments audio et vidéo directement en JS</p>
-                          <p>Méthode play et pause</p>
+                          <div class="texte">
+                            <h2>Contrôle du flux par JavaScript</h2>
+                            <p>Lorsqu'on fait appel à de la vidéo ou de l'audio, via une balise <code>html</code>, on peut toujours intéragir avec cet élement grâce à Javascript et le contrôler.</p>
+                            <p>Essayons avec un fichier audio et une balise standard. On place juste un identifiant, <code>musique</code>. On aura juste besoin des méthodes <code>play()</code> et <code>pause()</code>. On crée un bouton, qui fera office de bouton <em>play</em> et on lui donne aussi un identifiant, <code>commande</code>.</p>
+                            <p>Analysez le code sur la gauche, testez en cliquant sur le bouton <code>play</code> et essayer de reproduire sur vos éditeurs.</p>
+                            <p>Il est donc vraiment très simple d'intéragir avec du contenu multimédia. Le site W3schools permet de voir toutes les possibilités qu'offre la DOM : <a href="http://www.w3schools.com/tags/ref_av_dom.asp">HTML Audio/Video DOM Reference</a></p>
+                          </div>
                         </div>
                         <div id="api_Illust" class="slide">
-                          <div id="">
+                          <div id="" class="texte visual">
                               <!-- TODO: code JS avec API Native  -->
                               <img src="" alt="code JS API Native">
                           </div>
                         </div>
+                        <!-- PARTIE BALISE TRACK EN OPTION
                         <div id="track" class="slide">
                           <p>Insérer du texte dans l'audio et la vidéo</p>
                           <p>sous-titrage</p>
                         </div>
+                      -->
                     </div>
                     <!-- Fin Partie Droite -->
                 </section>
@@ -178,6 +285,10 @@
                 <!-- Footer -->
                 <footer>
                   <!-- TODO: Faire apparaître nos noms en défilant de droite à gauche -->
+                  <p id="copyright">&copy; 2016 - Inna, Véro, Romain, Yoan et Myriam</p>
+                  <!-- TODO Gérer la position
+                  <p id="design">Design : <a href="https://github.com/myrNG/" alt="GitHub Myriam Niaré-Guilloux">Myriam Niaré-Guilloux</a></p>
+              -->
                 </footer>
                 <!-- Fin du Footer -->
             </div>
