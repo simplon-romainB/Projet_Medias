@@ -39,7 +39,6 @@
                   <video width="100%" height="auto" autoplay="true" loop src="videos/video.mp4">
                       Your browser does not support this video tag or this format.
                   </video>
-
                   <p id="videoText">LES MEDIAS</p>
                 </div>
                 <!-- Fin div Video -->
@@ -69,6 +68,9 @@
                         <div id="videoHistory1" class="slide">
                           <div class="texte">
                             <h2>La vidéo</h2>
+                            <div id="historyVideo">
+                                <video src="videos/music.mp4" autoplay="true" loop></video>
+                            </div>
                             <p>Il faut remonter à la toute fin des années 80 pour assister aux balbutiements du multi-média sur  la toile. Développé par Apple en 1989 Quicktime apparaît sur Mac dès 1991 , puis en 1992 sur Windows.Il va connaître un grand succès dans les années 90 même si il sera concurrencé par Realplayer à partir de 1995. Premier lecteur à pouvoir lire des vidéos en streaming, ce logiciel open-source sera très présent à la fin des années 90. Durant cette période pionnière il n’existait pas de lecteur universel, chacun avait ses propres CODECS et technologies ce qui a compliqué le développement de la vidéo en streaming. Si le MP3 et le MPEG1 sont supportés très tôt Real a son propre CODEC le RealMedia (qui regroupe CODECS vidéos et audios) tandis que le lecteur d’Apple possède de son côté le format de fichier .mov.</p>
                           </div>
                         </div>
@@ -115,7 +117,122 @@
                           <div id="formats_img" class="texte visual">
                             <!-- TODO Screen tableau comparatif des différents formats -->
                             <!-- TODO Ou faire un tableau -->
-                            <img src="" alt="Tableau formats" />
+                            <table class="content_table">
+                                <caption>Formats Audios et Vidéos</caption>
+                                <thead>
+                                <tr>
+                                <th scope="col"></th>
+                                <th scope="col" colspan="3">Vidéos</th>
+                                <th scope="col" colspan="5">Audios</th>
+                                </tr>
+                                <tr>
+                                <th scope="col"></th>
+                                <th scope="col">WebM</th>
+                                <th scope="col">OGG Theora</th>
+                                <th scope="col">H.264 / MP4</th>
+                                <th scope="col">MP3</th>
+                                <th scope="col">Wav</th>
+                                <th scope="col">AAC</th>
+                                <th scope="col">WebM Vorbis</th>
+                                <th scope="col">OGG Vorbis</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                <th scope="row">Internet Explorer</th>
+                                <td></td>
+                                <td></td>
+                                <td>9.0</td>
+                                <td>9.0</td>
+                                <td></td>
+                                <td>9.0</td>
+                                <td></td>
+                                <td></td>
+                                </tr>
+                                <tr>
+                                <th scope="row">Firefox</th>
+                                <td>4.0</td>
+                                <td>3.5</td>
+                                <td></td>
+                                <td>W21 &#8211; L24</td>
+                                <td>3.5</td>
+                                <td>W21 &#8211; L24</td>
+                                <td>4.0</td>
+                                <td>3.5</td>
+                                </tr>
+                                <tr>
+                                <th scope="row">Chrome</th>
+                                <td>6.0</td>
+                                <td>3.0</td>
+                                <td></td>
+                                <td>X</td>
+                                <td>X</td>
+                                <td>X</td>
+                                <td>X</td>
+                                <td>9</td>
+                                </tr>
+                                <tr>
+                                <th scope="row">Safari</th>
+                                <td></td>
+                                <td></td>
+                                <td>3.1</td>
+                                <td>3.1</td>
+                                <td>3.1</td>
+                                <td></td>
+                                <td></td>
+                                <td>X</td>
+                                </tr>
+                                <tr>
+                                <th scope="row">Opéra</th>
+                                <td>10.6</td>
+                                <td>10.5</td>
+                                <td></td>
+                                <td>14.0</td>
+                                <td>11.0</td>
+                                <td>14.0</td>
+                                <td>10.6</td>
+                                <td>10.5</td>
+                                </tr>
+                                <tr>
+                                <th scope="row">Androïd</th>
+                                <td>2.3</td>
+                                <td>2.3</td>
+                                <td>3.0</td>
+                                <td></td>
+                                <td>4.1</td>
+                                <td>4.1</td>
+                                <td></td>
+                                <td></td>
+                                </tr>
+                                <tr>
+                                <th scope="row">iOS</th>
+                                <td></td>
+                                <td></td>
+                                <td>3.0</td>
+                                <td>X</td>
+                                <td></td>
+                                <td>X</td>
+                                <td></td>
+                                <td></td>
+                                </tr>
+                                <tr>
+                                <th scope="row"></th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                </tr>
+                                </tbody>
+                                <tfoot>
+                                <tr>
+                                <th scope="row" colspan="9" id="sources"><small>sources (<a href="http://en.wikipedia.org/wiki/HTML5_Audio" target="_blank">wikipedia audio</a>, <a href="http://fr.wikipedia.org/wiki/Open_Video" target="_blank">wikipedia video</a>, <a href="http://developer.android.com/guide/appendix/media-formats.html" target="_blank">developers Androïd</a>, <a href="https://developer.apple.com/library/ios/documentation/AudioVideo/Conceptual/MultimediaPG/Introduction/Introduction.html" target="_blank">iOS Developer</a>).</small></th>
+                                </tr>
+                                </tfoot>
+                                </table>
                           </div>
                         </div>
                         <div id="fallback" class="slide">
@@ -280,6 +397,9 @@
                       -->
                     </div>
                     <!-- Fin Partie Droite -->
+                    <div id="conclusion">
+                        
+                    </div>
                 </section>
                 <!-- Fin Section -->
                 <!-- Footer -->
