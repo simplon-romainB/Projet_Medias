@@ -113,7 +113,7 @@ header {
     }
       /*FIXME Positionnement à revoir */
       #videoText {
-        font-size: 2em;
+        font-size: 3em;
         color: #fff;
         position: absolute;
         animation: heartBeat 10s infinite  ;
