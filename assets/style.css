@@ -1,18 +1,16 @@
 @import 'https://fonts.googleapis.com/css?family=Montserrat:400,700';
+@import 'https://fonts.googleapis.com/css?family=Roboto:400,400i';
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
 
 }
-code {
-/*
-  font-size: 1.2em;
-  background: #ecf0f1;
-  color: #8E0E00;
-  */
+body h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
 }
+
 /* TODO Resoudre probleme de marge avec le #container */
 /* Container */
 #container {
@@ -76,7 +74,7 @@ header {
 }
   /* Div Video */
   #video {
-    
+
   }
   @keyframes heartBeat {
         0% {
