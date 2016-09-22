@@ -9,6 +9,7 @@
     <body>
         <!-- Container -->
         <div id="container">
+
             <!-- Header -->
             <header>
                 <!-- Titre -->
@@ -36,9 +37,11 @@
                 <!-- Div Video -->
                 <div id="video">
                   <!-- TODO A tester, mettre le height = 500px par exemple et aligner 3 vidéos avec 3 effets différents: scroll, random, et autre -->
-                  <video width="100%" height="auto" autoplay="true" loop src="videos/video.mp4">
-                      Your browser does not support this video tag or this format.
-                  </video>
+                        <video width="100%" height="auto" autoplay="true" loop src="videos/video.mp4">
+                            Your browser does not support this video tag or this format.
+                        </video>
+
+
                   <p id="videoText">LES MEDIAS</p>
                 </div>
                 <!-- Fin div Video -->
@@ -60,6 +63,7 @@
                 <!-- Délimitation entre Intro et Section -->
                 <hr>
                 <!--Fin  Introduction -->
+
                 <!-- Section -->
                 <section>
                     <!-- Partie Gauche -->
@@ -69,7 +73,14 @@
                           <div class="texte">
                             <h2>La vidéo</h2>
                             <div id="historyVideo">
-                                <video src="videos/music.mp4" autoplay="true" loop></video>
+                              <div id="Contenu">
+                                <div id="Bandeau">
+                                  <div id="Contenu-ecran">
+                                    <video src="videos/music.mp4" autoplay="true" loop></video>
+                                  </div>
+                                </div>
+                              </div>
+
                             </div>
                             <p>Il faut remonter à la toute fin des années 80 pour assister aux balbutiements du multi-média sur  la toile. Développé par Apple en 1989 Quicktime apparaît sur Mac dès 1991 , puis en 1992 sur Windows.Il va connaître un grand succès dans les années 90 même si il sera concurrencé par Realplayer à partir de 1995. Premier lecteur à pouvoir lire des vidéos en streaming, ce logiciel open-source sera très présent à la fin des années 90. Durant cette période pionnière il n’existait pas de lecteur universel, chacun avait ses propres CODECS et technologies ce qui a compliqué le développement de la vidéo en streaming. Si le MP3 et le MPEG1 sont supportés très tôt Real a son propre CODEC le RealMedia (qui regroupe CODECS vidéos et audios) tandis que le lecteur d’Apple possède de son côté le format de fichier .mov.</p>
                           </div>
@@ -78,6 +89,11 @@
                         <div id="audioHistory1" class="slide">
                           <div class="texte">
                             <h2>L' audio</h2>
+                            <div id="audio">
+                              <audio controls="controls">
+                                  <source src="music/Mounika_-_04_-_Soul_Blue_Tango.mp3" >
+                              </audio>
+                            </div>
                             <p>L’industrie musicale  a subi plus de mutations  en  une petite quinzaine d’années que durant les cinq décennies précédentes. L’explosion des communications en général et d’internet en particulier en est le principal facteur, bousculant nos modes de consommation et transformant en service ce qui a pendant des années été lié à un support physique fort ( la même constatation pourrait être faite pour le cinéma et dans une moindre mesure la littérature).</p>
                           </div>
                         </div>
@@ -318,14 +334,14 @@
                                   <!-- FIXME EDITEUR PRISM
                                   <pre class="language-javascript">
                                       <code class=" language-javascript">
-  &lsaquo;video controls poster="image.png">
-      &lsaquo;source src="video.mp4">
-      &lsaquo;source src="video.webm">
-      &lsaquo;source src="video.ogv">
-  &lsaquo;/video>
-                                      </code>
-                              </pre>
-                            -->
+                                              &lsaquo;video controls poster="image.png">
+                                                  &lsaquo;source src="video.mp4">
+                                                  &lsaquo;source src="video.webm">
+                                                      &lsaquo;source src="video.ogv">
+                                                  &lsaquo;/video>
+                                                                                      </code>
+                                                                              </pre>
+                                    -->
                               </div>
                             </div>
                         </div>
@@ -397,11 +413,26 @@
                       -->
                     </div>
                     <!-- Fin Partie Droite -->
-                    <div id="conclusion">
-                        
-                    </div>
                 </section>
                 <!-- Fin Section -->
+
+                <!-- Conclusion - Ecran et Vidéos -->
+                <div id="conclusion">
+                  <div id="contenu">
+                    <div id="bandeau">
+                      <div id="contenu-ecran">
+                        <!-- FIXME gérer le ersponsive et du coup la hauteur de la vidéo -->
+
+                        <video  width="100%" height="auto" autoplay="true" loop>
+                            <source src="videos/tv.mp4" type="video/mp4">
+                        </video>
+                      </div>
+                    </div>
+                    <div id="bas-ecran"></div>
+                  </div>
+                </div>
+                <!-- Fin Conclusion - Ecran et Vidéos -->
+
                 <!-- Footer -->
                 <footer>
                   <!-- TODO: Faire apparaître nos noms en défilant de droite à gauche -->
