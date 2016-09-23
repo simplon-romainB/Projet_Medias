@@ -260,7 +260,37 @@
                         <div id="fluxJS_Illust" class="slide card">
                             <div id="" class="texte visual">
                             <!-- Code Flux JS -->
-                                <img src="" alt="Code Flux JS">
+                                <pre>
+                                    <code  class="language-markup">
+&lt;audio id="my-audio" preload controls>
+    &lt;source src="http://jPlayer.org/audio/mp3/Miaow-07-Bubble.mp3" type="audio/mpeg">
+&lt;/audio>
+&lt;div class="buffered">
+    &lt;span id="buffered-amount">&lt;/span>
+&lt;/div>
+&lt;div class="progress">
+&lt;span id="progress-amount">&lt;/span>
+&lt;/div>
+                                    </code>
+                                    <code class="language-javascript">
+window.onload = function(){
+    var myAudio = document.getElementById('my-audio');
+
+    myAudio.addEventListener('progress', function() {
+        var bufferedEnd = myAudio.buffered.end(myAudio.buffered.length - 1);
+        var duration =  myAudio.duration;
+        if (duration > 0) {
+            document.getElementById('buffered-amount').style.width = ((bufferedEnd / duration)*100) + "%";
+        }
+    });
+    myAudio.addEventListener('timeupdate', function() {
+        var duration =  myAudio.duration;
+        if (duration > 0) {
+            document.getElementById('progress-amount').style.width = ((myAudio.currentTime / duration)*100) + "%";
+        }
+    });
+                                    </code>
+                                </pre>
                             </div>
                         </div>
                         <!--     Partie API Native   -->
@@ -410,7 +440,7 @@
                 <footer>
                     <!-- TODO: Faire apparaître nos noms en défilant de droite à gauche -->
                     <p id="copyright">&copy; 2016 - Inna, Véro, Romain, Yoan et Myriam</p>
-                </footer>
+                    </footer>
                 <!-- Fin du Footer -->
             </div>
             <!-- Fin Wrap - Partie principale du site -->
