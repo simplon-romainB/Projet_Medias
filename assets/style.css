@@ -132,88 +132,89 @@ body h1, h2, h3 {
                     padding-top: 5%;
                     margin-bottom: 5%;
                 }
-        /* --------------------- Section ---------------------*/
-        section {
+            /* --------------------- Section ---------------------*/
+            section {
           display: flex;
         }
-            /*---------------- H2 de toute la Section ------------------ */
-            section h2 {
+                /*---------------- H2 de toute la Section ------------------ */
+                section h2 {
               text-transform: uppercase;
               text-align: center;
             }
-            /* Partie Gauche */
-            #left {
+                /* Dimensions et Styles communs de la Div Left et de la Div Right   */
+                .side {
+                }
+                    /* Dimensions et Styles communs à chaque Slide, de droite ou de gauche */
+                    .slide {
+                        width: 100%;
+                        height: 800px;
+                        /* box-shadow: 15px 0 35px rgba(50,50,93,.1); */
+                        /*  box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07); */
+                    }
+                    /* --------------  Effet Carte sur les Visuels --------------- */
+                    .card {
+                        box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07);
+                    }
+
+                /* Partie Gauche */
+                #left {
               width: 50%;
             }
-            /* Dimensions et Styles communs de la Div Left et de la Div Right   */
-            .side {
-            }
-            /* Dimensions et Styles communs à chaque Slide, de droite ou de gauche */
-            .slide {
-                width: 95%;
-                height: 800px;
-                /* box-shadow: 15px 0 35px rgba(50,50,93,.1); */
-                /*  box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07); */
-            }
-            /* --------------  Effet Carte sur les Visuels --------------- */
-            .card {
-                box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07);
-            }
-            /* Partie Droite */
-            #right {
-                width: 50%;
-            }
-                .texte {
-            padding: 2% 4%;
-        }
-                .visual {
-                    transition:background-color 0.5s ease;
-                    margin: 0 auto;
-                    margin-top: 20px !important;
-                    width: 70%;
-                    height: 70%;
-                    border-radius: 10px;
-                    border-bottom-left-radius: 0px !important;
-                    border-bottom-right-radius: 0px !important;
-                    /*
-                    overflow: scroll;
-                    -webkit-overflow-scrolling: touch;
-                    overflow-x: hidden;
-                    */
+
+                /* Partie Droite */
+                #right {
+                    width: 50%;
                 }
-            #historyVideo {
-                width: 80%;
-                margin: auto;
-            }
+
+                /*  Slides Textuelles  */
+                .texte {
+                    padding: 2% 4%;
+                }
+                    .texte ul p {
+                        font-size: 0.6em;
+                    }
+                .visual {
+                        transition:background-color 0.5s ease;
+                        margin: 0 auto;
+                        margin-top: 20px !important;
+                        width: 70%;
+                        height: 70%;
+                        border-radius: 10px;
+                        border-bottom-left-radius: 0px !important;
+                        border-bottom-right-radius: 0px !important;
+                        /*
+                        overflow: scroll;
+                        -webkit-overflow-scrolling: touch;
+                        overflow-x: hidden;
+                        */
+                    }
+                    /*     Lecteur audio dans Partie Audio   */
+                    #audio {
+                        width: 350px;
+                        margin: auto;
+                        border: 4px solid #2F1A15;
+                        border-radius: 8px;
+                    }
+
+
                 #Contenu{
                 /*text-align: center;*/
                 margin: auto;
             }
                     #Bandeau{
-                width : 100%;
-                height : auto;
-                border-radius: 20px;
-                background-color: black;
-                border: 15px solid;
-                margin: auto;
-                overflow: hidden;
-            }
+                        width : 100%;
+                        height : auto;
+                        border-radius: 20px;
+                        background-color: black;
+                        border: 15px solid;
+                        margin: auto;
+                        overflow: hidden;
+                    }
                 #historyVideo video {
                     width: 100%;
                     text-align: center;
                 }
 
-                .texte ul p {
-                font-size: 0.6em;
-            }
-            #audio {
-            width: 350px;
-            margin: auto;
-            border: 4px solid #2F1A15;
-            border-radius: 8px;
-        }
-                .content_table {
-                }
           table {
                 border-collapse: collapse;
                 margin: auto;
