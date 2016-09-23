@@ -5,10 +5,24 @@
         <title>Projet Médias - Audio / Vidéo</title>
         <link rel="stylesheet" href="assets/prism.css">
         <link rel="stylesheet" href="assets/style.css">
+        <link rel="stylesheet" href="assets/playerVero.css" media="screen" title="no title">
     </head>
     <body>
         <!-- Container -->
         <div id="container">
+          <div id="navScroll">
+            <ul class="menu">
+              <li><a class="js-scrollTo" href="#intro">Intro</a></li>
+              <li><a class="js-scrollTo" href="#videoHistory1">Vidéo</a></li>
+              <li><a class="js-scrollTo" href="#audioHistory1">Audio</a></li>
+              <li><a class="js-scrollTo" href="#attribut">Attributs</a></li>
+              <li><a class="js-scrollTo" href="#formats_Illust">Formats</a></li>
+              <li><a class="js-scrollTo" href="#fallback">MIME</a></li>
+              <li><a class="js-scrollTo" href="#fluxJS_Illust">Flux JS</a></li>
+              <li><a class="js-scrollTo" href="#api">API Native</a></li>
+              <li><a class="js-scrollTo" href="#conclusion">Conclusion</a></li>
+            </ul>
+          </div>
 
             <!-- Header -->
             <header>
@@ -24,7 +38,13 @@
                 <div id="navigation">
                     <ul>
                         <li><a href="index.html">Accueil</a></li>
-                        <li><a href="#">Documentations</a></li>
+                        <li class="dropdown">
+                          <a href="#" class="dropbtn">Aller plus loin</a>
+                          <div class="dropdown-content">
+                            <a href="#">Design Audio</a>
+                            <a href="#">Synthèse Vocale</a>
+                          </div>
+                        </li>
                         <li><a href="#">Atelier</a></li>
                     </ul>
                 </div>
@@ -58,8 +78,7 @@
                     Cette page aura pour but de découvrir comment fonctionne l’intégration multi-média sous HTML5 et de faire participer (de façon plus ou moins ludique) les membres de la promotion 2 de Simplon.co Lyon dans le cadre d’un atelier.
                     </p>
                 </div>
-                <!-- Délimitation entre Intro et Section -->
-                <hr>
+
                 <!--Fin  Introduction -->
 
                 <!-- Section -->
@@ -70,28 +89,23 @@
                         <div id="videoHistory1" class="slide">
                             <div class="texte">
                                 <h2>La vidéo</h2>
-                                <div id="historyVideo">
-                                    <div id="Contenu">
-                                        <div id="Bandeau">
-                                            <div id="Contenu-ecran">
-                                                <video src="videos/music.mp4" autoplay="true" loop></video>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+
                                 <p>Il faut remonter à la toute fin des années 80 pour assister aux balbutiements du multi-média sur  la toile. Développé par Apple en 1989 Quicktime apparaît sur Mac dès 1991 , puis en 1992 sur Windows.Il va connaître un grand succès dans les années 90 même si il sera concurrencé par Realplayer à partir de 1995. Premier lecteur à pouvoir lire des vidéos en streaming, ce logiciel open-source sera très présent à la fin des années 90. Durant cette période pionnière il n’existait pas de lecteur universel, chacun avait ses propres CODECS et technologies ce qui a compliqué le développement de la vidéo en streaming. Si le MP3 et le MPEG1 sont supportés très tôt Real a son propre CODEC le RealMedia (qui regroupe CODECS vidéos et audios) tandis que le lecteur d’Apple possède de son côté le format de fichier .mov.</p>
+                                <p>En 1993 une petite Startup du nom de FutureWave crée un logiciel de dessin vectoriel, Smartsketch, remanié en 1995 ce soft intéressera  Macromedia qui un an plus tard rachetera la société ; ainsi va naître la révolution Flash. Le phénomène prend très rapidement de l’ampleur, devenant une des technologies majeures des internets dès le début des années 2000. En 2002 près de 92 % des internautes sont en contact avec Flash qui bien au-delà du dessin vectoriel est devenu à la fois un environnement de développement intégré, un lecteur vidéo et un logiciel d’animation.</p>
+                                <p>Durant la première moitié de la décennie 2000 Flashplayer va devenir le principal vecteur de contenu vidéo sur la toile. Supportant le MP3 dès la fin des années 90 il faudra pourtant attendre 2006 pour lire le h264 sur Flashplayer.</p>
+                                <p>Malgré de nombreux avantages la technologie Flash posait de sérieux problèmes de sécurité si bien qu’Apple décidera de ne pas l’utiliser pour ses téléphones et tablettes ce qui marquera  le début de l’abandon progressif de la technologie.  Parallèlement un petit site de vidéos en streaming va apparaître en 2005 et bousculer un peu les habitudes, et même si il n’est pas pionnier Youtube saura très vite s’imposer, d’autant plus après son rachat par Google en 2006. Grâce à ses fonctionnalités d’intégration il va devenir très facile d’utiliser de la vidéo sur un site perso/blog.</p>
                             </div>
                         </div>
                         <!-- Partie Histoire de l'Audio 1 -->
-                        <div id="audioHistory1" class="slide">
+                        <div id="audioHistory1" class="slide card">
                             <div class="texte">
-                                <h2>L' audio</h2>
+                              <!-- TODO Lecteur Audio Aléatoire de Véro -->
                                 <div id="audio">
                                     <audio controls="controls">
                                         <source src="music/Mounika_-_04_-_Soul_Blue_Tango.mp3" >
                                     </audio>
                                 </div>
-                                <p>L’industrie musicale  a subi plus de mutations  en  une petite quinzaine d’années que durant les cinq décennies précédentes. L’explosion des communications en général et d’internet en particulier en est le principal facteur, bousculant nos modes de consommation et transformant en service ce qui a pendant des années été lié à un support physique fort ( la même constatation pourrait être faite pour le cinéma et dans une moindre mesure la littérature).</p>
+                                <p>Lecteur random de Véro!</p>
                             </div>
                         </div>
                         <!-- Partie "Balises et Attribut" -->
@@ -306,6 +320,10 @@ window.onload = function(){
                                 <p>Par exemple, avec le type <code>webm</code>, on veut vérifier si le navigateur est capable de le lire, on fera : <code>if (videoAPI.canPlayType("video/webm")) { execution du code}</code></p>
                                 <p>Illustrons ça à droite avec du code.</p>
                             </div>
+                            <div id="earth">
+                              <div id="lavideo"></div>
+                                <button id="commande" onclick="ajouteVideo()">Ajoute Vidéo</button>
+                            </div>
                         </div>
                     </div>
                     <!--                 Fin Partie Gauche                   -->
@@ -313,16 +331,18 @@ window.onload = function(){
                     <!--                Partie Droite                        -->
                     <div id="right" class="side">
                         <!-- Partie Histoire de la Vidéo 2 -->
-                        <div id="videoHistory2" class="slide">
+                        <div id="videoHistory2" class="slide card">
                             <div class="texte">
-                                <p>En 1993 une petite Startup du nom de FutureWave crée un logiciel de dessin vectoriel, Smartsketch, remanié en 1995 ce soft intéressera  Macromedia qui un an plus tard rachetera la société ; ainsi va naître la révolution Flash. Le phénomène prend très rapidement de l’ampleur, devenant une des technologies majeures des internets dès le début des années 2000. En 2002 près de 92 % des internautes sont en contact avec Flash qui bien au-delà du dessin vectoriel est devenu à la fois un environnement de développement intégré, un lecteur vidéo et un logiciel d’animation.</p>
-                                <p>Durant la première moitié de la décennie 2000 Flashplayer va devenir le principal vecteur de contenu vidéo sur la toile. Supportant le MP3 dès la fin des années 90 il faudra pourtant attendre 2006 pour lire le h264 sur Flashplayer.</p>
-                                <p>Malgré de nombreux avantages la technologie Flash posait de sérieux problèmes de sécurité si bien qu’Apple décidera de ne pas l’utiliser pour ses téléphones et tablettes ce qui marquera  le début de l’abandon progressif de la technologie.  Parallèlement un petit site de vidéos en streaming va apparaître en 2005 et bousculer un peu les habitudes, et même si il n’est pas pionnier Youtube saura très vite s’imposer, d’autant plus après son rachat par Google en 2006. Grâce à ses fonctionnalités d’intégration il va devenir très facile d’utiliser de la vidéo sur un site perso/blog.</p>
+                              <div id="historyVideo">
+                                              <video src="videos/music.mp4" autoplay="true" loop></video>
+                              </div>
                             </div>
                         </div>
                         <!-- Partie Histoire de l'Audio 2 -->
                         <div id="audioHistory2" class="slide">
                             <div class="texte">
+                              <h2>L' audio</h2>
+                              <p>L’industrie musicale  a subi plus de mutations  en  une petite quinzaine d’années que durant les cinq décennies précédentes. L’explosion des communications en général et d’internet en particulier en est le principal facteur, bousculant nos modes de consommation et transformant en service ce qui a pendant des années été lié à un support physique fort ( la même constatation pourrait être faite pour le cinéma et dans une moindre mesure la littérature).</p>
                                 <p>Si la musique a su devenir omniprésente sur la toile c’est en grande partie grâce aux formats de compression que l’on peut classer en deux grandes familles, avec ou sans pertes. Le principal représentant de la compression sans pertes est le FLAC( Free Lossless Audio Codec, 2003). Format ouvert et réduisant la taille des fichiers de 30 à 70 % selon le type (les ondes régulières auront un meilleur taux de compression) il est très utilisé pour l’archivage des données.</p>
                                 <p>
                                 Toutefois ce seront les formats avec pertes qui vont vraiment permettre la diffusion et l’échange (parfois illégal) de fichiers musicaux de façon massive. Issu du projet Digital Audio Broadcasting et finalisé en 1992 Le Mpeg 1/-Audio Layer 3 (plus connu sous le sobriquet de MP3) est sans aucun doute le plus connu.Permettant une compression de l’ordre de 10 pour 1 il sera utilisé principalement entre les fréquences de 192kbits(1/7.5) et 320kbits(1/4.4), durant les années 2000 d’autres formats plus performant vont voir le jour (OGG vorbis en particulier) mais n’arriveront pas a s’imposer massivement vu l’omniprésence du mp3.</p>
@@ -334,20 +354,22 @@ window.onload = function(){
                         <div id="attribut_Illust" class="slide card">
                             <div class="texte visual">
                                 <div id="caniuse_img">
-                                    <!-- TODO: modifier dimension  -->
-                                    <img width="50%"  src="img/caniuse_video.png" alt="Screen Can I Use">
+
                                 </div>
+                                <!-- TODO Prism-js -->
                                 <div id="attributCode" >
-                                    <pre class="box">
-                                        &lsaquo;video controls poster="image.png"&rsaquo;
-                                        &lsaquo;source src="video.mp4" /&lrsaquo;
-                                        &lsaquo;source src="video.webm" /&lrsaquo;
-                                        &lsaquo;source src="video.ogv" /&lrsaquo;
-                                        &lsaquo;/video&rsaquo;
-                                        &lsaquo;audio controls&rsaquo;
-                                        &lsaquo;source src="audio.ogg" /&rsaquo;
-                                        &lsaquo;source src="audio.mp3" /&rsaquo;
-                                        &lsaquo;/audio&rsaquo;
+                                    <pre>
+                                      <code class="language-markup">
+&lt;video controls poster="image.png">
+  &lt;source src="video.mp4" />
+  &lt;source src="video.webm" />
+  &lt;source src="video.ogv" />
+&lt;/video>
+&lt;audio controls>
+  &lt;source src="audio.ogg" />
+  &lt;source src="audio.mp3" />
+&lt;/audio>
+                                      </code>
                                     </pre>
                                 </div>
                             </div>
@@ -407,12 +429,45 @@ window.onload = function(){
                                 <p>Analysez le code sur la gauche, testez en cliquant sur le bouton <code>play</code> et essayer de reproduire sur vos éditeurs.</p>
                                 <p>Il est donc vraiment très simple d'intéragir avec du contenu multimédia. Le site W3schools permet de voir toutes les possibilités qu'offre la DOM : <a href="http://www.w3schools.com/tags/ref_av_dom.asp">HTML Audio/Video DOM Reference</a></p>
                             </div>
+                            <div id="playerVero">
+                              <audio id="my-audio" preload controls>
+                                  <source src="http://jPlayer.org/audio/mp3/Miaow-07-Bubble.mp3" type="audio/mpeg">
+                              </audio>
+                              <div class="buffered">
+                                <span id="buffered-amount"></span>
+                              </div>
+                              <div class="progress">
+                                <span id="progress-amount"></span>
+                              </div>
+                            </div>
                         </div>
                         <!--  Partie API visuel--->
                         <div id="api_Illust" class="slide card">
                             <div id="" class="texte visual">
-                                <!-- TODO: code JS avec API Native  -->
-                                <img src="" alt="code JS API Native">
+                                <pre>
+                                  <code class="language-markup">
+&lt;div id="lavideo">&lt;/div>
+    &lt;button id="commande" onclick="ajouteVideo()">Ajoute Vidéo&lt;/button>
+                                  </code>
+                                  <code class="language-javascript">
+var objvideoAPI = null;
+var lavideoAPI = document.getElementById("lavideo");
+var commandeAPI = document.getElementById("commande");
+function ajouteVideo() {
+  if (objvideoAPI == null) {
+    objvideoAPI = document.createElement('video');
+      if (objvideoAPI.canPlayType("video/webm")){
+        objvideoAPI.setAttribute("src","videos/earth.mp4")
+        objvideoAPI.play()
+        lavideoAPI.appendChild(objvideoAPI)
+        commandeAPI.textContent = "Rejoue";
+      }
+    } else {
+  objvideoAPI.play()
+  }
+}
+                                  </code>
+                                </pre>
                             </div>
                         </div>
                     </div>
@@ -439,13 +494,17 @@ window.onload = function(){
                 <!-- Footer -->
                 <footer>
                     <!-- TODO: Faire apparaître nos noms en défilant de droite à gauche -->
-                    <p id="copyright">&copy; 2016 - Inna, Véro, Romain, Yoan et Myriam</p>
+                    <p id="copyright">&copy; 2016 - Inna, Véro, Romain et Myriam</p>
                     </footer>
                 <!-- Fin du Footer -->
             </div>
             <!-- Fin Wrap - Partie principale du site -->
         </div>
         <!-- Fin Container -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script src="assets/prism.js" type="text/javascript"></script>
+        <script src="assets/script.js" type="text/javascript"></script>
+        <script src="assets/playerVero.js"type="text/javascript"></script>
+        <script src="assets/api.js"type="text/javascript"></script>
     </body>
 </html>
