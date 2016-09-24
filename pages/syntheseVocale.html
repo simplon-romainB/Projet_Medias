@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Projet Médias - Audio / Vidéo</title>
+        <link rel="stylesheet" href="../assets/prism.css">
+        <link rel="stylesheet" href="../assets/style.css">
+        <link rel="stylesheet" href="assets/syntheseVocale.css">
+    </head>
+
+    <body>
+      <div id="container">
+        <!-- Header -->
+        <header>
+            <!-- Titre -->
+            <div id="titre">
+              <div id="logoDiv">
+                <img id="logo" src="../img/logo.png" alt="" />
+              </div>
+              <h1>La Synthèse Vocale</h1>
+            </div>
+            <!-- Fin du titre -->
+            <!-- Navigation -->
+            <div id="navigation">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropbtn">Aller plus loin</a>
+                      <div class="dropdown-content">
+                        <a href="designAudio.html">Design Audio</a>
+                        <a href="syntheseVocale.html">Synthèse Vocale</a>
+                      </div>
+                    </li>
+                    <li><a href="atelier.html">Atelier</a></li>
+                </ul>
+            </div>
+            <!-- Fin Navigation -->
+        </header>
+        <!-- Fin Header -->
+
+        <!--  Wrap  -->
+        <div class="bloc">
+            <h1>La Synthèse Vocale et Accéssibilité</h1>
+            <p>
+              Pendant très longtemps il incombait à la personne handicapée de s’adapter à une société qui ne prenait que très peu en compte tout ce qui échappait à une norme parfois arbitraire ( le fait d’être gaucher a pu être perçu comme une tare à réparer). Ces dernières années la législation a beaucoup évolué (loi du 11 Fevrier 2005 pour l’égalité des droits et des chances des personnes handicapées). Le monde du web se devait de proposer des alternatives, devenant un media prépondérant et fondamental. Il peut être intéressant de noter que certaines des technologies dont nous allons parler s’appliquent certes aux personnes handicapées mais aussi à toutes celles pour qui la lecture est difficile ( dyslexie, illettrisme….). Le braille (inventé par Louis Braille en 1829) reste la principale méthode d’accès au contenu pour les mal-voyants.  Le livre audio est une alternative très intéressante dans le sens où le numérique permet à la fois une baisse des coûts, une multiplication des supports et une limitation physique amoindrie.
+            </p>
+            <div id="jaws">
+              <p>
+                Dès les années 80 des moyens sont mis en place (  le premier micro-ordinateur en braille date de 1978,  et la  première version de <a href = "http://www.freedomscientific.com/Products/Blindness/JAWS">JAWS</a>  est créée en 1989 sous MS-DOS). Le braille continue d’évoluer et en 2011 hyper-braille permet la représentation de graphiques en relief.
+                Le son est en train de devenir un moyen d’accessibilité primordial sur la toile. JAWS est le logiciel le plus connu mais il existe heureusement des alternatives open-source performantes (dont NVDA).
+              </p>
+              <iframe class = "lienHandicap" src = "https://www.youtube.com/embed/5HAnbSWK7rM" width= "320" height = "195" frameborder="0"></iframe>
+            </div>
+            <div id="voder">
+              <iframe class = "voder" src = "https://www.youtube.com/embed/0rAyrmm7vv0" width="320" height="195" frameborder="0"></iframe>
+              <p>
+                La synthèse vocale émerge dès 1965 (il éxiste même un appareil gargantuesque le VODER, présenté par Bell en 1939)
+                , cette première generation appelée synthèse vocale par règles sera courante jusqu’en 1985 et sera bien adapté a la mémoire très faible des ordinateurs de l’époque, cette méthode avait néanmoins le défaut de donner des résultats extrêmement peu naturels.
+              </p>
+            </div>
+            <div id="vocale">
+              <p>
+                La seconde generation sera construite sur la base de la synthèse par diphones, on enregistre des diphones (1200 pour le français) que l’on concatène ensuite, on pourra même enregistrer plusieurs versions du même diphone afin de rendre l’accentuation suivant le contexte.
+                Actuellement la synthèse vocale est devenu très naturelle et donne des résultats plus que satisfaisant pour améliorer l’accessibilité des sites.
+                Cette technologie fonctionne en deux étapes, tout d’abord le texte est transcrit en phonèmes, de plus les mots sont catégorisés (particulièrement en Anglais) afin de trouver la prononciation juste.  Dans un second temps le logiciel cherche parmi des milliers d’enregistrements vocaux ceux qui correspondent à la foi a la lettre et au contexte de ce qui est énoncé et restitue le texte.
+              </p>
+              <audio class ="extraitDussolier" controls = "true" title ="reconstruction de la voix d'A.Dussolier" >
+                <source src="music/dussolier.mp3">
+              </audio>
+            </div>
+
+            <div id="liens">
+              <div id="cygne">
+                <a class = "lienSoundDesign" href = "http://rue89.nouvelobs.com/2015/05/05/jai-cherche-audrey-synthese-vocale-ordinateur-258883"><img src="img/obsarticle.png" alt="Le chant du Cygne" /></a>
+              </div>
+              <div id="cygne">
+                <a class = "lienSoundDesign" href = "http://www.sautcreatif.com/fr/accessibilite-comment-lire-page-web-quand-mal-voyant-ou-non-voyant/"><img src="img/nvda.png" alt="Le chant du Cygne" /></a>
+              </div>
+            </div>
+        </div>
+
+        <!--Fin  -->
+        <!-- Fin du Wrap  -->
+
+        <footer>
+          <!-- TODO: Faire apparaître nos noms en défilant de droite à gauche -->
+          <p id="copyright">&copy; 2016 - Inna, Véro, Romain et Myriam</p>
+        </footer>
+        <!-- Fin du Footer -->
+      </div>
+      <!-- Fin Container -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+      <script src="../assets/prism.js" type="text/javascript"></script>
+      <script src="../assets/script.js" type="text/javascript"></script>
+    </body>
+</html>
