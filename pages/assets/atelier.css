@@ -1,0 +1,30 @@
+header {
+  background: #005C97;
+background: -webkit-linear-gradient(to left, #005C97 , #363795);
+background: linear-gradient(to left, #005C97 , #363795);
+}
+.dropdown:hover .dropdown-content  {
+    display: block;
+    color: #005C97;
+}
+
+.bloc {
+  background: url('../img/comingsoon.png') no-repeat center;
+  background-size: cover;
+  height: 500px;
+  margin: 5%;
+  text-align: center;
+  padding: 0 15% 5%;
+  box-shadow: -15px 15px 35px rgba(50,50,93,.4), 15px 5px 15px rgba(0,0,0,.07);
+  border-radius: 5px;
+}
+    .bloc h1 {
+        text-transform: uppercase;
+        padding-top: 5%;
+        margin-bottom: 5%;
+    }
+footer {
+  background: #005C97;
+background: -webkit-linear-gradient(to left, #005C97 , #363795);
+background: linear-gradient(to left, #005C97 , #363795);
+}

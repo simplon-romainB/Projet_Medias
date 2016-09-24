@@ -1,0 +1,50 @@
+.bloc {
+  margin: 5%;
+  text-align: center;
+  padding: 0 20% 5%;
+  box-shadow: -15px 15px 35px rgba(50,50,93,.4), 15px 5px 15px rgba(0,0,0,.07);
+  border-radius: 5px;
+}
+    .bloc h1 {
+        text-transform: uppercase;
+        padding-top: 5%;
+        margin-bottom: 5%;
+    }
+  #jaws {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+  }
+    .lienHandicap {
+      margin-left: 5%;
+      margin-right: 7%;
+    }
+
+
+    #voder {
+      margin-top: 5%;
+      display: flex;
+      justify-content: space-around;
+    }
+      .voder {
+        margin-right: 7%;
+        margin-left: 5%;
+      }
+
+    #vocale {
+      margin-top: 5%;
+      /*
+      display: flex;
+      justify-content: space-around;
+      */
+    }
+      .extraitDussolier {
+        margin-right: 7%;
+        margin-left: 5%;
+      }
+
+  #liens {
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-around;
+  }

@@ -22,7 +22,28 @@ body h1, h2, h3 {
     #container {
       width: 100%;
     }
-
+      #navScroll {
+        position: absolute;
+        color; #fff;
+        position: fixed;
+        right: 2%;
+        top: 45%;
+        z-index: 1;
+        background: #8E0E00;
+        border-radius: 5px;
+      }
+        #navScroll ul {
+          list-style-type: none;
+        }
+          #navScroll li {
+            margin-bottom: 2%;
+          }
+            #navScroll a {
+              text-decoration: none;
+              color: #fff;
+              font-family: 'Montserrat', sans-serif;
+              text-transform: uppercase;
+            }
         /* ----------------------- Header -----------------------*/
         header {
             background: #8E0E00;
@@ -30,7 +51,7 @@ body h1, h2, h3 {
             background: linear-gradient(to left, #8E0E00 , #1F1C18);
             color: rgb(255,255,255);
             width: 100%;
-            height: 150px;
+            height: 180px;
             display: flex;
             justify-content:  space-around;
         }
@@ -63,6 +84,7 @@ body h1, h2, h3 {
             }
                 #navigation ul {
                     list-style-type: none;
+                    overflow: hidden;
                 }
                     #navigation li {
                         display: inline-block;
@@ -73,6 +95,41 @@ body h1, h2, h3 {
                             text-decoration: none;
                             color: inherit;
                         }
+
+                          .dropbtn {
+                            display: inline-block;
+
+                            text-align: center;
+                            padding: 14px 16px;
+                            text-decoration: none;
+                          }
+                          #navigation li a:hover, .dropdown:hover .dropbtn {
+                            /* background-color: #FFF; */
+                          }
+                          #navigation li.dropdown {
+                            display: inline-block;
+                          }
+                          .dropdown-content {
+                            display: none;
+                            position: absolute;
+                            background-color: #f9f9f9;
+                            min-width: 160px;
+                            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                          }
+                          .dropdown-content a {
+                            color: black;
+                            padding: 12px 16px;
+                            text-decoration: none;
+                            display: block;
+                            text-align: left;
+                          }
+                          .dropdown-content a:hover {
+                            background-color: #f1f1f1;
+                          }
+                          .dropdown:hover .dropdown-content  {
+                              display: block;
+                              color: #8E0E00;
+                          }
 
         /*---------------------- Wrap - Partie principale du site --------------------*/
         #wrap {
@@ -124,8 +181,11 @@ body h1, h2, h3 {
                 }
             /* Intro */
             #intro {
+              margin: 2%;
                 text-align: center;
                 padding: 0 15% 5%;
+                box-shadow: -15px 15px 35px rgba(50,50,93,.4), 15px 5px 15px rgba(0,0,0,.07);
+                border-radius: 5px;
                 }
                 #intro h1 {
                     text-transform: uppercase;
@@ -134,32 +194,33 @@ body h1, h2, h3 {
                 }
             /* --------------------- Section ---------------------*/
             section {
-          display: flex;
-        }
+              display: flex;
+            }
                 /*---------------- H2 de toute la Section ------------------ */
                 section h2 {
-              text-transform: uppercase;
-              text-align: center;
-            }
+                  text-transform: uppercase;
+                  text-align: center;
+                }
                 /* Dimensions et Styles communs de la Div Left et de la Div Right   */
                 .side {
+
                 }
                     /* Dimensions et Styles communs à chaque Slide, de droite ou de gauche */
                     .slide {
                         width: 100%;
                         height: 800px;
-                        /* box-shadow: 15px 0 35px rgba(50,50,93,.1); */
-                        /*  box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07); */
+                        margin: 4% 0;
                     }
                     /* --------------  Effet Carte sur les Visuels --------------- */
                     .card {
-                        box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07);
+                      box-shadow: -15px 15px 35px rgba(50,50,93,.4), 15px 5px 15px rgba(0,0,0,.07);
+                      border-radius: 15px;
                     }
 
                 /* Partie Gauche */
                 #left {
-              width: 50%;
-            }
+                  width: 50%;
+                }
 
                 /* Partie Droite */
                 #right {
@@ -192,15 +253,21 @@ body h1, h2, h3 {
                     #audio {
                         width: 350px;
                         margin: auto;
-                        border: 4px solid #2F1A15;
-                        border-radius: 8px;
+                        padding-top: 23%;
+                        padding-left: 26%;
                     }
 
+                #attribut_Illust .texte {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                }
 
                 #Contenu{
-                /*text-align: center;*/
-                margin: auto;
-            }
+                  /*text-align: center;*/
+                  margin: auto;
+                }
                     #Bandeau{
                         width : 100%;
                         height : auto;
@@ -210,15 +277,34 @@ body h1, h2, h3 {
                         margin: auto;
                         overflow: hidden;
                     }
+
+                #historyVideo {
+                  margin: 0 auto;
+                }
                 #historyVideo video {
-                    width: 100%;
-                    text-align: center;
+                    width:425px;
+                    height:355px;
+                    margin:auto;
+                    padding-top: 23%;
+                    padding-left: 26%;
+                }
+                #videoHistory2 .texte {
+                  padding: 0;
+                }
+
+                #playerVero {
+                  margin-left: 30%;
+                  margin-top: 10%;
+                }
+                #earth {
+                  width: 300px;
+                  margin-left: 20%;
                 }
 
           table {
                 border-collapse: collapse;
                 margin: auto;
-            }
+          }
                 caption {
                     text-transform: uppercase;
                     font-weight: bold;
@@ -229,6 +315,7 @@ body h1, h2, h3 {
                 }
     /* Conclusion */
     #conclusion {
+      margin: 5% 0;
     }
     #contenu{
         margin: auto;
