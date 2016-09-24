@@ -6,6 +6,7 @@ $(document).ready(function() {
 			return false;
 		});
 	});
+<<<<<<< HEAD
 
 
 
@@ -49,3 +50,5 @@ $(document).ready(function() {
 		}
 	});
 }());
+=======
+>>>>>>> 2d70496bd6f475a75b916247199753fdb4d95914
