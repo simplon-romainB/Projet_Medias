@@ -1,4 +1,4 @@
-// Prism JS pour afficher code HTML
+//   PRISM JS pour afficher code HTML
 	(function () {
 
 	if (typeof self === 'undefined' || !self.Prism || !self.document || !Prism.languages.markup) {
@@ -49,7 +49,3 @@ $(document).ready(function() {
 			return false;
 		});
 	});
-
-
-
-	

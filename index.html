@@ -56,13 +56,13 @@
             <div id="wrap">
                 <!-- Div Video -->
                 <div id="video">
-                  <!-- TODO A tester, mettre le height = 500px par exemple et aligner 3 vidéos avec 3 effets différents: scroll, random, et autre -->
                     <video width="100%" height="auto" autoplay="true" loop src="videos/video.mp4">
                             Your browser does not support this video tag or this format.
                     </video>
                     <p id="videoText">LES MEDIAS</p>
                 </div>
                 <!-- Fin div Video -->
+
                 <!-- Introduction -->
                 <div id="intro">
                     <h1>Au commencement...</h1>
@@ -86,7 +86,7 @@
                     <!-- Partie Gauche -->
                     <div id="left" class="side">
                         <!-- Partie Histoire de la Vidéo 1 -->
-                        <div id="videoHistory1" class="slide">
+                        <div id="videoHistory1" class="slide hideme">
                             <div class="texte">
                                 <h2>La vidéo</h2>
 
@@ -97,7 +97,7 @@
                             </div>
                         </div>
                         <!-- Partie Histoire de l'Audio 1 -->
-                        <div id="audioHistory1" class="slide card">
+                        <div id="audioHistory1" class="slide card hideme">
                             <div class="texte">
                               <!-- TODO Lecteur Audio Aléatoire de Véro -->
                                 <div id="audio">
@@ -109,7 +109,7 @@
                             </div>
                         </div>
                         <!-- Partie "Balises et Attribut" -->
-                        <div id="attribut" class="slide">
+                        <div id="attribut" class="slide hideme">
                             <div class="texte">
                                 <h2>Les balises et attributs</h2>
                                 <p>
@@ -141,7 +141,7 @@
                             </div>
                         </div>
                         <!-- Partie "Visuel Formats" -->
-                        <div id="formats_Illust" class="slide card">
+                        <div id="formats_Illust" class="slide card hideme">
                             <div id="formats_img" class="texte visual">
                                 <table class="content_table">
                                 <caption>Formats Audios et Vidéos</caption>
@@ -262,7 +262,7 @@
                             </div>
                         </div>
                         <!-- Partie MIME et Fallback -->
-                        <div id="fallback" class="slide">
+                        <div id="fallback" class="slide hideme">
                             <div class="texte">
                                 <h2>Type MIME et Fallback</h2>
                                 <p>La balise <code>source</code> doit pointer vers le fichier de base mais doit aussi indiquer le type MIME utilisé. Le type MIME est <quote>un identifiant de format de données composé de deux parties</quote>: un <em>type</em> et un <em>sous-type</em>. Pour plus d'informations : <a href="https://fr.wikipedia.org/wiki/Type_MIME">Type MIME</a></p>
@@ -271,7 +271,7 @@
                             </div>
                         </div>
                         <!-- Partie Visuel Contrôle Flux JS -->
-                        <div id="fluxJS_Illust" class="slide card">
+                        <div id="fluxJS_Illust" class="slide card hideme">
                             <div id="" class="texte visual">
                             <!-- Code Flux JS -->
                                     <pre>
@@ -309,7 +309,7 @@ window.onload = function(){
                             </div>
                         </div>
                         <!--     Partie API Native   -->
-                        <div id="api" class="slide">
+                        <div id="api" class="slide hideme">
                             <div class="texte">
                                 <h2>API native</h2>
                                 <p>Enfin, Il n'est pas nécessaire d'utiliser les élements audio et vidéo. On peut s'amuser à tout créer depuis JavaScript!</p>
@@ -330,7 +330,7 @@ window.onload = function(){
                     <!--                 Fin Partie Gauche                   -->
 
                     <!--                Partie Droite                        -->
-                    <div id="right" class="side">
+                    <div id="right" class="side hideme">
                         <!-- Partie Histoire de la Vidéo 2 -->
                         <div id="videoHistory2" class="slide card">
                             <div class="texte">
@@ -376,7 +376,7 @@ window.onload = function(){
                             </div>
                         </div>
                         <!-- Partie Formats  -->
-                        <div id="formats" class="slide">
+                        <div id="formats" class="slide hideme">
                             <div class="texte">
                                 <h2>Les formats Audio/Vidéo et conversions</h2>
                                 <p>Deux types de flux.</p>
@@ -409,7 +409,7 @@ window.onload = function(){
                             </div>
                         </div>
                         <!-- Partie Type MIME Visuel -->
-                        <div id="fallback_Illust" class="slide card">
+                        <div id="fallback_Illust" class="slide card hideme">
                             <div class="texte visual">
                                 <div id="mime">
                                     <!-- TODO: modifier dimension  -->
@@ -422,7 +422,7 @@ window.onload = function(){
                             </div>
                         </div>
                         <!-- Partie Flux JS  -->
-                        <div id="fluxJS" class="slide">
+                        <div id="fluxJS" class="slide hideme">
                             <div class="texte">
                                 <h2>Contrôle du flux par JavaScript</h2>
                                 <p>Lorsqu'on fait appel à de la vidéo ou de l'audio, via une balise <code>html</code>, on peut toujours intéragir avec cet élement grâce à Javascript et le contrôler.</p>
@@ -443,7 +443,7 @@ window.onload = function(){
                             </div>
                         </div>
                         <!--  Partie API visuel--->
-                        <div id="api_Illust" class="slide card">
+                        <div id="api_Illust" class="slide card hideme">
                             <div id="" class="texte visual">
                                 <pre>
                                   <code class="language-markup"><!--
@@ -494,9 +494,9 @@ function ajouteVideo() {
 
                 <!-- Footer -->
                 <footer>
-                    <!-- TODO: Faire apparaître nos noms en défilant de droite à gauche -->
-                    <p id="copyright">&copy; 2016 - Inna, Véro, Romain et Myriam</p>
-                    </footer>
+                  <!-- TODO: Faire apparaître nos noms en défilant de droite à gauche -->
+                  <p id="copyright">&copy; 2016 - Inna, Véro, Romain et Myriam</p>
+                </footer>
                 <!-- Fin du Footer -->
             </div>
             <!-- Fin Wrap - Partie principale du site -->
