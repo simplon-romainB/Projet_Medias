@@ -1,14 +1,4 @@
-$(document).ready(function() {
-		$('.js-scrollTo').on('click', function() {
-			var page = $(this).attr('href');
-			var speed = 750;
-			$('html, body').animate( { scrollTop: $(page).offset().top }, speed );
-			return false;
-		});
-	});
-
-
-
+// Prism JS pour afficher code HTML
 	(function () {
 
 	if (typeof self === 'undefined' || !self.Prism || !self.document || !Prism.languages.markup) {
@@ -49,3 +39,17 @@ $(document).ready(function() {
 		}
 	});
 }());
+
+// Scrolling
+$(document).ready(function() {
+		$('.js-scrollTo').on('click', function() {
+			var page = $(this).attr('href');
+			var speed = 750;
+			$('html, body').animate( { scrollTop: $(page).offset().top }, speed );
+			return false;
+		});
+	});
+
+
+
+	
