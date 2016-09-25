@@ -49,3 +49,10 @@
     display: flex;
     justify-content: space-around;
   }
+  #liens img {
+
+    -webkit-filter: blur(2px) grayscale(100%);
+  }
+  #liens img:hover {
+    -webkit-filter: blur(0);
+  }

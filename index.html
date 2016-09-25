@@ -264,12 +264,32 @@
                             </div>
                         </div>
                         <!-- Partie MIME et Fallback -->
-                        <div id="fallback" class="slide hideme">
+                        <div id="frameworks" class="slide hideme">
                             <div class="texte">
-                                <h2>Type MIME et Fallback</h2>
-                                <p>La balise <code>source</code> doit pointer vers le fichier de base mais doit aussi indiquer le type MIME utilisé. Le type MIME est <quote>un identifiant de format de données composé de deux parties</quote>: un <em>type</em> et un <em>sous-type</em>. Pour plus d'informations : <a href="https://fr.wikipedia.org/wiki/Type_MIME">Type MIME</a></p>
-                                <p>Pour la vidéo, il faut préciser le conteneur et le codec e préférence. Le navigateur s'occupera de lire le format qui lui correspond. Afin d'optimiser au mieux, l'odre des balises est important.</p>
-                                <p>Aussi, mieux vaut prévoir un fallback si la balise ou le format ne sont pas reconnus pas le navigateur. Un <em>fallback</em> est une information ou alternative textuelle, que l'on ajoute après les balises <code>source</code>, de façon à ce qu'elle soit lu en dernier recours</p>
+                                <h2>Les frameworks</h2>
+                                  <p>Cependant, hormis le fait de pouvoir juste mettre un simple élément <code>audio</code> ou <code>vidéo</code> sur sa page, le manipuler grâce à JavaScript, on peut aussi faire appel à des frameworks qui ont l'avantage de nous avoir pré-maché tout le boulot côté style.</p>
+                                  <p>
+                                    En voici quelques uns:
+
+                                      <h3>audio.js</strong></h3>
+                                        <p>audio.js utilise la balise <code>audio</code> et un lecteur flash invisible pour imiter la balise <code>audio</code> dans les navigateur. On peut customiser le <code>css</code> entre autres.</p>
+                                      <h3>video.js</h3>
+                                        <p>
+                                          Librairie open-source et aussi connu sous le nom de <strong>HTML5 Video Player</strong>. Elle suporte le HTML5 ainsi que le Flash ainsi que Youtube et Viméo. Possède une bonne communauté.
+                                        </p>
+                                      <h3>popcorn.js</h3>
+                                        <p>Framework écrit en JavaScript par des réalisateurs, des développeurs web et n'importe qui voulant créer des médias intéractifs. Popcorn.js fait partie du projet <a href="http://mozillapopcorn.org/">Mozilla's Popcorn</a> </p>
+                                      <h3>projekktor.js</h3>
+                                        <p>
+                                          Librairie open-source, écrite en JavaScript. Simplifie l'intégration et le travail avec les vidéos dans le web en gérant les compatibilités entre navigateurs.
+                                        </p>
+                                      <h3>Mediaelement.js</h3>
+                                      <p>
+                                        Ecrite en jQuery. Elle fonctionne en imitant le MediaElement Native de HTML5 via des plugins en Flash et Silverlight.
+                                      </p>
+
+                                  </p>
+
                             </div>
                         </div>
                         <!-- Partie Visuel Contrôle Flux JS -->
@@ -536,6 +556,7 @@ function ajouteVideo() {
         </div>
         <!-- Fin Container -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="assets/jquery-ui.js" type="text/javascript"></script>
         <script src="assets/prism.js" type="text/javascript"></script>
         <script src="assets/script.js" type="text/javascript"></script>
         <script src="assets/playerVero.js"type="text/javascript"></script>

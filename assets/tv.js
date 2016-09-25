@@ -8,7 +8,7 @@ var allumage = 0;
             fenetre.setAttribute('frameBorder', '0');
             fenetre.setAttribute('id', 'ecran');
             fenetre.classList.add('iframePosition');
-            fenetre.setAttribute('src', '../snow3.html');
+            fenetre.setAttribute('src', 'assetsTV/snow3.html');
             fenetre.setAttribute('border', 'none');
             fenetre.setAttribute('seamless', 'true');
             allumage = 1;
@@ -17,7 +17,7 @@ var allumage = 0;
     }
     function chaine(origine) {
         var fenetre = document.getElementById('ecran');
-        fenetre.setAttribute('src', '../snow3.html');
+        fenetre.setAttribute('src', 'assetsTV/snow3.html');
         setTimeout(function(){fenetre.setAttribute('src', origine);},110);
         allumage = 1;
       }

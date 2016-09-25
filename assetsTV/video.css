@@ -21,7 +21,7 @@
 }
 
 
-/*--css de l'iframe--*/
+/*--css de l'iframe--
 .iframePosition {
   position: relative;
   top:0;
@@ -30,6 +30,7 @@
   height: 100%;
   overflow: hidden;
 }
+*/
 /*--switch on/off de la telecommande--*/
 .onoffswitch {
     width: 100%;
