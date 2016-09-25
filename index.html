@@ -357,7 +357,14 @@ window.onload = function(){
                         <div id="videoHistory2" class="slide card">
                             <div class="texte">
                               <div id="historyVideo">
-                                              <video src="videos/music.mp4" autoplay="true" loop></video>
+                                <div id='phone'>
+                                  <div id='screen'>
+                                    <video src="videos/music.mp4" autoplay="true" loop></video>
+                                    <div id="audios"></div>
+                                    <div id="home"></div>
+                                  </div>
+                                </div>
+
                               </div>
                             </div>
                         </div>
@@ -563,39 +570,6 @@ function ajouteVideo() {
         <script src="assets/api.js"type="text/javascript"></script>
         <script src="assets/tv.js" type="text/javascript">
         </script>
-        <!--
-        <script type="text/javascript">
-        // Script pour la tv commande et le changement de chaîne
-        var allumage = 0;
-            function allumerTv() {
-                  if ( allumage == 0) {
-                    var container = document.getElemensByClass('classic');
-                    var fenetre = document.createElement('iframe');
-                    container.appendChild(fenetre);
-                    fenetre.setAttribute('frameBorder', '0');
-                    fenetre.setAttribute('id', 'ecran');
-                    fenetre.classList.add('iframePosition');
-                    fenetre.setAttribute('src', 'assetsTV/snow3.html');
-                    fenetre.setAttribute('border', 'none');
-                    fenetre.setAttribute('seamless', 'true');
-                    allumage = 1;
-                  }
-                  else eteindreTv();
-            }
-            function chaine(origine) {
-                var fenetre = document.getElementById('ecran');
-                fenetre.setAttribute('src', 'assetsTV/snow3.html');
-                setTimeout(function(){fenetre.setAttribute('src', origine);},110);
-                allumage = 1;
-              }
 
-            function eteindreTv() {
-                var container = document.getElementById('classic');
-                var fenetre = document.getElementById('ecran');
-                container.removeChild(fenetre);
-                allumage = 0;
-            }
-        </script>
-      -->
     </body>
 </html>

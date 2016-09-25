@@ -293,13 +293,55 @@ body h1, h2, h3 {
 
                 #historyVideo {
                   margin: 0 auto;
+                  padding-top: 25%;
                 }
                 #historyVideo video {
-                    width:425px;
-                    height:355px;
+                    width:100%;
+                    height:100%;
                     margin:auto;
-                    padding-top: 23%;
-                    padding-left: 26%;
+                    position: relative;
+                    top: 0;
+                    /*padding-top: 23%;
+                    padding-left: 26%;*/
+                }
+                /* iPhone  */
+                #phone {
+                  border: 1px solid black;
+                  width: 550px;
+                  height:250px;
+                  border-radius: 15px;
+                  position: relative;
+                  top: 13%;
+                  left: 20%;
+                }
+
+                #screen {
+                  border: 1px solid black;
+                  background: grey;
+                  position: relative;
+                  width: 70%;
+                  height:90%;
+                  top: 4.5%;
+                  left: 15%;
+                }
+                #audios {
+                  border: 1px solid black;
+                  width: 2%;
+                  height: 20%;
+                  background: black;
+                  position: absolute;
+                  left: -13%;
+                  top: 33%;
+                }
+                #home {
+                  border: 1px solid black;
+                  width: 12%;
+                  height: 20%;
+                  background: black;
+                  position: absolute;
+                  right: -17%;
+                  top: 40%;
+                  border-radius: 50%;
                 }
                 #videoHistory2 .texte {
                   padding: 0;
@@ -360,7 +402,7 @@ body h1, h2, h3 {
     }
     /* TV commande */
     #zapping {
-      border: 1px solid black;
+      padding-top: 10%;
       width: 15%;
       height: 15%;
       display: flex;
@@ -370,10 +412,10 @@ body h1, h2, h3 {
     /*--css de l'iframe--*/
     .iframePosition {
       position: absolute;
-      top:3.5vh;
-      left: 7.3vh;
-      width: 75%;
-      height: 75%;
+      top:6%;
+      left: 0;
+      width: 100%;
+      height: 100%;
       overflow: hidden;
     }
 
@@ -382,21 +424,19 @@ body h1, h2, h3 {
       justify-content: space-between;
     }
     .boutons {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      border: 1px solid black;
+      width: 50px;
+      height: 50px;
+
     }
     #switch {
-      border: 1px solid black;
       width: 15%;
       height: 15%;
     }
       #onOff {
-        width: 40px;
+        position: relative;
+        width: 55px;
         height: 40px;
         border-radius: 50%;
-        border: 1px solid black;
         margin: auto;
       }
 /* Footer */
