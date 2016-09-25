@@ -1,0 +1,23 @@
+body {
+  overflow: hidden;
+  background-color: black;
+  border: 0;
+  padding: 0;
+}
+#containerPlaylistAleatoire{
+  overflow: auto;
+  text-align: center;
+}
+
+#bouton{
+  font-family: monospace;
+  background-color: #B0FCC1;
+  font-size: 1em;
+  text-shadow: 1px blue;
+  box-shadow: 0;
+}
+
+.video0 {
+  height: 100%;
+  width: 100%;
+}

@@ -6,6 +6,8 @@
         <link rel="stylesheet" href="assets/prism.css">
         <link rel="stylesheet" href="assets/style.css">
         <link rel="stylesheet" href="assets/playerVero.css">
+        <link rel="stylesheet" href="assetsTV/video.css">
+
     </head>
     <body>
         <!-- Container -->
@@ -480,14 +482,45 @@ function ajouteVideo() {
                 <div id="conclusion">
                     <div id="contenu">
                         <div id="bandeau">
-                            <div id="contenu-ecran">
+                            <div id="contenu-ecran" class="classic"> <!-- .classic permet au script d'inclure l'iframe du zapping -->
                             <!-- FIXME gérer le ersponsive et du coup la hauteur de la vidéo -->
-                                <video  width="100%" height="auto" autoplay="true" loop>
+                                <!--<video  width="100%" height="auto" autoplay="true" loop>
                                     <source src="videos/tv.mp4" type="video/mp4">
-                                </video>
+                                </video>-->
                             </div>
                         </div>
                         <div id="bas-ecran"></div>
+                    </div>
+                    <!-- TV commande -->
+                    <div id="zapping">
+                      <!--Les chaines -->
+                      <div id="chaines">
+                        <div id="une" class="boutons">
+                          <button id = "chaine1" class ="bouton"  type = "button"  onclick = "chaine('assetsTV/rotation.html')">1</button>
+                        </div>
+                        <div id="deux" class="boutons">
+                          <button id = "chaine2" class ="bouton"  type = "button"  onclick = "chaine('assetsTV/videobackground.html')">2</button>
+                        </div>
+                        <div id="trois" class="boutons">
+                          <button id = "chaine3"  class = "bouton" type = "button"  onclick = "chaine('assetsTV/lightbox.html')">3</button>
+                        </div>
+                        <div id="quatre" class="boutons">
+                          <button id = "chaine4" class = "bouton"  type = "button"  onclick = "chaine('assetsTV/lecteuralea.html')">4</button>
+                        </div>
+                      </div>
+                      <!-- ON/OFF -->
+                      <div id="switch">
+                        <div id="onOff">
+                          <!-- Bouton ON/OFF -->
+                          <div class="onoffswitch">
+                              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked onclick = "allumerTv()">
+                              <label class="onoffswitch-label" for="myonoffswitch">
+                                  <span class="onoffswitch-inner"></span>
+                                  <span class="onoffswitch-switch"></span>
+                              </label>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                 </div>
                 <!-- Fin Conclusion - Ecran et Vidéos -->
@@ -507,5 +540,41 @@ function ajouteVideo() {
         <script src="assets/script.js" type="text/javascript"></script>
         <script src="assets/playerVero.js"type="text/javascript"></script>
         <script src="assets/api.js"type="text/javascript"></script>
+        <script src="assets/tv.js" type="text/javascript">
+        </script>
+        <!--
+        <script type="text/javascript">
+        // Script pour la tv commande et le changement de chaîne
+        var allumage = 0;
+            function allumerTv() {
+                  if ( allumage == 0) {
+                    var container = document.getElemensByClass('classic');
+                    var fenetre = document.createElement('iframe');
+                    container.appendChild(fenetre);
+                    fenetre.setAttribute('frameBorder', '0');
+                    fenetre.setAttribute('id', 'ecran');
+                    fenetre.classList.add('iframePosition');
+                    fenetre.setAttribute('src', 'assetsTV/snow3.html');
+                    fenetre.setAttribute('border', 'none');
+                    fenetre.setAttribute('seamless', 'true');
+                    allumage = 1;
+                  }
+                  else eteindreTv();
+            }
+            function chaine(origine) {
+                var fenetre = document.getElementById('ecran');
+                fenetre.setAttribute('src', 'assetsTV/snow3.html');
+                setTimeout(function(){fenetre.setAttribute('src', origine);},110);
+                allumage = 1;
+              }
+
+            function eteindreTv() {
+                var container = document.getElementById('classic');
+                var fenetre = document.getElementById('ecran');
+                container.removeChild(fenetre);
+                allumage = 0;
+            }
+        </script>
+      -->
     </body>
 </html>
