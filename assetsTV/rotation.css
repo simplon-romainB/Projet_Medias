@@ -1,0 +1,57 @@
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+.img10-container{
+  position: absolute;
+  top: 7vh;
+  width: 100%;
+  display: block;
+  height:100%;
+
+}
+
+
+
+.ob{
+  width: 65%;
+  height: 85vh;
+  display: block;
+  transition: 0.5s ease;
+  order: 1;
+  position: absolute;
+  top:0;
+
+}
+
+.ob2 {}
+
+.Sarah{
+  width: 32.5%;
+  height: 42.5vh;
+  margin-top: 0vh;
+  display: block;
+  transition: 0.5s ease;
+  position: absolute;
+  top: 43vh;
+  left: 63%;
+
+}
+
+.sarah2 {}
+
+.rachel{
+  width: 32.5%;
+  height: 42.5vh;
+  display: block;
+  transition: 0.5s ease;
+  position: absolute;
+  top: 0vh;
+  left: 63%;
+  
+}
+
+.rachel2 {}

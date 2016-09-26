@@ -294,15 +294,21 @@ body a {
                     position: relative;
                     top: 0;
                 }
+                .phone {
+                  padding: 0;
+                  margin: 0;
+                }
                 /* iPhone  */
                 #phone {
-                  border: 1px solid black;
+                  border: 1px solid grey;
+                  background: #F3DBC3;
                   width: 550px;
                   height:250px;
                   border-radius: 15px;
-                  position: relative;
+                  margin: auto;
+                  /*position: relative;
                   top: 13%;
-                  left: 20%;
+                  left: 20%;*/
                 }
                 #screen {
                   border: 1px solid black;
@@ -315,12 +321,12 @@ body a {
                 }
                     #audios {
                         border: 1px solid black;
-                        width: 2%;
+                        width: 1%;
                         height: 20%;
                         background: black;
                         position: absolute;
                         left: -13%;
-                        top: 33%;
+                        top: 40%;
                     }
                     #home {
                         border: 1px solid black;
@@ -429,6 +435,7 @@ body a {
                 border-radius: 50%;
                 margin: auto;
               }
+
         /* Footer */
         footer {
             background: #8E0E00;
