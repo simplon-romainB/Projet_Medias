@@ -1,15 +1,44 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Service TV</title>
-    <link rel="stylesheet" href="videobackground.css" />
-    </script>
-  </head>
-  <body>
-    <div id="videoBackground">
-      <h1 id='texteVideoBg'>Sympa hein :-)</h1>
-      <video id="videoBg" src="../videos/etoiles.mp4" autoplay="true" loop="true" muted="true" overflow = "hidden"></video>
-    </div>
-  </body>
-  </html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Service TV</title>
+        <style media="screen" type="text/css">
+            body {
+              overflow: hidden;
+              background-color: black;
+            }
+            #videoBackground{
+              position: relative;
+            }
+            #videoBg{
+              height: 100%;
+              width: 100%;
+              margin: 0 auto;
+              left:0;
+              top:0;
+
+            }
+            #texteVideoBg{
+              font-family: monospace;
+              font-size: 3em;
+              color: white;
+              position: absolute;
+              width: 100%;
+              height: 20vh;
+              line-height: 20vh;
+              top:0;
+              overflow: hidden;
+              text-align: center;
+              z-index: 2;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="videoBackground">
+            <h1 id='texteVideoBg'>Sympa hein :-)</h1>
+            <video id="videoBg" src="../videos/etoiles.mp4" autoplay="true" loop="true" muted="true" overflow = "hidden"></video>
+        </div>
+    </body>
+</html>

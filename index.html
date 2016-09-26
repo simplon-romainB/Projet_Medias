@@ -10,8 +10,11 @@
 
     </head>
     <body>
+        <!-- TODO couleur pour tous les liens  -->
+        <!-- TODO Commenter les lecteurs de Véro : parties "Contrôle du Flux" et "API Native" -->
         <!-- Container -->
         <div id="container">
+            <!-- Menu Lateral fixe -->
           <div id="navScroll">
             <ul class="menu">
               <li><a class="js-scrollTo" href="#intro">Intro</a></li>
@@ -19,7 +22,7 @@
               <li><a class="js-scrollTo" href="#audioHistory1">Audio</a></li>
               <li><a class="js-scrollTo" href="#attribut">Attributs</a></li>
               <li><a class="js-scrollTo" href="#formats_Illust">Formats</a></li>
-              <li><a class="js-scrollTo" href="#fallback">MIME</a></li>
+              <li><a class="js-scrollTo" href="#frameworks">Frameworks</a></li>
               <li><a class="js-scrollTo" href="#fluxJS_Illust">Flux JS</a></li>
               <li><a class="js-scrollTo" href="#api">API Native</a></li>
               <li><a class="js-scrollTo" href="#conclusion">Conclusion</a></li>
@@ -88,7 +91,7 @@
                     <!-- Partie Gauche -->
                     <div id="left" class="side">
                         <!-- Partie Histoire de la Vidéo 1 -->
-                        <div id="videoHistory1" class="slide hideme">
+                        <div id="videoHistory1" class="slide ">
                             <div class="texte">
                                 <h2>La vidéo</h2>
 
@@ -99,7 +102,7 @@
                             </div>
                         </div>
                         <!-- Partie Histoire de l'Audio 1 -->
-                        <div id="audioHistory1" class="slide card hideme">
+                        <div id="audioHistory1" class="slide card ">
                             <div class="texte">
                               <!-- TODO Lecteur Audio Aléatoire de Véro -->
                                 <div id="audio">
@@ -111,39 +114,39 @@
                             </div>
                         </div>
                         <!-- Partie "Balises et Attribut" -->
-                        <div id="attribut" class="slide hideme">
+                        <div id="attribut" class="slide ">
                             <div class="texte">
                                 <h2>Les balises et attributs</h2>
                                 <p>
-                                    La prise en compte de la lecture de l'élement <code>video</code> et <code>audio</code> sans plug-in n'est effective qu'à partir de la version 9.0 de Internet Explorer, et ça n'est toujours pas le cas pour Opéra mini.
+                                    La prise en compte de la lecture de l'élément <code>video</code> et <code>audio</code> sans plug-in n'est effective qu'à partir de la version 9.0 de Internet Explorer, et ça n'est toujours pas le cas pour Opéra mini.
                                 </p>
                                 <p>
-                                    Les deux balises <code>audio</code> et <code>video</code> s'emploient de la même manière. La bonne pratique nous amènera à préférer la balise <code>source</code> à l'attribut <code>src</code> de la balise mère qui permettra au navigateur de choisir son format. La balise <code>video</code> permet en plus l'usage d'un attribut <code>poster</code>.
+                                    Les deux balises <code>audio</code> et <code>video</code> s'emploient de la même manière. La bonne pratique nous amènera à préférer la balise <code>source</code> à l'attribut <code>src</code> de la balise mère qui permettra au navigateur de choisir son format. La balise <code>video</code> permet en plus l'usage d'un attribut <code>poster</code> qui permet d'afficher une image représentant la vidéo, moins ennuyeux que l'écran noir et très pratique très répandue.
                                 </p>
                                 <p>Les attributs disponibles :</p>
                                 <ul>
-                                    <li><code>autoplay</code></li>
+                                    <li><h4>autoplay</h4></li>
                                     <p>lecture auto du média dès chargement de la page</p>
-                                    <li><code>loop</code></li>
+                                    <li><h4>loop</h4></li>
                                     <p>lecture en boucle du média</p>
-                                    <li><code>preload</code></li>
+                                    <li><h4>preload</h4></li>
                                     <p>contrôle le chargement</p>
                                         <ul>
                                             <li><code>none</code></li>
                                             <li><code>metadata</code></li>
                                             <li><code>auto</code></li>
                                         </ul>
-                                    <li><code>controls</code></li>
+                                    <li><h4>controls</h2></li>
                                     <p>barre de contrôle de lecture du navigateur</p>
-                                    <li><code>poster</code></li>
+                                    <li><h4>poster</h4></li>
                                     <p>affiche une image définie (vidéo seulement)</p>
-                                    <li><code>muted</code></li>
+                                    <li><h4>muted</h4></li>
                                     <p>état par défaut du son (et conseillé)</p>
                                 </ul>
                             </div>
                         </div>
                         <!-- Partie "Visuel Formats" -->
-                        <div id="formats_Illust" class="slide card hideme">
+                        <div id="formats_Illust" class="slide card ">
                             <div id="formats_img" class="texte visual">
                                 <table class="content_table">
                                 <caption>Formats Audios et Vidéos</caption>
@@ -264,10 +267,10 @@
                             </div>
                         </div>
                         <!-- Partie MIME et Fallback -->
-                        <div id="frameworks" class="slide hideme">
+                        <div id="frameworks" class="slide ">
                             <div class="texte">
                                 <h2>Les frameworks</h2>
-                                  <p>Cependant, hormis le fait de pouvoir juste mettre un simple élément <code>audio</code> ou <code>vidéo</code> sur sa page, le manipuler grâce à JavaScript, on peut aussi faire appel à des frameworks qui ont l'avantage de nous avoir pré-maché tout le boulot côté style.</p>
+                                  <p>Cependant, hormis le fait de pouvoir juste mettre un simple élément <code>audio</code> ou <code>vidéo</code> sur sa page, le manipuler grâce à JavaScript, on peut aussi faire appel à des frameworks qui ont l'avantage de nous faire économiser un peu de temps car en général, le style est déjà pris en main.</p>
                                   <p>
                                     En voici quelques uns:
 
@@ -293,7 +296,7 @@
                             </div>
                         </div>
                         <!-- Partie Visuel Contrôle Flux JS -->
-                        <div id="fluxJS_Illust" class="slide card hideme">
+                        <div id="fluxJS_Illust" class="slide card ">
                             <div id="" class="texte visual">
                             <!-- Code Flux JS -->
                                     <pre>
@@ -331,7 +334,7 @@ window.onload = function(){
                             </div>
                         </div>
                         <!--     Partie API Native   -->
-                        <div id="api" class="slide hideme">
+                        <div id="api" class="slide ">
                             <div class="texte">
                                 <h2>API native</h2>
                                 <p>Enfin, Il n'est pas nécessaire d'utiliser les élements audio et vidéo. On peut s'amuser à tout créer depuis JavaScript!</p>
@@ -352,7 +355,7 @@ window.onload = function(){
                     <!--                 Fin Partie Gauche                   -->
 
                     <!--                Partie Droite                        -->
-                    <div id="right" class="side hideme">
+                    <div id="right" class="side ">
                         <!-- Partie Histoire de la Vidéo 2 -->
                         <div id="videoHistory2" class="slide card">
                             <div class="texte">
@@ -390,12 +393,12 @@ window.onload = function(){
                                 <div id="attributCode" >
                                     <pre>
                                       <code class="language-markup">
-&lt;video controls poster="image.png">
+&lt;video controls poster="image.png" autoplay>
   &lt;source src="video.mp4" />
   &lt;source src="video.webm" />
   &lt;source src="video.ogv" />
 &lt;/video>
-&lt;audio controls>
+&lt;audio controls loop>
   &lt;source src="audio.ogg" />
   &lt;source src="audio.mp3" />
 &lt;/audio>
@@ -405,7 +408,7 @@ window.onload = function(){
                             </div>
                         </div>
                         <!-- Partie Formats  -->
-                        <div id="formats" class="slide hideme">
+                        <div id="formats" class="slide ">
                             <div class="texte">
                                 <h2>Les formats Audio/Vidéo et conversions</h2>
                                 <p>Deux types de flux.</p>
@@ -437,21 +440,21 @@ window.onload = function(){
                                 </ul>
                             </div>
                         </div>
-                        <!-- Partie Type MIME Visuel -->
-                        <div id="fallback_Illust" class="slide card hideme">
+                        <!-- Partie frameworks Visuel -->
+                        <div id="frameworks_Illust" class="slide card ">
                             <div class="texte visual">
-                                <div id="mime">
+                                <div id="">
                                     <!-- TODO: modifier dimension  -->
-                                    <img src="" alt="Code TYPE MIME">
+                                    <img src="" alt="frameworks">
                                 </div>
                                 <div id="fallback">
                                     <!-- TODO: modifier dimension  -->
-                                    <img src="" alt="Code Fallback">
+                                    <img src="" alt="frameworks">
                                 </div>
                             </div>
                         </div>
                         <!-- Partie Flux JS  -->
-                        <div id="fluxJS" class="slide hideme">
+                        <div id="fluxJS" class="slide ">
                             <div class="texte">
                                 <h2>Contrôle du flux par JavaScript</h2>
                                 <p>Lorsqu'on fait appel à de la vidéo ou de l'audio, via une balise <code>html</code>, on peut toujours intéragir avec cet élement grâce à Javascript et le contrôler.</p>
@@ -472,7 +475,7 @@ window.onload = function(){
                             </div>
                         </div>
                         <!--  Partie API visuel--->
-                        <div id="api_Illust" class="slide card hideme">
+                        <div id="api_Illust" class="slide card ">
                             <div id="" class="texte visual">
                                 <pre>
                                   <code class="language-markup"><!--

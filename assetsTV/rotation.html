@@ -1,45 +1,100 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Service TV</title>
-    <link rel="stylesheet" href="rotation.css" />
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Service TV</title>
+        <style media="screen" type="text/css">
+            body {
+              overflow: hidden;
+              margin: 0;
+              padding: 0;
+              background-color: black;
+            }
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+            .img10-container{
+              position: absolute;
+              top: 7vh;
+              width: 100%;
+              display: block;
+              height:100%;
 
-    <script type = "text/javascript" src = "../assets/jquery-ui.js" /></script>
-    <script type = "text/javascript" src = "../assets/jquery-ui.css"/></script>
+            }
+
+            .ob{
+              width: 65%;
+              height: 85vh;
+              display: block;
+              transition: 0.5s ease;
+              order: 1;
+              position: absolute;
+              top:0;
+
+            }
+
+            .ob2 {}
+
+            .Sarah{
+              width: 32.5%;
+              height: 42.5vh;
+              margin-top: 0vh;
+              display: block;
+              transition: 0.5s ease;
+              position: absolute;
+              top: 43vh;
+              left: 63%;
+
+            }
+
+            .sarah2 {}
+
+            .rachel{
+              width: 32.5%;
+              height: 42.5vh;
+              display: block;
+              transition: 0.5s ease;
+              position: absolute;
+              top: 0vh;
+              left: 63%;
+
+            }
+
+            .rachel2 {}
+
+        </style>
+
   </head>
-  <body>
-<div id = "rotateVideos" class="img10-container">
+    <body>
 
-    <video id = "airbnb" src="../videos/aigle.mp4" class="ob"  autoplay= "true" loop="true">
-    </video>
-    <video id = "astro" src="../videos/auroreboréale.mp4"  class="Sarah" autoplay= "true" loop="true">
-    </video>
-    <video id = "rach" src="../videos/cielnocturne.mp4" class="rachel"  autoplay = "true" loop="true">
-    </video>
+        <div id = "rotateVideos" class="img10-container">
+            <video id = "airbnb" src="../videos/aigle.mp4" class="ob"  autoplay= "true" loop="true">
+            </video>
+            <video id = "astro" src="../videos/auroreboréale.mp4"  class="Sarah" autoplay= "true" loop="true">
+            </video>
+            <video id = "rach" src="../videos/cielnocturne.mp4" class="rachel"  autoplay = "true" loop="true">
+            </video>
+        </div>
+        <!-- SCRIPT -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
+        <script type = "text/javascript" src = "../assets/jquery-ui.js" /></script>
+        <script type = "text/javascript" src = "../assets/jquery-ui.css"/></script>
+        <script>
+        $(document).ready(function(){
+          $(".ob").on("click",function(){
+            $(".ob").toggleClass("ob Sarah", 500);
+            $(".Sarah").toggleClass("Sarah ob", 500);
+          });
+          $(".Sarah").on("click",function(){
+            $(".ob").toggleClass("ob Sarah", 500);
+            $(".Sarah").toggleClass("Sarah ob", 500);
 
-</div>
+          });
+          $(".rachel").on("click",function(){
+            $(".ob").toggleClass("ob rachel", 500);
+            $(".rachel").toggleClass("rachel ob", 500);
+          });
+        });
+        </script>
 
-<script>
-$(document).ready(function(){
-  $(".ob").on("click",function(){
-    $(".ob").toggleClass("ob Sarah", 500);
-    $(".Sarah").toggleClass("Sarah ob", 500);
-  });
-  $(".Sarah").on("click",function(){
-    $(".ob").toggleClass("ob Sarah", 500);
-    $(".Sarah").toggleClass("Sarah ob", 500);
-
-  });
-  $(".rachel").on("click",function(){
-    $(".ob").toggleClass("ob rachel", 500);
-    $(".rachel").toggleClass("rachel ob", 500);
-  });
-});
-</script>
-
-</body>
+    </body>
 </html>

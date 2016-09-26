@@ -17,33 +17,40 @@ body {
 body h1, h2, h3 {
     font-family: 'Montserrat', sans-serif;
 }
+body a {
+    text-decoration: none;
+    color: inherit;
+}
 
 
     /* ---------------------  Container------------------------ */
     #container {
       width: 100%;
     }
-      #navScroll {
+        #navScroll {
         position: absolute;
         color; #fff;
         position: fixed;
-        right: 2%;
+        right: 1%;
         top: 45%;
         z-index: 1;
         background: #8E0E00;
         border-radius: 5px;
       }
-        #navScroll ul {
-          list-style-type: none;
+            #navScroll ul {
+            list-style-type: none;
+            padding-right: 20px;
+            padding-left: 20px;
         }
-          #navScroll li {
+            #navScroll li {
             margin-bottom: 2%;
+            text-align: left;
           }
-            #navScroll a {
-              text-decoration: none;
-              color: #fff;
-              font-family: 'Montserrat', sans-serif;
-              text-transform: uppercase;
+                #navScroll a {
+                text-decoration: none;
+                color: #fff;
+                font-family: 'Montserrat', sans-serif;
+                text-transform: uppercase;
             }
         /* ----------------------- Header -----------------------*/
         header {
@@ -56,7 +63,7 @@ body h1, h2, h3 {
             display: flex;
             justify-content:  space-around;
         }
-          /* ---------------Titre + Logo --------------------- */
+            /* ---------------Titre + Logo --------------------- */
             #titre {
                 width: 50%;
                 display: flex;
@@ -96,48 +103,42 @@ body h1, h2, h3 {
                             text-decoration: none;
                             color: inherit;
                         }
+                            #navigation li.dropdown {
+                                 display: inline-block;
+                            }
+                            .dropdown:hover .dropdown-content  {
+                                display: block;
+                                color: #8E0E00;
+                            }
+                            .dropbtn {
+                                display: inline-block;
+                                text-align: center;
+                                padding: 14px 16px;
+                                text-decoration: none;
+                            }
+                                .dropdown-content {
+                                    display: none;
+                                    position: absolute;
+                                    background-color: #f9f9f9;
+                                    min-width: 160px;
+                                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                                }
+                                    .dropdown-content a {
+                                        color: black;
+                                        padding: 12px 16px;
+                                        text-decoration: none;
+                                        display: block;
+                                        text-align: left;
+                                    }
+                                        .dropdown-content a:hover {
+                                            background-color: #f1f1f1;
+                                        }
 
-                          .dropbtn {
-                            display: inline-block;
-
-                            text-align: center;
-                            padding: 14px 16px;
-                            text-decoration: none;
-                          }
-                          #navigation li a:hover, .dropdown:hover .dropbtn {
-                            /* background-color: #FFF; */
-                          }
-                          #navigation li.dropdown {
-                            display: inline-block;
-                          }
-                          .dropdown-content {
-                            display: none;
-                            position: absolute;
-                            background-color: #f9f9f9;
-                            min-width: 160px;
-                            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                          }
-                          .dropdown-content a {
-                            color: black;
-                            padding: 12px 16px;
-                            text-decoration: none;
-                            display: block;
-                            text-align: left;
-                          }
-                          .dropdown-content a:hover {
-                            background-color: #f1f1f1;
-                          }
-                          .dropdown:hover .dropdown-content  {
-                              display: block;
-                              color: #8E0E00;
-                          }
 
         /*---------------------- Wrap - Partie principale du site --------------------*/
         #wrap {
           width: 100%;
         }
-        /*
-        .
             /* --------- Div Video ------------ */
             #video {
             }
@@ -184,13 +185,13 @@ body h1, h2, h3 {
                 }
             /* Intro */
             #intro {
-              margin: 2%;
+                margin: 2%;
                 text-align: center;
                 padding: 0 15% 5%;
                 box-shadow: -15px 15px 35px rgba(50,50,93,.4), 15px 5px 15px rgba(0,0,0,.07);
                 border-radius: 5px;
                 background: #F3F3F6;
-                }
+            }
                 #intro h1 {
                     text-transform: uppercase;
                     padding-top: 5%;
@@ -202,12 +203,11 @@ body h1, h2, h3 {
             }
                 /*---------------- H2 de toute la Section ------------------ */
                 section h2 {
-                  text-transform: uppercase;
-                  text-align: center;
+                    text-transform: uppercase;
+                    text-align: center;
                 }
                 /* Dimensions et Styles communs de la Div Left et de la Div Right   */
                 .side {
-
                 }
                     /* Dimensions et Styles communs à chaque Slide, de droite ou de gauche */
                     .slide {
@@ -221,17 +221,14 @@ body h1, h2, h3 {
                       border-radius: 15px;
                       background: #F3F3F6;
                     }
-
                 /* Partie Gauche */
                 #left {
                   width: 50%;
                 }
-
                 /* Partie Droite */
                 #right {
                     width: 50%;
                 }
-
                 /*  Slides Textuelles  */
                 .texte {
                     padding: 2% 4%;
@@ -248,11 +245,6 @@ body h1, h2, h3 {
                         border-radius: 10px;
                         border-bottom-left-radius: 0px !important;
                         border-bottom-right-radius: 0px !important;
-                        /*
-                        overflow: scroll;
-                        -webkit-overflow-scrolling: touch;
-                        overflow-x: hidden;
-                        */
                     }
                     /*     Lecteur audio dans Partie Audio   */
                     #audio {
@@ -301,8 +293,6 @@ body h1, h2, h3 {
                     margin:auto;
                     position: relative;
                     top: 0;
-                    /*padding-top: 23%;
-                    padding-left: 26%;*/
                 }
                 /* iPhone  */
                 #phone {
@@ -314,7 +304,6 @@ body h1, h2, h3 {
                   top: 13%;
                   left: 20%;
                 }
-
                 #screen {
                   border: 1px solid black;
                   background: grey;
@@ -324,29 +313,29 @@ body h1, h2, h3 {
                   top: 4.5%;
                   left: 15%;
                 }
-                #audios {
-                  border: 1px solid black;
-                  width: 2%;
-                  height: 20%;
-                  background: black;
-                  position: absolute;
-                  left: -13%;
-                  top: 33%;
-                }
-                #home {
-                  border: 1px solid black;
-                  width: 12%;
-                  height: 20%;
-                  background: black;
-                  position: absolute;
-                  right: -17%;
-                  top: 40%;
-                  border-radius: 50%;
-                }
+                    #audios {
+                        border: 1px solid black;
+                        width: 2%;
+                        height: 20%;
+                        background: black;
+                        position: absolute;
+                        left: -13%;
+                        top: 33%;
+                    }
+                    #home {
+                        border: 1px solid black;
+                        width: 12%;
+                        height: 20%;
+                        background: black;
+                        position: absolute;
+                        right: -17%;
+                        top: 40%;
+                        border-radius: 50%;
+                    }
+
                 #videoHistory2 .texte {
                   padding: 0;
                 }
-
                 #playerVero {
                   margin-left: 30%;
                   margin-top: 10%;
@@ -355,7 +344,7 @@ body h1, h2, h3 {
                   width: 300px;
                   margin-left: 20%;
                 }
-
+        /*  Tableau des formats */
           table {
                 border-collapse: collapse;
                 margin: auto;
@@ -368,92 +357,93 @@ body h1, h2, h3 {
                 [scope=col] {
                     background: grey;
                 }
-    /* Conclusion */
-    #conclusion {
-      margin: 5% 0;
-      display: flex;
-      justify-content: center;
-    }
-    #contenu{
-        width: 50%
 
-    }
-    #bandeau{
-        width : 75%;
-        height : 50vh;
-        border-radius: 20px;
-        background-color: black;
-        border: 15px solid;
-        margin: auto;
-        overflow: hidden;
-    }
-    /* FIXME gérer le responsive et du coup la hauteur de la vidéo */
-    #contenu-ecran {
-        position: relative;
-        padding-bottom: 56.25%;
-        padding-top: 30px; height: 0; overflow: hidden;
-    }
-    #bas-ecran{
-        margin-top: 2px;
-        margin: auto;
-        border: 10px solid;
-        width: 80%;
-        border-radius: 0 0 40% 40%;
-    }
-    /* TV commande */
-    #zapping {
-      padding-top: 10%;
-      width: 15%;
-      height: 15%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    /*--css de l'iframe--*/
-    .iframePosition {
-      position: absolute;
-      top:6%;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
+            /* Conclusion */
+            #conclusion {
+              margin: 5% 0;
+              display: flex;
+              justify-content: center;
+            }
+            #contenu{
+                width: 50%
 
-    #chaines {
-      display: flex;
-      justify-content: space-between;
-    }
-    .boutons {
-      width: 50px;
-      height: 50px;
+            }
+            #bandeau{
+                width : 75%;
+                height : 50vh;
+                border-radius: 20px;
+                background-color: black;
+                border: 15px solid;
+                margin: auto;
+                overflow: hidden;
+            }
+            /* FIXME gérer le responsive et du coup la hauteur de la vidéo */
+            #contenu-ecran {
+                position: relative;
+                padding-bottom: 56.25%;
+                padding-top: 30px; height: 0; overflow: hidden;
+            }
+            #bas-ecran{
+                margin-top: 2px;
+                margin: auto;
+                border: 10px solid;
+                width: 80%;
+                border-radius: 0 0 40% 40%;
+            }
+            /* TV commande */
+            #zapping {
+              padding-top: 10%;
+              width: 15%;
+              height: 15%;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+            }
+            /*--css de l'iframe--*/
+            .iframePosition {
+              position: absolute;
+              top:6%;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              overflow: hidden;
+            }
 
-    }
-    #switch {
-      width: 15%;
-      height: 15%;
-    }
-      #onOff {
-        position: relative;
-        width: 55px;
-        height: 40px;
-        border-radius: 50%;
-        margin: auto;
-      }
-/* Footer */
-footer {
-    background: #8E0E00;
-    background: -webkit-linear-gradient(to left, #8E0E00 , #1F1C18);
-    background: linear-gradient(to left, #8E0E00 , #1F1C18);
-    color: rgb(255,255,255);
-    width: 100%;
-    height: 150px;
-}
-    #copyright {
-        text-align: center;
-        position: relative;
-        top: 75px;
-        letter-spacing: 5px;
-    }
-    #design {
-        text-align: center;
-    }
+            #chaines {
+              display: flex;
+              justify-content: space-between;
+            }
+            .boutons {
+              width: 50px;
+              height: 50px;
+
+            }
+            #switch {
+              width: 15%;
+              height: 15%;
+            }
+              #onOff {
+                position: relative;
+                width: 55px;
+                height: 40px;
+                border-radius: 50%;
+                margin: auto;
+              }
+        /* Footer */
+        footer {
+            background: #8E0E00;
+            background: -webkit-linear-gradient(to left, #8E0E00 , #1F1C18);
+            background: linear-gradient(to left, #8E0E00 , #1F1C18);
+            color: rgb(255,255,255);
+            width: 100%;
+            height: 150px;
+        }
+            #copyright {
+                text-align: center;
+                position: relative;
+                top: 75px;
+                letter-spacing: 5px;
+            }
+            #design {
+                text-align: center;
+            }
