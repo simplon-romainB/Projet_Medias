@@ -66,6 +66,7 @@ body a {
         }
             /* ---------------Titre + Logo --------------------- */
             #titre {
+                padding: 2%;
                 width: 50%;
                 /*display: flex;
                 justify-content:center;
@@ -74,17 +75,20 @@ body a {
                 #logoDiv {
                 }
                     #logo {
-                        padding: 2%;
-                        width: 150px;
-                        height: 150px;
+                        height: 100%;
+                        float: left;
                     }
                 #titre h1 {
                     display: inline-block;
+                    height: 100%;
+                    padding: 8% 2%;
+                    box-sizing: border-box;
                     margin: 0 auto;
                     text-align: center;
                     text-transform: lowercase;
                     letter-spacing: 6px;
                 }
+
             /* ----------------------- Navigation --------------------- */
             #navigation {
                 width: 50%;
@@ -144,7 +148,13 @@ body a {
           width: 100%;
         }
             /* --------- Div Video ------------ */
-            #video {
+            #video img {
+                font-size: 3em;
+                color: #fff;
+                position: absolute;
+                animation: heartBeat 10s infinite;
+                top: 50%;
+                left: 36%;
             }
                 /* ------ Animation  heartBeat -------- */
                 @keyframes heartBeat {
