@@ -32,6 +32,8 @@ var allumage = 0;
 */
 var allumage = 0;
 var containerTexte = document.getElementById('bas-ecran');
+var description = document.getElementById('description');
+var conclusion = document.getElementById('conclusion');
 var explications = document.createElement('div');
     function allumerTv() {
           if ( allumage == 0) {
@@ -43,9 +45,9 @@ var explications = document.createElement('div');
             fenetre.classList.add('iframePosition');
             fenetre.setAttribute('src', './assetsTV/snow3.html');
             fenetre.setAttribute('border', 'none');
-            containerTexte.appendChild(explications);
-            explications.classList.add('explicationsParagraphe');
-            explications.innerHTML = "Choisissez une chaîne !" ;
+            conclusion.appendChild(explications); //FIXME A ETE MODIFIE!!
+            description.classList.add('descriptionStyle'); //FIXME A ETE MODIFIE
+            description.innerHTML = "Choisissez une chaîne !" ; //FIXME A ETE MODIFIE
             allumage = 1;
           }
           else eteindreTv();
@@ -56,24 +58,24 @@ var explications = document.createElement('div');
         setTimeout(function(){fenetre.setAttribute('src', origine);},110);
         allumage = 1;
           if (origine == 'assetsTV/rotation.html') {
-            containerTexte.appendChild(explications);
-            explications.classList.add('explicationsParagraphe');
-            explications.innerHTML = "trois videos qui échangent leur place sur un click !" ;
+            conclusion.appendChild(explications); ///FIXME A ETE MODIFIE!!
+            description.classList.add('descriptionStyle'); //FIXME A ETE MODIFIE!!
+            description.innerHTML = "trois videos qui échangent leur place sur un click !" ;//FIXME A ETE MODIFIE!!
           }
           else if (origine == 'assetsTV/videobackground.html') {
-            containerTexte.appendChild(explications);
-            explications.classList.add('explicationsParagraphe');
-            explications.innerHTML = 'Ce genre de présentation, un texte sur fond de video, devient un element de design très présent actuellement' ;
+            conclusion.appendChild(explications); //FIXME A ETE MODIFIE!!
+            description.classList.add('descriptionStyle'); //FIXME A ETE MODIFIE!!
+            description.innerHTML = 'Ce genre de présentation, un texte sur fond de video, devient un element de design très présent actuellement' ;
           }
           else if (origine == 'assetsTV/lightbox.html') {
-            containerTexte.appendChild(explications);
-            explications.classList.add('explicationsParagraphe');
-            explications.innerHTML = "un effet de lightbox  (un plugin assez courant) créé en quelques lignes de JS" ;
+            conclusion.appendChild(explications);//FIXME A ETE MODIFIE!!
+            description.classList.add('descriptionStyle'); //FIXME A ETE MODIFIE!!
+            description.innerHTML = "un effet de lightbox  (un plugin assez courant) créé en quelques lignes de JS" ;
           }
           else if (origine == 'assetsTV/lecteuralea.html') {
-            containerTexte.appendChild(explications);
-            explications.classList.add('explicationsParagraphe');
-            explications.innerHTML = "Un lecteur de videos aléatoires, qui recommencera après avoir épuis notre (petit) stock de videos !" ;
+            conclusion.appendChild(explications); //FIXME A ETE MODIFIE!!
+            description.classList.add('descriptionStyle'); //FIXME A ETE MODIFIE!!
+            description.innerHTML = "Un lecteur de videos aléatoires, qui recommencera après avoir épuisé notre (petit) stock de videos !" ;//FIXME A ETE MODIFIE!!
           }
       }
     function eteindreTv() {
@@ -81,6 +83,8 @@ var explications = document.createElement('div');
         var fenetre = document.getElementById('ecran');
         container.removeChild(fenetre);
         allumage = 0;
-        containerTexte.appendChild(explications);
-        explications.innerHTML = "" ;
+        conclusion.appendChild(explications); //FIXME A ETE MODIFIE!!
+        explications.innerHTML = "" ; //FIXME A ETE MODIFIE!!
+        //FIXME la fenêtre ne se referme pas haha
+        
     }

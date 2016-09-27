@@ -14,6 +14,9 @@ body {
     padding: 0;
 
 }
+body h1, h2 {
+    color: #8E0E00 ;
+}
 body h1, h2, h3 {
     font-family: 'Montserrat', sans-serif;
 }
@@ -28,24 +31,24 @@ body a {
       width: 100%;
     }
         #navScroll {
-        position: absolute;
-        color; #fff;
-        position: fixed;
-        right: 1%;
-        top: 45%;
-        z-index: 1;
-        background: #8E0E00;
-        border-radius: 5px;
-      }
+            position: absolute;
+            color; #fff;
+            position: fixed;
+            right: 1%;
+            top: 45%;
+            z-index: 1;
+            background: #8E0E00;
+            border-radius: 5px;
+          }
             #navScroll ul {
             list-style-type: none;
             padding-right: 20px;
             padding-left: 20px;
         }
             #navScroll li {
-            margin-bottom: 2%;
-            text-align: left;
-          }
+                margin-bottom: 2%;
+                text-align: left;
+              }
                 #navScroll a {
                 text-decoration: none;
                 color: #fff;
@@ -370,9 +373,18 @@ body a {
               display: flex;
               justify-content: center;
             }
+            /* Détails du travail éffectué lorsque l'on zappe */
+            #description {
+                width: 20%;
+                height: 250px;
+            }
+            .descriptionStyle {
+                box-shadow: -15px 15px 35px rgba(50,50,93,.4), 15px 5px 15px rgba(0,0,0,.07);
+                border-radius: 15px;
+                background: #F3F3F6;
+            }
             #contenu{
                 width: 50%
-
             }
             #bandeau{
                 width : 75%;
