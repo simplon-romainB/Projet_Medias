@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript" src="jquery.js"></script>
+    <script src="jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript">
+  </head>
+  <body>
+    <div class="links">
+      <div id="inline-popups">
+        <a href="#test-popup" data-effect="mfp-zoom-in" class="box one img-scale"><video src="10s.gif" loop="0" id="blocGif1"></video></a>
+        <a href="#test-popup" data-effect="mfp-zoom-in" class="box two img-scale"><video src="10s.gif" loop="0" id="blocGif2"></video></a>
+        <a href="#test-popup" data-effect="mfp-zoom-in" class="box three img-scale"><video src="10s.gif" loop="0" id="blocGif3"></video></a>
+        <a href="#test-popup" data-effect="mfp-zoom-in" class="box four img-scale"><video src="10s.gif" loop="0" id="blocGif4"></video></a>
+
+      </div>
+
+    <!-- Popup itself -->
+    <div id="test-popup" class="white-popup mfp-with-anim mfp-hide" ><embed src="http://www.dailymotion.com/embed/video/x20ekdi_very-hard-episode-33-lynx-le-premier-fauve-d-atari_tech" style="height: 50%; width:100%"></embed></div>
+
+    // Inline popups
+    $('#inline-popups').magnificPopup({
+    delegate: 'a',
+    removalDelay: 500, //delay removal by X to allow out-animation
+    callbacks: {
+      beforeOpen: function() {
+         this.st.mainClass = this.st.el.attr('data-effect');
+      }
+    },
+    midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+    });
+    </script>
+    <!-- <script type="text/javascript">
+    function afficherIframe(origine) {
+
+        var ifr = document.createElement('iframe');
+        ifr.setAttribute("src", origine);
+        ifr.classList.add('placement');
+        document.body.appendChild(ifr);
+    }
+    </script> -->
+
+  </body>
+</html>

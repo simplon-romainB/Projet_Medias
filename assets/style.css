@@ -66,6 +66,7 @@ body a {
         }
             /* ---------------Titre + Logo --------------------- */
             #titre {
+                padding: 2%;
                 width: 50%;
                 /*display: flex;
                 justify-content:center;
@@ -74,17 +75,19 @@ body a {
                 #logoDiv {
                 }
                     #logo {
-                        padding: 2%;
-                        width: 150px;
-                        height: 150px;
+                        height: 100%;
+                        float: left;
                     }
                 #titre h1 {
                     display: inline-block;
+                    height: 100%;
+                    padding: 8% 2%;
+                    box-sizing: border-box;
                     margin: 0 auto;
                     text-align: center;
-                    text-transform: lowercase;
                     letter-spacing: 6px;
                 }
+
             /* ----------------------- Navigation --------------------- */
             #navigation {
                 width: 50%;
@@ -144,7 +147,13 @@ body a {
           width: 100%;
         }
             /* --------- Div Video ------------ */
-            #video {
+            #video img {
+                font-size: 3em;
+                color: #fff;
+                position: absolute;
+                animation: heartBeat 10s infinite;
+                top: 50%;
+                left: 36%;
             }
                 /* ------ Animation  heartBeat -------- */
                 @keyframes heartBeat {
@@ -250,6 +259,53 @@ body a {
                         border-bottom-left-radius: 0px !important;
                         border-bottom-right-radius: 0px !important;
                     }
+
+                    /* Lecteur mp3 */
+                    #mp3 {
+                        border: 1px solid black;
+                        width: 60%;
+                        height: 80%;
+                        background: #FCE9BF;
+
+                        border-radius: 6px 6px 0 0;
+                        margin: auto;
+                        }
+                        #ecran {
+                        border: 1px solid black;
+                        width: 88%;
+                        height: 70%;
+                        margin: 4% auto;
+                        background: white;
+                        }
+                        #volume {
+                        background: black;
+                        width: 10%;
+                        height: 8%;
+                        border-radius: 4px;
+                        position: relative;
+                        top: 5%;
+                        left:10%;
+                        }
+                        #touch {
+                        background: black;
+                        width: 20%;
+                        height: 15%;
+                        border-radius: 4px;
+                        position: relative;
+                        top: -5%;
+                        left:40%;
+
+                        }
+                        #lecture {
+                        background: black;
+                        width: 10%;
+                        height: 8%;
+                        border-radius: 4px;
+                        position: relative;
+                        top: -18%;
+                        left: 80%;
+                        }
+                    /* Fin lecteur mp3 */
                     /*     Lecteur audio dans Partie Audio   */
                     #audio {
                         width: 350px;
@@ -310,6 +366,9 @@ body a {
                   height:250px;
                   border-radius: 15px;
                   margin: auto;
+                  -webkit-box-shadow: 2px -2px 0px 2px rgba(0,0,0,0.75);
+                  -moz-box-shadow: 2px -2px 0px 2px rgba(0,0,0,0.75);
+                  box-shadow: 2px -2px 0px 2px rgba(0,0,0,0.75);
                   /*position: relative;
                   top: 13%;
                   left: 20%;*/
@@ -354,6 +413,11 @@ body a {
                   width: 300px;
                   margin-left: 20%;
                 }
+                #audioHistory1 .texte {
+                  height: 100%;
+                  padding-top: 10%;
+                  padding-left: 10%;
+                }
         /*  Tableau des formats */
           table {
                 border-collapse: collapse;
@@ -376,13 +440,16 @@ body a {
             }
             /* Détails du travail éffectué lorsque l'on zappe */
             #description {
-                width: 20%;
-                height: 250px;
+                width: 16%;
+                height: 70px;
             }
             .descriptionStyle {
+              font-family: 'Montserrat', sans-serif;
                 box-shadow: -15px 15px 35px rgba(50,50,93,.4), 15px 5px 15px rgba(0,0,0,.07);
                 border-radius: 15px;
                 background: #F3F3F6;
+                text-align: center;
+                padding: 3% 0;
             }
             #contenu{
                 width: 50%

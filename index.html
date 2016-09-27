@@ -5,6 +5,7 @@
         <title>Projet Médias - Audio / Vidéo</title>
         <link rel="stylesheet" href="assets/prism.css">
         <link rel="stylesheet" href="assets/style.css">
+        <link rel="stylesheet" href="assets/lecteurVero.css">
         <link rel="stylesheet" href="assets/playerVero.css">
         <link rel="stylesheet" href="assetsTV/video.css">
 
@@ -14,6 +15,7 @@
         <!-- TODO Commenter les lecteurs de Véro : parties "Contrôle du Flux" et "API Native" -->
         <!-- TODO Dimensions des prism.js -->
         <!-- TODO target="_blank" sur tous les liens -->
+        <!-- TODO  Régler le problème de classe et de ID avec le script de Véro lecteurVero.js et .css-->
         <!-- Container -->
         <div id="container">
             <!-- Menu Lateral fixe -->
@@ -27,7 +29,7 @@
               <li><a class="js-scrollTo" href="#frameworks">Frameworks</a></li>
               <li><a class="js-scrollTo" href="#fluxJS_Illust">Flux JS</a></li>
               <li><a class="js-scrollTo" href="#api">API Native</a></li>
-              <li><a class="js-scrollTo" href="#conclusion">Conclusion</a></li>
+              <li><a class="js-scrollTo" href="#conclusion">Créations</a></li>
             </ul>
           </div>
 
@@ -35,11 +37,8 @@
             <header>
                 <!-- Titre -->
                 <div id="titre">
-                  
-                    <img id="logo" src="img/logo_medias-06.png" alt="" />
+                    <img id="logo" src="img/logo_medias-06.png" alt="logo" />
                     <h1>méd:as</h1>
-                  
-
                 </div>
                 <!-- Fin du titre -->
                 <!-- Navigation -->
@@ -67,7 +66,7 @@
                     <video width="100%" height="auto" autoplay="true" loop src="videos/video.mp4">
                             Your browser does not support this video tag or this format.
                     </video>
-                    <p id="videoText">LES MEDIAS</p>
+                    <img src="img/logo_medias-06.png" alt="">
                 </div>
                 <!-- Fin div Video -->
 
@@ -108,12 +107,89 @@
                         <div id="audioHistory1" class="slide card ">
                             <div class="texte">
                               <!-- TODO Lecteur Audio Aléatoire de Véro -->
+                              <!--
                                 <div id="audio">
                                     <audio controls="controls">
                                         <source src="music/Mounika_-_04_-_Soul_Blue_Tango.mp3" >
                                     </audio>
                                 </div>
-                                <p>Lecteur random de Véro!</p>
+                              -->
+                              <!-- Lecteur mp3 -->
+                              <div id="mp3">
+                                <div id="ecran">
+                                  <!--  Lecteur de Véro  -->
+                                  <div id="boxmusic">
+                                    <div class="musiclist">
+                                      <!-- first player -->
+                                      <div  class="container-piste" id="p-1">
+                                        <div class="image">
+                                          <img class="imgsrc" src="./img/track_background.png">
+                                        </div>
+                                        <ul class="player-container">
+                                          <li class="title">title</li>
+                                          <li class="album">album </li>
+                                          <li class="artist">artiste</li>
+                                          <!-- <li id="temps">time<span>00:00</span></li>-->
+                                          <li class="controlers">
+                                            <form class="btns" method="get" onsubmit="playOneByOne(); return false"></form>
+                                          </li>
+                                          <!-- player default -->
+                                          <li class="media_player">
+                                            <audio class="track" src="./mp3/" type="audio/mpeg" controls></audio>
+                                          </li>
+                                        </ul>
+                                      </div>
+
+                                      <!-- second player -->
+                                      <div  class="container-piste" id="p-2">
+                                        <div class="image">
+                                          <img class="imgsrc" src="./img/track_background.png">
+                                        </div>
+                                        <ul class="player-container">
+                                          <li class="title">title</li>
+                                          <li class="album">album </li>
+                                          <li class="artist">artiste</li>
+                                          <!-- <li id="temps">time<span>00:00</span></li>-->
+                                          <li class="controlers">
+                                            <form class="btns" method="get" onsubmit="playOneByOne(); return false"></form>
+                                          </li>
+                                          <!-- player default -->
+                                          <li class="media_player">
+                                            <audio class="track" src="./mp3/" type="audio/mpeg" controls></audio>
+                                          </li>
+                                        </ul>
+                                      </div>
+
+                                      <!-- third player -->
+                                      <div  class="container-piste" id="p-3">
+                                        <div class="image">
+                                          <img class="imgsrc" src="./img/track_background.png">
+                                        </div>
+                                        <ul class="player-container">
+                                          <li class="title">title</li>
+                                          <li class="album">album </li>
+                                          <li class="artist">artiste</li>
+                                          <!-- <li id="temps">time<span>00:00</span></li>-->
+                                          <li class="controlers">
+                                            <form class="btns" method="get" onsubmit="playOneByOne(); return false"></form>
+                                          </li>
+                                          <!-- player default -->
+                                          <li class="media_player">
+                                            <audio class="track" src="./mp3/" type="audio/mpeg" controls></audio>
+                                          </li>
+                                        </ul>
+                                      </div>
+
+                                  </div>
+                                  </div>
+                                  <!-- Fin lecteur Véro -->
+                                </div>
+                                <div id="volume"></div>
+                                <div id="touch"></div>
+                                <div id="lecture"></div>
+                              </div>
+
+                              <!-- Fin Lecteur mp3 -->
                             </div>
                         </div>
                         <!-- Partie "Balises et Attribut" -->
@@ -517,10 +593,6 @@ function ajouteVideo() {
                     <div id="contenu">
                         <div id="bandeau">
                             <div id="contenu-ecran" class="classic"> <!-- .classic permet au script d'inclure l'iframe du zapping -->
-                            <!-- FIXME gérer le ersponsive et du coup la hauteur de la vidéo -->
-                                <!--<video  width="100%" height="auto" autoplay="true" loop>
-                                    <source src="videos/tv.mp4" type="video/mp4">
-                                </video>-->
                             </div>
                         </div>
                         <div id="bas-ecran"></div>
@@ -536,7 +608,7 @@ function ajouteVideo() {
                           <button id = "chaine2" class ="bouton"  type = "button"  onclick = "chaine('assetsTV/videobackground.html')">2</button>
                         </div>
                         <div id="trois" class="boutons">
-                          <button id = "chaine3"  class = "bouton" type = "button"  onclick = "chaine('assetsTV/lightbox.html')">3</button>
+                          <button id = "chaine3"  class = "bouton" type = "button"  onclick = "chaine('assetsTV/animationlb.html')">3</button>
                         </div>
                         <div id="quatre" class="boutons">
                           <button id = "chaine4" class = "bouton"  type = "button"  onclick = "chaine('assetsTV/lecteuralea.html')">4</button>
@@ -573,6 +645,7 @@ function ajouteVideo() {
         <script src="assets/jquery-ui.js" type="text/javascript"></script>
         <script src="assets/prism.js" type="text/javascript"></script>
         <script src="assets/script.js" type="text/javascript"></script>
+        <!--<script src="assets/lecteurVero.js" type="text/javascript"> </script>-->
         <script src="assets/playerVero.js"type="text/javascript"></script>
         <script src="assets/api.js"type="text/javascript"></script>
         <script src="assets/tv.js" type="text/javascript">

@@ -1,0 +1,67 @@
+.musiclist{
+	display: block;
+	bottom: 0;
+	width: 100%;
+}
+.musiclist ul{
+	display: inline-block;
+	width: 100%;
+}
+.musiclist li{
+	display: block;
+	list-style: none;
+	padding: 0 5px;
+}
+.musiclist li:last-child {
+	padding-top: 20px;
+}
+
+
+
+.player-container{
+    width: 70%;
+    padding-left: 10px;
+}
+.player-container, .image{
+  display: inline-block;
+  float: left;
+}
+
+/* CSS VERO FOR PLAYLIST */
+.player-container img{
+  height: 150px;
+}
+.image{width: 30%;}
+.container-piste img{
+  width: 100%;
+  float: left;
+}
+.player-container ul{
+  height: auto;
+  display: inline-block;
+  float: left;
+}
+.player-container li{
+  display: block;
+  height: 100%;
+  list-style: none;
+  text-align: left;
+}
+.player-container li:last-child {
+  padding-top: 20px;
+}
+.container-piste{
+  display: block;
+  height: 125px;
+}
+.media_player{
+  width: 50%;
+}
+.track{
+  width: 100%;
+}
+.title{
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 2em;
+}
+/* fin vero css */
