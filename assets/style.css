@@ -14,9 +14,7 @@ body {
     padding: 0;
 
 }
-body h1, h2 {
-    color: #8E0E00 ;
-}
+
 body h1, h2, h3 {
     font-family: 'Montserrat', sans-serif;
 }
@@ -69,23 +67,23 @@ body a {
             /* ---------------Titre + Logo --------------------- */
             #titre {
                 width: 50%;
-                display: flex;
+                /*display: flex;
                 justify-content:center;
-                align-items: center;
+                align-items: center;*/
             }
                 #logoDiv {
-                    display: flex;
-                    justify-content: space-between;
-                    margin-right: 5%;
                 }
                     #logo {
-                        width: 50px;
-                        height: 50px;
+                        padding: 2%;
+                        width: 150px;
+                        height: 150px;
                     }
                 #titre h1 {
+                    display: inline-block;
+                    margin: 0 auto;
                     text-align: center;
-                    text-transform: uppercase;
-                    letter-spacing: 8px;
+                    text-transform: lowercase;
+                    letter-spacing: 6px;
                 }
             /* ----------------------- Navigation --------------------- */
             #navigation {
@@ -139,6 +137,9 @@ body a {
 
 
         /*---------------------- Wrap - Partie principale du site --------------------*/
+        #wrap h1, h2 {
+            color: #8E0E00 ;
+        }
         #wrap {
           width: 100%;
         }
