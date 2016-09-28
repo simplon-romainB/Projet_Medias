@@ -41,7 +41,7 @@ description.style.visibility = ('visible');
             description.classList.add('descriptionStyle'); //FIXME A ETE MODIFIE!!
             description.innerHTML = 'Ce genre de présentation, un texte sur fond de video, devient un element de design très présent actuellement' ;
           }
-          else if (origine == 'assetsTV/lightbox.html') {
+          else if (origine == 'assetsTV/animationlb.html') {
             var description = document.getElementById('description');//FIXME A ETE MODIFIE!!
             description.classList.add('descriptionStyle'); //FIXME A ETE MODIFIE!!
             description.innerHTML = "un effet de lightbox  (un plugin assez courant) créé en quelques lignes de JS" ;

@@ -1,5 +1,5 @@
 <div id="mp3">
-  <div id="ecran">
+  <div id="ecranmp3">
     <!--  Lecteur de Véro  -->
     <!-- FIXME remplacer background img par rien -->
     <div id="boxmusic">
