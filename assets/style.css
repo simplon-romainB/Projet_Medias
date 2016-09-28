@@ -276,7 +276,7 @@ body a {
                         height: 70%;
                         margin: 4% auto;
                         background: white;
-                        overflow: hidden;
+                        overflow: scroll;
                         }
                         #volume {
                         background: black;

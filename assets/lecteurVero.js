@@ -6,14 +6,13 @@ function playOneByOne(){
 var PlayList = [
 	{track: 1, artist: "Massive Attack", album: "Mezzanine", title:"Man Next Door", src: "./music/man_next_door.mp3", imgsrc: "./img/mezzanine.png" }, // 0
 	{track: 2, artist: " Kool & the Gang", album: "Light of Worlds", title:"Summer Madness", src: "./music/summer_madness.mp3", imgsrc: "./img/lights.jpg" } , // 1
-	{track: 3, artist: "Michael Jackson", album: "Thriller", title:"Wanna Be Startin' Somethin'", src: "./music/wanna_be_startin_somethin.mp3", imgsrc: "./thriller.png" }, // 2
+	{track: 3, artist: "Michael Jackson", album: "Thriller", title:"Wanna Be Startin' Somethin'", src: "./music/wanna_be_startin_somethin.mp3", imgsrc: "./img/thriller.png" }, // 2
 	];
 
 console.log("\n#1 INSERER PISTE UN PAR UN DANS CHAQUE PLAYER");
 //parcourir la playlist et insérer petit à petit
-var tagAudio = Array.from(document.getElementById('boxmusic').getElementsByTagName('audio')); // Array.from transforme un Array-like en vrai tableau[]
-var tagImg = Array.from(document.getElementsByTagName('img'));
-
+var tagAudio = Array.from(document.getElementById('boxmusic').getElementsByClassName('track')); // Array.from transforme un Array-like en vrai tableau[]
+var tagImg = Array.from(document.getElementsByClassName('imgsrc'));
 // écrire du texte dans les différents balbutiements
 var text;
 function setText(el,text){
@@ -26,7 +25,7 @@ function insertProp(){
 	// parourir le tableau de piste
 	var pisteObj = PlayList[p]; // objet complet
 	var piste = PlayList[p].src; // source
-	var image = PlayList[p].imgsrc;
+	var image = PlayList[p].imgsrc; //FIXME
 	var hOp = PlayList[p].hasOwnProperty('album'); // FALSE pour SENILE vérifie l'existence d'une propriété
 	//console.log("var piste => numero ", p, piste, "\npiste Objet =>",pisteObj, hOp);
 
