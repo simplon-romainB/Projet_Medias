@@ -5,14 +5,18 @@ function playOneByOne(){
 // tableau des données piste
 var PlayList = [
 	{track: 1, artist: "Massive Attack", album: "Mezzanine", title:"Man Next Door", src: "./music/man_next_door.mp3", imgsrc: "./img/mezzanine.png" }, // 0
-	{track: 2, artist: " Kool & the Gang", album: "Light of Worlds", title:"Summer Madness", src: "./music/summer_madness.mp3", imgsrc: "./img/lights.jpg" } , // 1
-	{track: 3, artist: "Michael Jackson", album: "Thriller", title:"Wanna Be Startin' Somethin'", src: "./music/wanna_be_startin_somethin.mp3", imgsrc: "./img/thriller.png" }, // 2
+	{track: 2, artist: "Michael Jackson", album: "Thriller", title:"Wanna Be Startin' Somethin'", src: "./music/wanna_be_startin_somethin.mp3", imgsrc: "./img/thriller.png" }, // 1
+	{track: 3, artist: " Kool & the Gang", album: "Light of Worlds", title:"Summer Madness", src: "./music/summer_madness.mp3", imgsrc: "./img/lights.jpg" } , // 2
 	];
 
 console.log("\n#1 INSERER PISTE UN PAR UN DANS CHAQUE PLAYER");
 //parcourir la playlist et insérer petit à petit
-var tagAudio = Array.from(document.getElementById('boxmusic').getElementsByClassName('track')); // Array.from transforme un Array-like en vrai tableau[]
-var tagImg = Array.from(document.getElementsByClassName('imgsrc'));
+/*var tagAudio = Array.from(document.getElementById('boxmusic').getElementsByClassName('track')); // Array.from transforme un Array-like en vrai tableau[]
+var tagImg = Array.from(document.getElementById('boxmusic').getElementsByClassName('imgsrc'));*/
+
+
+var tagAudio = Array.from(document.getElementById('boxmusic').getElementsByTagName('audio'));
+var tagImg = Array.from(document.getElementById('boxmusic').getElementsByClassName('imgsrc'));
 // écrire du texte dans les différents balbutiements
 var text;
 function setText(el,text){
@@ -90,6 +94,7 @@ function insertProp(){
 	};
 	};
 
+// SCRIPT OSCILLO
 var controlers = document.getElementsByClassName('btns');
 function audioPlay() {
 		// création de Next

@@ -146,6 +146,11 @@ body a {
         #wrap {
           width: 100%;
         }
+        #wrap a {
+            text-decoration: none;
+            color: #16a085;
+            font-weight: bold;
+        }
             /* --------- Div Video ------------ */
             #video img {
                 font-size: 3em;
@@ -261,14 +266,16 @@ body a {
                     }
 
                     /* Lecteur mp3 */
-                    #mp3 {
+                    /*#mp3 {
                         border: 1px solid black;
                         width: 60%;
                         height: 80%;
                         background: #FCE9BF;
-
                         border-radius: 6px 6px 0 0;
                         margin: auto;
+                        -webkit-box-shadow: 2px -2px 0px 2px rgba(0,0,0,0.75);
+                        -moz-box-shadow: 2px -2px 0px 2px rgba(0,0,0,0.75);
+                        box-shadow: 2px -2px 0px 2px rgba(0,0,0,0.75);
                         }
                         #ecran {
                         border: 1px solid black;
@@ -305,7 +312,7 @@ body a {
                         position: relative;
                         top: -18%;
                         left: 80%;
-                        }
+                        }*/
                     /* Fin lecteur mp3 */
                     /*     Lecteur audio dans Partie Audio   */
                     #audio {

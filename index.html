@@ -5,16 +5,13 @@
         <title>Projet Médias - Audio / Vidéo</title>
         <link rel="stylesheet" href="assets/prism.css">
         <link rel="stylesheet" href="assets/style.css">
-        <link rel="stylesheet" href="assets/lecteurVero.css">
-        <link rel="stylesheet" href="assets/playerVero.css">
+        <!--<link rel="stylesheet" href="assets/lecteurVero.css">
+        <link rel="stylesheet" href="assets/playerVero.css">-->
         <link rel="stylesheet" href="assetsTV/video.css">
-
     </head>
+
     <body>
-        <!-- TODO couleur pour tous les liens  -->
-        <!-- TODO Commenter les lecteurs de Véro : parties "Contrôle du Flux" et "API Native" -->
         <!-- TODO Dimensions des prism.js -->
-        <!-- TODO target="_blank" sur tous les liens -->
         <!-- Container -->
         <div id="container">
             <!-- Menu Lateral fixe -->
@@ -114,79 +111,7 @@
                                 </div>
                               -->
                               <!-- Lecteur mp3 -->
-                              <div id="mp3">
-                                <div id="ecran">
-                                  <!--  Lecteur de Véro  -->
-                                  <div id="boxmusic">
-                                    <div class="musiclist">
-                                      <!-- first player -->
-                                      <div  class="container-piste" id="p-1">
-                                        <div class="image">
-                                          <img class="imgsrc" src="./img/track_background.png">
-                                        </div>
-                                        <ul class="player-container">
-                                          <li class="title">title</li>
-                                          <li class="album">album </li>
-                                          <li class="artist">artiste</li>
-                                          <!-- <li id="temps">time<span>00:00</span></li>-->
-                                          <li class="controlers">
-                                            <form class="btns" method="get" onsubmit="playOneByOne(); return false"></form>
-                                          </li>
-                                          <!-- player default -->
-                                          <li class="media_player">
-                                            <audio class="track" src="./mp3/" type="audio/mpeg" controls></audio>
-                                          </li>
-                                        </ul>
-                                      </div>
-
-                                      <!-- second player -->
-                                      <div  class="container-piste" id="p-2">
-                                        <div class="image">
-                                          <img class="imgsrc" src="./img/track_background.png">
-                                        </div>
-                                        <ul class="player-container">
-                                          <li class="title">title</li>
-                                          <li class="album">album </li>
-                                          <li class="artist">artiste</li>
-                                          <!-- <li id="temps">time<span>00:00</span></li>-->
-                                          <li class="controlers">
-                                            <form class="btns" method="get" onsubmit="playOneByOne(); return false"></form>
-                                          </li>
-                                          <!-- player default -->
-                                          <li class="media_player">
-                                            <audio class="track" src="./mp3/" type="audio/mpeg" controls></audio>
-                                          </li>
-                                        </ul>
-                                      </div>
-
-                                      <!-- third player -->
-                                      <div  class="container-piste" id="p-3">
-                                        <div class="image">
-                                          <img class="imgsrc" src="./img/track_background.png">
-                                        </div>
-                                        <ul class="player-container">
-                                          <li class="title">title</li>
-                                          <li class="album">album </li>
-                                          <li class="artist">artiste</li>
-                                          <!-- <li id="temps">time<span>00:00</span></li>-->
-                                          <li class="controlers">
-                                            <form class="btns" method="get" onsubmit="playOneByOne(); return false"></form>
-                                          </li>
-                                          <!-- player default -->
-                                          <li class="media_player">
-                                            <audio class="track" src="./mp3/" type="audio/mpeg" controls></audio>
-                                          </li>
-                                        </ul>
-                                      </div>
-
-                                  </div>
-                                  </div>
-                                  <!-- Fin lecteur Véro -->
-                                </div>
-                                <div id="volume"></div>
-                                <div id="touch"></div>
-                                <div id="lecture"></div>
-                              </div>
+                              
 
                               <!-- Fin Lecteur mp3 -->
                             </div>
@@ -338,7 +263,7 @@
                                 </tbody>
                                 <tfoot>
                                 <tr>
-                                <th scope="row" colspan="9" id="sources"><small>sources (<a href="http://en.wikipedia.org/wiki/HTML5_Audio" target="_blank">wikipedia audio</a>, <a href="http://fr.wikipedia.org/wiki/Open_Video" target="_blank">wikipedia video</a>, <a href="http://developer.android.com/guide/appendix/media-formats.html" target="_blank">developers Androïd</a>, <a href="https://developer.apple.com/library/ios/documentation/AudioVideo/Conceptual/MultimediaPG/Introduction/Introduction.html" target="_blank">iOS Developer</a>).</small></th>
+                                <th scope="row" colspan="9" id="sources"><small>sources (<a href="http://en.wikipedia.org/wiki/HTML5_Audio " target="_blank">wikipedia audio</a>, <a href="http://fr.wikipedia.org/wiki/Open_Video" target="_blank">wikipedia video</a>, <a href="http://developer.android.com/guide/appendix/media-formats.html" target="_blank">developers Androïd</a>, <a href="https://developer.apple.com/library/ios/documentation/AudioVideo/Conceptual/MultimediaPG/Introduction/Introduction.html" target="_blank">iOS Developer</a>).</small></th>
                                 </tr>
                                 </tfoot>
                                 </table>
@@ -359,7 +284,7 @@
                                           Librairie open-source et aussi connu sous le nom de <strong>HTML5 Video Player</strong>. Elle suporte le HTML5 ainsi que le Flash ainsi que Youtube et Viméo. Possède une bonne communauté.
                                         </p>
                                       <h3>popcorn.js</h3>
-                                        <p>Framework écrit en JavaScript par des réalisateurs, des développeurs web et n'importe qui voulant créer des médias intéractifs. Popcorn.js fait partie du projet <a href="http://mozillapopcorn.org/">Mozilla's Popcorn</a> </p>
+                                        <p>Framework écrit en JavaScript par des réalisateurs, des développeurs web et n'importe qui voulant créer des médias intéractifs. Popcorn.js fait partie du projet <a href="http://mozillapopcorn.org/" target="_blank">Mozilla's Popcorn</a> </p>
                                       <h3>projekktor.js</h3>
                                         <p>
                                           Librairie open-source, écrite en JavaScript. Simplifie l'intégration et le travail avec les vidéos dans le web en gérant les compatibilités entre navigateurs.
@@ -535,11 +460,11 @@ window.onload = function(){
                         <div id="fluxJS" class="slide ">
                             <div class="texte">
                                 <h2>Contrôle du flux par JavaScript</h2>
-                                <p>Lorsqu'on fait appel à de la vidéo ou de l'audio, via une balise <code>html</code>, on peut toujours intéragir avec cet élement grâce à Javascript et le contrôler.</p>
-                                <p>Essayons avec un fichier audio et une balise standard. On place juste un identifiant, <code>musique</code>. On aura juste besoin des méthodes <code>play()</code> et <code>pause()</code>. On crée un bouton, qui fera office de bouton <em>play</em> et on lui donne aussi un identifiant, <code>commande</code>.</p>
-                                <p>Analysez le code sur la gauche, testez en cliquant sur le bouton <code>play</code> et essayer de reproduire sur vos éditeurs.</p>
-                                <p>Il est donc vraiment très simple d'intéragir avec du contenu multimédia. Le site W3schools permet de voir toutes les possibilités qu'offre la DOM : <a href="http://www.w3schools.com/tags/ref_av_dom.asp">HTML Audio/Video DOM Reference</a></p>
+                                <p>Lorsqu'on fait appel à de la vidéo ou à de l'audio, on peut toujours intéragir avec cet élément grâce à JS  et le cotrôler.</p>
+                                <p>Essayons avec un fichier</p>
+                                <p>Le site W3schools permet de voir toutes les possibilités qu'offre la DOM : <a href="http://www.w3schools.com/tags/ref_av_dom.asp" target="_blank">HTML Audio/Video DOM Reference</a></p>
                             </div>
+                            <!-- TODO Inclure ancien lecteur MP3 -->
                             <div id="playerVero">
                               <audio id="my-audio" preload controls>
                                   <source src="http://jPlayer.org/audio/mp3/Miaow-07-Bubble.mp3" type="audio/mpeg">
@@ -644,8 +569,8 @@ function ajouteVideo() {
         <script src="assets/jquery-ui.js" type="text/javascript"></script>
         <script src="assets/prism.js" type="text/javascript"></script>
         <script src="assets/script.js" type="text/javascript"></script>
-        <script src="assets/lecteurVero.js" type="text/javascript"> </script>
-        <script src="assets/playerVero.js"type="text/javascript"></script>
+        <!--<script src="assets/lecteurVero.js" type="text/javascript"> </script>
+        <script src="assets/playerVero.js"type="text/javascript"></script>-->
         <script src="assets/api.js"type="text/javascript"></script>
         <script src="assets/tv.js" type="text/javascript">
         </script>
