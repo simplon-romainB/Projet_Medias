@@ -1,7 +1,7 @@
 .bloc {
   margin: 5%;
   text-align: center;
-  padding: 0 15% 5%;
+  padding: 0 20% 5%;
   box-shadow: -15px 15px 35px rgba(50,50,93,.4), 15px 5px 15px rgba(0,0,0,.07);
   border-radius: 5px;
   background: #F3F3F6;
@@ -12,14 +12,11 @@
         margin-bottom: 5%;
     }
 
-#liens {
-  margin-top: 10%;
-  display: flex;
-  justify-content:space-around;
-}
-  #liens img {
-    -webkit-filter: blur(1px) grayscale(100%);
-  }
-  #liens img:hover {
-    -webkit-filter: blur(0);
-  }
+      #blocBis  {
+        display: flex;
+        flex-direction: column;
+      }
+        .cat {
+          display: flex;
+          justify-content: space-around;
+        }
