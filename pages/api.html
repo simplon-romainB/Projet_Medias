@@ -44,31 +44,65 @@
             <p id="definition">
               Une <strong>A</strong>pplication <strong>P</strong>rogramming <strong>I</strong>nterface est une Interface Applicative de Programmation qui permet d’établir des connexions entre plusieurs logiciels pour échanger des données.Plus techniquement, il s’agit d’un ensemble de fonctions qui vont permettre à un développeur d’utiliser simplement une application dans son programme.
             </p>
-            <p>Par exemple, vous avez besoin d'intégrer la gestion d'un moyen de paiment dans votre site, l'API de Paypal permet de gérer les services bancaires en l'intégrant directement dans votre site. Il en est de même pour des sites comme Youtube, SoundCloud, Viméo, Deezer, etc. C'est ce que nous allons vous présenter ici, avec Youtube, Deezer.</p>
+            <p>Par exemple, vous avez besoin d'intégrer la gestion d'un moyen de paiment dans votre site, l'API de <strong>Paypal</strong> permet de gérer les services bancaires en l'intégrant directement dans votre site. Il en est de même pour des sites comme <strong>Youtube</strong>, <strong>SoundCloud</strong>, <strong>Viméo</strong>, <strong>Deezer</strong>, etc. C'est ce que nous allons vous présenter ici, avec <strong>Youtube</strong>, <strong>Deezer</strong>.</p>
             <div id="blocBis">
+                <h2>SPOTIFY</h2>
+                <p>Spotify possède aussi son API, voici un exempe :</p>
+                <p>Importer notre playlist ("title", "artist", "album", "songid")</p>
+                <p>Etape 1: installer <code>ruby</code>:</p>
+                    <pre>
+                        <code class="language-powershell">
+sudo apt-get update
+sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
 
+cd
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+exec $SHELL
+
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+exec $SHELL
+
+rbenv install 2.3.1
+rbenv global 2.3.1
+ruby -v)
+étape 1 : installer Bundler :
+gem install bundler
+rbenv rehash
+bundle install
+                        </code>
+                    </pre>
+                <p><strong>Etape 2</strong> :</p>
+                <p><a href="https://github.com/jlund/spotify-export">https://github.com/jlund/spotify-export</a> cloner les fichiers</p>
+                <p><strong>Etape 3</strong> : </p>
+                <p>Aller sur spotify et selectionner les pistes à exporter ctrl+A (pour tout selectionner), clic droit ‘Copy spotify url ‘,
+coller dans un editeur de texte, et l’enregistrer ( au meme endroit que les fichiers cloner)</p>
+                <p><strong>Etape 4 :</strong>
+                <p>ce placer dans le documents où ce trouvent les fichiers, et executer ceci  :./bin/spotify-export.rb filename.txt</p>
               <!-- YOUTUBE -->
-              <div id="youtube" class="cat">
+            <!--  <div id="youtube" class="cat">
                 <div class="word">
                   <h2>YOUTUBE</h2>
                 </div>
                 <div class="api">
 
                 </div>
-              </div>
+            </div> -->
               <!-- FIN YOUTUBE-->
               <!-- DEEZER -->
-              <div id="deezer" class="cat">
+            <!--  <div id="deezer" class="cat">
                 <div class="api">
 
                 </div>
                 <div class="word">
                   <h2>DEEZER</h2>
                 </div>
-              </div>
+            </div> -->
               <!-- FIN DEEZER-->
               <!-- SPOTIFY -->
-              <div id="spotify" class="cat">
+            <!--  <div id="spotify" class="cat">
                 <div class="word">
                   <h2>SPOTIFY</h2>
                 </div>
@@ -79,7 +113,7 @@
                         <code></code>
                     </pre>
                 </div>
-              </div>
+            </div> -->
               <!-- FIN SPOTIFY-->
             </div>
         </div>
