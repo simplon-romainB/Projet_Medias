@@ -459,6 +459,14 @@ body a {
               display: flex;
               justify-content: center;
             }
+
+            #up {
+                width: 50px;
+                height: 50px;
+                position: relative;
+                bottom: -300px;
+                left: 0;
+            }
             /* Détails du travail éffectué lorsque l'on zappe */
             #description {
                 width: 16%;
