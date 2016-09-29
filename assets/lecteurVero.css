@@ -28,6 +28,9 @@
 }
 
 /* CSS VERO FOR PLAYLIST */
+#ecranmp3 {
+	background: indianred;
+}
 .player-container img{
   height: 150px;
 }
@@ -53,15 +56,18 @@
 .container-piste{
   display: block;
   height: 125px;
+  background: indianred;
+  color: white;
 }
 .media_player{
-  width: 50%;
+  width: 90%;
 }
 .track{
   width: 100%;
+  background: tan;
 }
 .title{
   font-family: 'Fjalla One', sans-serif;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 /* fin vero css */
