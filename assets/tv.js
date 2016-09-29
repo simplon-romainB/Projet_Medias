@@ -33,7 +33,7 @@ description.style.visibility = ('visible');
           if (origine == 'assetsTV/rotation.html') {
             var description = document.getElementById('description');
             description.classList.add('descriptionStyle'); //FIXME A ETE MODIFIE!!
-            description.innerHTML = "trois videos qui échangent leur place sur un click !" ;//FIXME A ETE MODIFIE!!
+            description.innerHTML = "Voici trois videos qui échangent leur place sur un click !" ;//FIXME A ETE MODIFIE!!
           }
           else if (origine == 'assetsTV/videobackground.html') {
             var description = document.getElementById('description');
@@ -41,7 +41,7 @@ description.style.visibility = ('visible');
             description.classList.add('descriptionStyle'); //FIXME A ETE MODIFIE!!
             description.innerHTML = 'Ce genre de présentation, un texte sur fond de video, devient un element de design très présent actuellement' ;
           }
-          else if (origine == 'assetsTV/animationlb.html') {
+          else if (origine == 'assetsTV/lightbox.html') {
             var description = document.getElementById('description');//FIXME A ETE MODIFIE!!
             description.classList.add('descriptionStyle'); //FIXME A ETE MODIFIE!!
             description.innerHTML = "un effet de lightbox  (un plugin assez courant) créé en quelques lignes de JS" ;

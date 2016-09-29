@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="../assets/prism.css">
         <link rel="stylesheet" href="../assets/style.css">
         <link rel="stylesheet" href="assets/api.css">
+
     </head>
 
     <body>
@@ -44,28 +45,98 @@
             <p id="definition">
               Une <strong>A</strong>pplication <strong>P</strong>rogramming <strong>I</strong>nterface est une Interface Applicative de Programmation qui permet d’établir des connexions entre plusieurs logiciels pour échanger des données.Plus techniquement, il s’agit d’un ensemble de fonctions qui vont permettre à un développeur d’utiliser simplement une application dans son programme.
             </p>
-            <p>Par exemple, vous avez besoin d'intégrer la gestion d'un moyen de paiment dans votre site, l'API de Paypal permet de gérer les services bancaires en l'intégrant directement dans votre site. Il en est de même pour des sites comme Youtube, SoundCloud, Viméo, Deezer, etc. C'est ce que nous allons vous présenter ici, avec Youtube, Deezer.</p>
+            <p>Par exemple, vous avez besoin d'intégrer la gestion d'un moyen de paiment dans votre site, l'API de <strong>Paypal</strong> permet de gérer les services bancaires en l'intégrant directement dans votre site. Il en est de même pour des sites comme <strong>Youtube</strong>, <strong>SoundCloud</strong>, <strong>Viméo</strong>, <strong>Deezer</strong>, etc. C'est ce que nous allons essayer vous présenter ici :</p>
             <div id="blocBis">
+              <!-- En attente
+                <h2>SPOTIFY</h2>
+                <p>Spotify possède aussi son API, voici un exempe :</p>
+                <p>Importer notre playlist ("title", "artist", "album", "songid")</p>
+                <p>Etape 1: installer <code>ruby</code>:</p>
+                    <pre>
+                        <code class="language-powershell">
+sudo apt-get update
+sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
+
+cd
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+exec $SHELL
+
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+exec $SHELL
+
+rbenv install 2.3.1
+rbenv global 2.3.1
+ruby -v)
+étape 1 : installer Bundler :
+gem install bundler
+rbenv rehash
+bundle install
+                        </code>
+                    </pre>
+                <p><strong>Etape 2</strong> :</p>
+                <p><a href="https://github.com/jlund/spotify-export">https://github.com/jlund/spotify-export</a> cloner les fichiers</p>
+                <p><strong>Etape 3</strong> : </p>
+                <p>Aller sur spotify et selectionner les pistes à exporter ctrl+A (pour tout selectionner), clic droit ‘Copy spotify url ‘,
+coller dans un editeur de texte, et l’enregistrer ( au meme endroit que les fichiers cloner)</p>
+                <p><strong>Etape 4 :</strong>
+                <p>ce placer dans le documents où ce trouvent les fichiers, et executer ceci  :./bin/spotify-export.rb filename.txt</p>
+              -->
 
               <!-- YOUTUBE -->
               <div id="youtube" class="cat">
                 <div class="word">
                   <h2>YOUTUBE</h2>
+                  <p>
+                    Vous pouvez intégrer des lecteurs YouTube sur des pages Web à l'aide de balises <code>iframe</code> ou <code>object</code>. En ajoutant des paramètres à l'URL iFrame ou SWF, vous pouvez également personnaliser la lecture de vidéos dans votre application. Par exemple, vous pouvez automatiquement lancer la lecture de vidéos via le paramètre autoplay ou répéter la lecture d'une seule vidéo via le paramètre loop. Vous pouvez également activer l'API JavaScript pour le lecteur à l'aide du paramètre enablejsapi.
+                  </p>
+                  <p>
+                    Le code HTML et JavaScript ci-dessous offre un exemple simple d'intégration d'un lecteur YouTube sur un élément de page dont la valeur id est ytplayer. La fonction onYouTubePlayerAPIReady() définie dans cet exemple est automatiquement appelée lorsque le code de l'API iFrame Player a été chargé. Ce code ne définit aucun paramètre du lecteur, ni d'autres gestionnaires d'événements.
+                  </p>
                 </div>
                 <div class="api">
+                  <!-- iFrame -->
+                    <div id="ytplayer"></div>
+                    <pre>
+                      <code class="language-javascript">
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/player_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
+var player;
+function onYouTubePlayerAPIReady() {
+player = new YT.Player('ytplayer', {
+height: '207',
+width: '340',
+videoId: 'M7lc1UVf-VE'
+                      </code>
+                    </pre>
+                    <p><a href="https://developers.google.com/youtube/player_parameters?hl=fr">YouTube API iFrame</a></p>
+                  <!-- Fin iFrame -->
+                  <!-- Search Bar -->
+
+                  <!-- Fin Search Bar -->
                 </div>
-              </div>
+            </div>
               <!-- FIN YOUTUBE-->
               <!-- DEEZER -->
               <div id="deezer" class="cat">
                 <div class="api">
-
+                  <img width="640" height="529" src="img/deezerAPI.png" alt="Deezer API">
+                  <p><a href="http://developers.deezer.com/api">Documentation API Deezer</a></p>
+                  <p><a href="http://developers.deezer.com/sdk/ios">Documentation SDK Deezer</a></p>
                 </div>
                 <div class="word">
                   <h2>DEEZER</h2>
+                  <p>
+                    Deezer étant l’une des plus grosse plateforme d’écoute et de partage de musique, il est intéressant de voir comment se servir des différents outils qu’il nous met à disposition à savoir son API de recherche de morceau et ses différents SDK pour une intégration web ou mobile.<br>
+                    Le point faible de cette API réside sur le fait qu’il est impossible d’écouter plus de 30sec d’un morceau car, contrairement à l’API de Facebook, elle n’intègre pas de connexion. Donc des utilisateurs en compte gratuit ou premium  ne peuvent pas s’y connecter et réécouter via l’API leurs morceaux favoris.
+                  </p>
                 </div>
-              </div>
+            </div>
               <!-- FIN DEEZER-->
               <!-- SPOTIFY -->
               <div id="spotify" class="cat">
@@ -73,13 +144,9 @@
                   <h2>SPOTIFY</h2>
                 </div>
                 <div class="api">
-                    <p>Importer notre playlist ("title", "artist", "album", "songrid") en format texte: </p>
-                    <p><strong>Installer ruby :</strong></p>
-                    <pre>
-                        <code></code>
-                    </pre>
+
                 </div>
-              </div>
+            </div>
               <!-- FIN SPOTIFY-->
             </div>
         </div>
@@ -96,7 +163,10 @@
       <!-- Fin Container -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src = "https://www.youtube.com/iframe_api" ></script>
     <script src="../assets/prism.js" type="text/javascript"></script>
     <script src="../assets/script.js" type="text/javascript"></script>
+    <script src="assets/api.js" type="text/javascript"></script>
+
   </body>
 </html>

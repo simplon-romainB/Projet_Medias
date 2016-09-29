@@ -1,7 +1,13 @@
+a {
+    text-decoration: none;
+    color: #16a085;
+    font-weight: bold;
+}
+
 .bloc {
   margin: 5%;
   text-align: center;
-  padding: 0 20% 5%;
+  padding: 0 10% 5%;
   box-shadow: -15px 15px 35px rgba(50,50,93,.4), 15px 5px 15px rgba(0,0,0,.07);
   border-radius: 5px;
   background: #F3F3F6;
@@ -11,6 +17,12 @@
         padding-top: 5%;
         margin-bottom: 5%;
     }
+    .bloc a {
+      text-decoration: none;
+      color: #16a085;
+      font-weight: bold;
+    }
+
 
       #blocBis  {
         display: flex;
@@ -18,5 +30,16 @@
       }
         .cat {
           display: flex;
-          justify-content: space-around;
+          justify-content: space-between;
+          margin-top: 10%;
         }
+          .word {
+            padding: 2%;
+          }
+            .word p {
+              padding-top: 10%;
+            }
+          .api {
+            padding: 2%;
+          }
+/*  CSS Search bar  */
