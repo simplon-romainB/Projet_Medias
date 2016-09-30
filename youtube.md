@@ -1,2 +1,0 @@
-On ne peut pas parler de balise vidéo sans parler de Youtube! On a tous eu un jour peut êtr un skyblog ou un blog tout court où le bon goût des 2000 nous poussait à surcharger nos pages d'animation, de musique ou de vidéo. YouTube est un site d'hébergement de vidéo crée en 2005. One va pas vous refaire l'historique ici, allez plutôt voir du côté de Wikipédia.
-Ce qui nous intéresse ici ce sont les petites astuces pour intégrer comem on le souhaite une vidéo Youtube dans notre site.
