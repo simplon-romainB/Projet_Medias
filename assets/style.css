@@ -63,6 +63,8 @@ body a {
             height: 280px;
             display: flex;
             justify-content:  space-around;
+            position: absolute;
+            z-index: 999;
         }
             /* ---------------Titre + Logo --------------------- */
             #titre {
@@ -143,6 +145,7 @@ body a {
 
         #wrap h1, h2 {
             color: #8E0E00 ;
+            padding-bottom: 10%;
         }
         #wrap {
           width: 100%;
@@ -448,7 +451,39 @@ body a {
                 [scope=col] {
                     background: grey;
                 }
-
+        /*  Frameworks */
+        #frameScreen {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+            #audiojsScreen {
+                width: 100%;
+                height: 25%;
+                background: url('../img/audioJS.JPG') no-repeat fixed;
+                background-size: cover;
+            }
+            #videojsScreen {
+                width: 100%;
+                height: 25%;
+                background: url('../img/videoJS.JPG') no-repeat fixed;
+                background-size: cover;
+            }
+            #popcornjsScreen {
+                width: 100%;
+                height: 25%;
+                background: url('../img/popcornJS.JPG') no-repeat fixed;
+                background-size: cover;
+            }
+            #projekktorScreen {
+                width: 100%;
+                height: 25%;
+                background: url('../img/projekktorJS.JPG') no-repeat fixed;
+                background-size: cover;
+            }
+            /*#mediajsScreen {
+                width: 100%;
+            }*/
             /* Conclusion */
             #crea {
                 font-family: 'Montserrat', sans-serif;

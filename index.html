@@ -80,7 +80,7 @@
                     Depuis l’arrivée de <strong>HTML5</strong> en 2011 l’intégration vidéo a pu se passer de <strong>Flash</strong> et de nouvelles méthodes se sont mises en place tant pour l’audio que pour la vidéo . La nécessité du plugin <strong>Flash</strong> pouvait poser des problèmes auparavant (en particulier avec les appareils <strong>IOS</strong> ). Tout se fait désormais nativement avec une balise <code>video</code> ce qui améliore entre autre les performances. Cette nouvelle norme a  amené de nombreuses balises inédites,une déclaration de <strong>Doctype</strong> simplifiée et mémorisable, en outre <strong>HTML5</strong> permet de travailler hors ligne.
                     Depuis 2014 le <strong>HTML5</strong> va permettre d’intégrer directement du contenu multi-média et  devenir le nouveau standard d’intégration multi-média.
                     </p>
-                    <p>Un sigle barbare est devenu de plus en plus fréquent sur les internets moderne ; l’User Generated Content (<strong>UGC</strong>). L’explosion de <strong>YouTube</strong> depuis une dizaine d’années ainsi que la facilité a héberger des fichiers <strong>MP3</strong> a permis a l’utilisateur moyen de  devenir un créateur de contenu, se réappropriant ce qui était jusque là réservé à une oligarchie audio-visuelle.</p>
+                    <p>Un sigle barbare est devenu de plus en plus fréquent sur les internets moderne ; l’User Generated Content (<strong>UGC</strong>). Le Contenu généré par les utilisateurs se réfère à un ensemble de médias dont le contenu est principalement, soit produit soit directement influencé par les utilisaterurs finaux. Il est opposé au contenu traditionnel produit, vendu ou diffusé par les entreprises de média traditionnelles (<a href="https://www.wikipedia.org" target="_blank">source: Wikipédia</a>)L’explosion de <strong>YouTube</strong> depuis une dizaine d’années ainsi que la facilité a héberger des fichiers <strong>MP3</strong> a permis a l’utilisateur moyen de  devenir un créateur de contenu, se réappropriant ce qui était jusque là réservé à une oligarchie audio-visuelle.</p>
                     <p>
                     Cette page aura pour but de découvrir comment fonctionne l’intégration multi-média sous <strong>HTML5</strong> et de faire participer (de façon plus ou moins ludique) les membres de la promotion 2 de <strong>Simplon.co Lyon</strong> dans le cadre d’un atelier.
                     </p>
@@ -465,10 +465,12 @@ window.onload = function(){
   &lt;source src="video.mp4" />
   &lt;source src="video.webm" />
   &lt;source src="video.ogv" />
+  votre navigateur ne reconnait pas ce format
 &lt;/video>
 &lt;audio controls loop>
   &lt;source src="audio.ogg" />
   &lt;source src="audio.mp3" />
+  votre navigateur ne reconnait pas ce format
 &lt;/audio>
                                       </code>
                                     </pre>
@@ -511,13 +513,12 @@ window.onload = function(){
                         <!-- Partie frameworks Visuel -->
                         <div id="frameworks_Illust" class="slide card ">
                             <div class="texte visual">
-                                <div id="">
-                                    <!-- TODO: modifier dimension  -->
-                                    <img src="" alt="frameworks">
-                                </div>
-                                <div id="fallback">
-                                    <!-- TODO: modifier dimension  -->
-                                    <img src="" alt="frameworks">
+                                <div id="frameScreen">
+                                    <div id="audiojsScreen"></div>
+                                    <div id="videojsScreen"></div>
+                                    <div id="popcornjsScreen"></div>
+                                    <div id="projekktorScreen"></div>
+                                    <!--<div id="mediajsScreen"></div>-->
                                 </div>
                             </div>
                         </div>
@@ -525,7 +526,7 @@ window.onload = function(){
                         <div id="fluxJS" class="slide ">
                             <div class="texte">
                                 <h2>Contrôle du flux par JavaScript</h2>
-                                <p>Lorsqu'on fait appel à de la vidéo ou à de l'audio, on peut toujours intéragir avec cet élément grâce à <strong>JS</strong>  et le cotrôler.</p>
+                                <p>Lorsqu'on fait appel à de la vidéo ou à de l'audio, on peut toujours intéragir avec cet élément grâce à <strong>JS</strong>  et le contrôler.</p>
                                 <p>Essayons avec une balise <code>audio</code> et une <code>div</code>. On place un identifiant, ici <code>my-audio</code>. Afin de rendre l'exemple plus complet, on ajouté deux <code>div</code>: une <code>.buffering</code> et une <code>.progress</code>. Elles vont nous permettre d'afficher la progression de la lecture.</p>
                                 <p>On interviendra à l'aide du <strong>DOM</strong> et des propriétés <code>buffered</code> et <code>duration</code>.</p>
                                 <p>La propriété <code>buffered</code> renvoi un objet <code>timeRange</code>, une mémoire tampon. La propriété <code>duration</code> retourne la longueur du média en seconde.</p>
