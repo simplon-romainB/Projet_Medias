@@ -4,14 +4,12 @@
 //var piste = document.getElementById('audioOscilo').setAttribute('src',  './mp3/rehab.mp3');
 
 
-// tableau des données piste
-var PlayList = [
-{track: 1, artist: "Massive Attack", album: "Mezzanine", title:"Man Next Door", src: "../music/man_next_door.mp3", imgsrc: "../img/mezzanine.png" }, // 0
-{track: 2, artist: "Michael Jackson", album: "Thriller", title:"Wanna Be Startin' Somethin'", src: "../music/wanna_be_startin_somethin.mp3", imgsrc: "../img/thriller.png" }, // 1
-{track: 3, artist: " Kool & the Gang", album: "Light of Worlds", title:"Summer Madness", src: "../music/summer_madness.mp3", imgsrc: "../img/lights.jpg" } // 2
-];
-
-
+  // tableau des données piste
+  var PlayList = [
+    {track: 1, artist: "Massive Attack", album: "Mezzanine", title:"Man Next Door", src: "../music/man_next_door.mp3", imgsrc: "../img/mezzanine.png" }, // 0
+    {track: 2, artist: "Michael Jackson", album: "Thriller", title:"Wanna Be Startin' Somethin'", src: "../music/wanna_be_startin_somethin.mp3", imgsrc: "../img/thriller.png" }, // 1
+    {track: 3, artist: " Kool & the Gang", album: "Light of Worlds", title:"Summer Madness", src: "../music/summer_madness.mp3", imgsrc: "../img/lights.jpg" } // 2
+  ];
 
 console.log(PlayList);
 

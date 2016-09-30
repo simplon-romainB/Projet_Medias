@@ -12,7 +12,9 @@ header {
   background: -webkit-linear-gradient(to left,#005C97 , #363795);
   background: linear-gradient(to left,#005C97 , #363795);
 }
-
+#titreAtelier {
+    
+}
 .dropdown:hover .dropdown-content  {
   display: block;
   color:#005C97;
