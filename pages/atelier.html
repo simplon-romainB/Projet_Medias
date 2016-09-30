@@ -4,11 +4,12 @@
     <head>
         <meta charset="utf-8">
         <title>Projet Médias - Audio / Vidéo</title>
+        <link rel="icon" type="image/x-ico" href="../img/logo_medias-06.ico">
         <link rel="stylesheet" href="../assets/prism.css">
         <link rel="stylesheet" href="../assets/style.css">
         <link rel="stylesheet" href="assets/atelier.css">
-    </head>
 
+    </head>
     <body>
       <div id="container">
         <!-- Header -->
@@ -37,27 +38,433 @@
             <!-- Fin Navigation -->
         </header>
         <!-- Fin Header -->
-
         <!--  Wrap  -->
         <div class="bloc">
             <h1>Lecteur Audio avec son oscilloscope</h1>
+            <section id="deux" class="box-container">
+              <div id="box-section">
+                <!-- IDEA: prevoir une balise avec form qui accueilera des boutons lui donner une id   -->
+                <div class="musicplaylist">
+                  <!-- informations about song -->
 
+                  <div class="mp3_player">
+                    <!-- IDEA: le canvas remplace ton IMG  TOFIXED: Dans le le js verifier la necessité de mettre 'jacketsrc' id jacket ' sinon mettre id et une prop correspondante-->
+                    <div id="oscilloscope">
+                      <canvas id="analyser_render"></canvas>
+                    </div>
+                    <ul>
+                     <!-- <li id="titre"></li>-->
+                      <li id="album"></li>
+                      <li id="artiste"></li>
+                      <li id="controlers">
+                        <form id="btns" method="get" onsubmit="playRandom(); return false"></form>
+                      </li>
+                      <li id="audio_box">
+                        <!-- ICI ce met l'initMp3Player() & playRandom() -->
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                  <!-- IDEA: prevoir une balise avec form qui accueilera des boutons lui donner une id   -->
+              </div>
+            </section>
         </div>
 
-        <!--Fin  -->
-        <!-- Fin du Wrap  -->
-        <footer>
-          <!-- TODO: Faire apparaître nos noms en défilant de droite à gauche -->
-          <p id="copyright">&copy; 2016 - Inna, Véro, Romain et Myriam</p>
-        </footer>
-        <!-- Fin du Footer -->
-      </div>
-      <!-- Fin Container -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-      <script src="../assets/prism.js" type="text/javascript"></script>
-      <script src="../assets/script.js" type="text/javascript"></script>
-      <script src="assets/atelier.js" type="text/javascript">
+        <div id="top">
+            <a class="js-scrollTo" href="#logo">&uarr;</a>
+        </div>
+    <div class="tabs">
+        <!--bouton ratio #tab-content1 -->
+        <input type="radio" name="tabs" id="tab1" checked >
+        <label for="tab1">
+            <span>Intro</span>
+        </label>
+        <!-- bouton ratio #tab-content2 -->
+        <input type="radio" name="tabs" id="tab2">
+        <label for="tab2">
+            <span>Outillage</span>
+        </label>
+        <!--bouton ratio #tab-content3 -->
+        <input type="radio" name="tabs" id="tab3">
+        <label for="tab3">
+            <span>HTML</span>
+        </label>
+        <!-- IDEA: 4 -->
+        <input type="radio" name="tabs" id="tab4">
+        <label for="tab4">
+            <span>new Audio()</span>
+        </label>
+        <!-- IDEA: 4 -->
+        <input type="radio" name="tabs" id="tab5">
+        <label for="tab5">
+            <span> initMP3()</span>
+        </label>
+        <!-- IDEA: 4 -->
+        <input type="radio" name="tabs" id="tab6">
+        <label for="tab6">
+            <span>rendue</span>
+        </label>
+        <!-- IDEA: 4 -->
+        <input type="radio" name="tabs" id="tab7">
+        <label for="tab7">
+            <span>code Oscilloscope</span>
+        </label>
+        <!-- contenu -->
+        <div id="tab-content1" class="tab-content">
+            <h3>Qu'est qu'un osciloscope ?</h3>
+            <blockquote cite="https://fr.wikipedia.org/wiki/Oscilloscope#Les_oscilloscopes_num.C3.A9riques">
+              <p>Un oscilloscope1 est un instrument de mesure destiné à visualiser un signal électrique, le plus souvent variable au cours du temps.<br />
+              Il est utilisé par de nombreux scientifiques afin de visualiser soit des tensions électriques, soit diverses autres grandeurs physiques préalablement transformées en tension au moyen d'un convertisseur adapté ou de capteurs.
+              La courbe de rendu d'un oscilloscope est appelée oscillogramme.</p>
+              <p> Il existe deux sorte d'oscilloscope: Analogique et celle que nous verrons Numérique.</p>
+              <ul>
+                <li><strong>L'analogique : </strong>utilise directement un multiple de la tension d'entrée pour produire la déviation du spot.</li>
+                <li><strong>Le Numérique:  </strong> quand à lui transforme préalablement pour un traitement futur, la tension d'entrée en nombre. L'affichage est reconstruit après coup. Ici nous récupérons le spectre du signal pour générer l'oscillogramme.
+                </li>
+              </ul>
+            </blockquote>
+            <h4>API AUDIO</h4>
+              <p>
+                 L'API est paru en 2010, son principe est assez simple : il prends des objets audioNode de façon arbitraire. Chaque noeud possède une entrée et/ou une sortie. Le noeud d'entrée ne possède qu'une sortie alors qu'un noeud de sortie ne possède qu'une entrée (== destination). On peut placer différents noeuds entre le noeud Source et le noeud de Destination.
+                 Ce principe est appelé 'routage' et cela se produit dans un 'audioContext'.
+              </p>
+              <h4>le son</h4>
+              <p>
+                Un son est constitué d'une série d'ondes, vibrations d'air très fines, qui oscillent selon des fréquences généralement irrégulières, variables dans le temps. L'oreille humaine détecte des variations de fréquences sonores entre 20Hz et 20Khz.
+                </p>
+                <p>
+                Le spectre correspond la longueur > [intervalle] à analyser (temps d'une piste par exemple).
+              </p>
+              <p>
+                L'analyseur de spectre sonore va donc re-découper la composition spectrale du signal audio produit en tranches de fréquences, de 20Hz à 20KHz, mais au lieu de modifier le volume sur ces tranches, il va finement restituer une courbe graphique tracée à partir du volume effectivement détecté sur chacune des plages analysées.
+              </p>
+              <p>
+                Les résultats se cantonnent toujours à la plage dynamique de l'audition humaine de 20Hz à 20KHz. Cela peut être utile dans l'analyse du caractère de la musique et en notant si certaines fréquences sont dominante ou manquantes au sein d'un mix.
+                spectre == styles de spectrogrammes proposés sont variables
+              </p>
+              <pre>
+                <code class="language-bash">
+    SHEMAS
+        ENTRÉE                   NOEUDS                         SORTIE/RENDER
+    ---------------         ----------------            --------------------------------
+    | MP3 / MIC  | × ===> × | ANALYSER/GAIN |  × ===> × | HAUT-PARLEUR / OSCILLO RENDU |
+    ---------------         ----------------            --------------------------------
+                </code>
+              </pre>
+        </div> <!-- #tab-content1 -->
+        <div id="tab-content2" class="tab-content">
+            <h3>Outillage et CORS</h3>
+            <p>La doc du W3C a subit plusieurs moutures depuis ça publication du 15 Décembre 2011, 5 précisément.
+            </p>
+            <p>
+              Le temps a pousser à sécurser le web. Les éléments audios étaient une failles à gérer. Les HTMLMediaElement permettent d'accéder à des sources d'origine différentes en les analysant. Parfois cela crée une perte d'information si un script d'une origine inspect celle d'une autre origine. C'est pour ces conditions que nous utilisons un server (local ici:lite-server) afin de ne pas lever les panneaux d'alertes de Chrome par exemple avec les autorisations CORs-ross-origine qui ne permettent pas de lire un fichier contenant des audioELements.
+              <p>
+            <ul>
 
+              <li><a href="https://www.w3.org/TR/webaudio/">du web Audio Api par w3C</a></li>
+              <li><a href="http://www.html5rocks.com/en/tutorials/webaudio/introduction/" target="_blank">web audio api par html5rocks</a></li>
+              <li><a href="http://w3c.github.io/html/infrastructure.html#cors-ross-origin">Cross origin</a></li>
+            </ul>
+            <h3>Outillage</h3>
+            <p>Pour créer l'oscilloscope et pour son bon fonctionnement il est nécesaire de préparer plusieur outils:</p>
+            <ul>
+              <li>de source mp3/ogg/mp4 etc...(<a href="https://github.com/veroxy/Medias-teams/raw/forckVero/mp3/noescape.mp3">lien de téléchargement)</a></li>
+              <li>un serveur (local ou non), on prendra lite-server que l'on lance via le Terminal avec la cmd <code class="language-shell">$ lite-server </code></li>
+              <li>de la prise de connaissance de la web API Audio</li>
+            </ul>
+            <p>je vous épargne ça: téléchargez le script Shell suivant ("enregistrer-sous"):
+            <a id="script-sh" class="l-3 s-4" alt="enregister script" href="https://raw.githubusercontent.com/veroxy/Medias-teams/forckVero/creatoscillo.sh"  download="createoscillo.sh">telecharger le script</a></p>
+            <p>une fois téléchargé lancez le terminal et aller dans le répertoire dans lequel vous avez enregistré le fichier.sh et lancz la commande suivante :
+            <code class="language-shell">$ ./screatoscillo.sh </code>   il vous créera dans votre répertoire ./Documents un dossier /createOscillo/</p>
+        </div> <!-- #tab-content2 -->
+
+        <div id="tab-content3" class="tab-content">
+          <h3>Structure HTML</h3>
+          <p>en premier lieu on construit la structure du html: ouvrez le fichier <code class="language-shell">$atom index.html</code>, il se présentera comme le suivant :</p>
+          <pre class="language-markup">
+              <code class="language-markup"><!--
+  <html>
+    <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="./js/initOscillo.js">
+    Script initialisateur en entête
+    </script>
+    </head>
+    <body>
+      <div class="mp3_player">
+        <canvas id="analyser_render"> Génération de l'oscillo </canvas>
+
+        Information concernant la piste jouée
+        <ul>
+        <li id="titre">Rehab</li>
+        <li id="album">Good Girl Gone Bad </li>
+        <li id="artiste">Rihanna</li>
+        <li id="controlers">
+          <form id="btns" method="get" onsubmit="playRandom(); return false"></form>
+        </li>
+        <li id="audio_box">
+        ICI met l'initMp3() & playRandom()
+        </li>
+        </ul>
+      </div>
+      <script type="text/javascript" src="./js/random.js">
+      Script qui remplie les informations du lecteur
       </script>
     </body>
+  </html>
+          --></code>
+          </pre>
+        </div> <!-- #tab-content3 -->
+
+        <div id="tab-content4" class="tab-content">
+          <h3>Prototype</h3>
+          <ol>
+          <li>pour commencer on doit va créer un nouvel objet AUDIO().</li>
+          <li>on paramètre l'attribut SOURCE avec le lien de l'audio que vous avez dans votre dossier ./mp3/</li>
+          <li>on mettra le controls a true pour pouvoir le récupérer </li>
+          <li>l'attribut 'loop' est sur false mais vous pouvez très bien le mettre sur 'true' si vous voulez devenir fou avec une seule chanson
+          <pre class="">
+            <code class="language-javascript">
+  var audio = new Audio();
+  audio.src = PlayList[0].src; // './mp3/jpetelesplombs.mp3'
+  audio.controls = true;
+  audio.loop = false;
+            </code>
+          </pre>
+      </li>
+      <li>
+        On appel la fonction que nous allons créer dans la partie deux au chargement de la page.
+        <pre class="">
+        <code class="language-javascript">
+window.addEventListener("load", initMP3, true);
+        </code>
+      </pre>
+    </li>
+    </ol>
+        <li>
+          on cré toutes les variables dont on aura besoin
+          <pre class="">
+          <code class="language-javascript">
+  var canvas,
+  ctx,
+  source,
+  context,
+  analyser,
+  fbc_array,
+  bars,
+  bar_x,
+  bar_width,
+  bar_height;
+            </code>
+          </pre>
+        </li>
+      </ol>
+        </div> <!-- #tab-content4 -->
+        <div id="tab-content5" class="tab-content">
+            <h3>initialiser et contextualisation Audio</h3>
+            <ol>
+            <li>on cré une fonction qui va initialiser le mp3 dans laquelle on va tout d'abord récupérer l'élément Html qui recevra en tant que parent l'élément audio que nous avons créé précédement. On paramètre l'attribut id de ce nouvel enfant pour pouvoir l'exploiter.
+            </li>
+            récédement. On paramètre l'attribut id de ce nouvel enfant pour pouvoir l'exploiter.
+              <pre>
+                <code class="language-javascript">
+    function initMp3(){
+    document.getElementById('audio_box').appendChild(audio).setAttribute('id', 'audioOscilo');
+                </code>
+              </pre>
+            </li>
+            <li>
+              c'est ici qu'il faut créer le contexte audio afin qu'il créer l'interface et pouvoir connecter des nouveau noeuds. On fait un appel à l'objet 'window.' pour dire que c'est de cette que le context va agir.
+              <pre>
+                <code class="language-javascript">
+    window.AudioContext = window.AudioContext ||
+                          window.webkitAudioContext;
+    context = new AudioContext();
+                </code>
+              </pre>
+            </li>
+          </li>
+          <li>
+            maintenant le contextes est insatallé il faut lui envoyer un noeud, ici on lui cré un Analyser, on aurit très pien pu créer un oscillatorNode mais cela ne créera pas réllement ce que l'on voudra.
+            <pre>
+              <code class="language-javascript">
+    analyser = context.createAnalyser()
+              </code>
+            </pre>
+          </li>
+          <li>
+            Nous avons créer au paravant un élement canvas dans le html, celui-ci contiendria le rendu générée par l'oscilloscope.
+            <pre>
+              <code class="language-javascript">
+    canvas = document.getElementById('analyser_render');
+    ctx = canvas.getContext('2d');
+              </code>
+            </pre>
+          </li>
+          <li>
+            Vous vous souvenez du schémas cd SOURCE > NODE > DESTINATION le voici : le contexte audio prend en source l'objet audio() qui est envoyé à l'analyser et pour être encuite envoyé et interprété par la sortie.
+            <pre>
+              <code class="language-javascript">
+    source = context.createMediaElementSource(audio);
+    source.connect(analyser);
+    analyser.connect(context.destination);
+              </code>
+            </pre>
+          </ol>
+        </div> <!-- #tab-content4 -->
+        <div id="tab-content6" class="tab-content">
+            <h3>Générer le rendu graphique</h3>
+          <ol>
+            <li>
+                <h4>window.requestAnimationFrame()</h4>
+            <p>
+              La méthode window.requestAnimationFrame() notifie le navigateur que l'on souhaite exécuter une animation et demande que celui-ci exécute une fonction spécifique de mise à jour de l'animation, avant le prochain rafraîchissement du navigateur. Cette méthode prend comme argument un callback qui sera appelé avant le rafraîchissement du navigateur.
+            </p>
+            <p>
+              <blockquote cite="http://">
+                Note pour appeler l'animation suivant:
+                Si l'on veut animer une nouvelle animation lors du prochain rafraichissement on rappele la méthode requestAnimFrame(). IL faut paramétrer le callback à 60/s, cela est dû au paramètre de rafraîssement de l'écran LCD de référence qui est en général égal à 60Hz
+              </blockquote>
+            </p>
+            <pre>
+              <code class="language-javascript">
+  window.requestAnimFrame = (function(){
+  return  window.requestAnimationFrame       ||
+          window.webkitRequestAnimationFrame ||
+          window.mozRequestAnimationFrame    ||
+          function( callback ){
+            window.setTimeout(callback, 1000 / 60); // rappel
+          };
+  })();
+
+  window.requestAnimationFrame(frameLooper);
+              </code>
+            </pre>
+          </li>
+          <li>
+            <h4>frequencyBinCount</h4>
+            <p>
+              La propriété frequencyBinCount de l'objet AnalyserNode est un nombre entier non signé équivalent à la moitié la taille de la FFT. Il correspond en général au nombre de valeurs que l'on aurat à manipuler pour la visualisation.
+            </p>
+            <pre>
+              <code class="language-javascript">
+  fbc_array = new Uint8Array(analyser.frequencyBinCount);
+              </code>
+            </pre>
+          </li>
+          <li>
+            <h4>bejetNode.getByteFrequencyData()</h4>
+            <p>
+              La méthode getByteFrequencyData() de l'objet AnalyserNode copie les données de fréquence dans le Uint8Array (tableau d'entiers non-signés) passé en argument.
+              Si le tableau a moins d'éléments que AnalyserNode.frequencyBinCount, les excédants sont supprimés; s'il en a davantage, les excédants sont ignorés.
+            </p>
+            <pre>
+              <code class="language-javascript">
+  analyser.getByteFrequencyData(fbc_array);
+              </code>
+            </pre>
+          </li>
+        </div>
+        <div id="tab-content7" class="tab-content">
+          <pre>
+          <code class="language-javascript">
+              // tableau des données piste
+              var PlayList = [
+              {track: 1, artist: "Rihanna", album: "Anti", title:"Needed Me", src: "./mp3/neededme.mp3", imgsrc: "./img/neededme.jpg" }, // 0
+              {track: 2, artist: "Young Money", album: "Rise Of An Empire", title:"Senile", src: "./mp3/senile.mp3", imgsrc: "./img/senile.jpg" } , // 1
+              {track: 3, artist: "Disiz la peste", album: "Le Poisson Rouge", title:"J'pète Les Plombs", src: "./mp3/jpetelesplombs.mp3", imgsrc: "./img/jpetelesplombs.jpg" }, // 2
+              {track: 4, artist: "Bjork", album: "Homogenic", title:"Joga", src: "./mp3/joga.mp3", imgsrc: "./img/joga.jpg" }, // 4
+              {track: 5, artist: "Yemi Alade", album: "King of Queens", title:"Johnny", src: "./mp3/johnny.mp3", imgsrc: "./img/johnny.jpg" },// 5
+              //{track: 6, artist: "Midnite", album: "Unpolished", title:"Don't Move", src: "./mp3/dontmove.mp3", imgsrc: "./img/dontmove.jpg" }, // 6 NE PAS DECOMMENTER
+              {track: 7, artist: "Le Peuple De L'Herbe", album: "P.H Test/Two", title:"No Escape", src: "./mp3/noescape.mp3", imgsrc: "./img/noescape.jpg" },// 7
+              {track: 8, artist: "Vanessa Da Mata", album: "Good Luck ft Ben Harper", title:"Boa Sorte", src: "./mp3/boasorte.mp3", imgsrc: "./img/boasorte.jpg" }, // 8
+              {track: 9, artist: "Rihanna", album: "Good Girl Gone Bad", title:"Rehab", src: "./mp3/rehab.mp3", imgsrc: "./img/rehab.jpg" },// 9
+              {track: 10, artist: "Oscar Chavez", album: "Desde Mexico Para Siempre Che", title:"Hasta Siempre Comandante Che Guevara", src: "./mp3/hastasiemprecomandantecheguevara.mp3", imgsrc: "./img/hastasiemprecomandantecheguevara.jpg" }, // 10
+              ];
+
+              console.log(PlayList);
+
+              /*---------------- AUDIO API----------------*/
+              //Access-Control-Allow-Credentials: true; TOFIXED
+              var audio = new Audio();
+              audio.src = PlayList[0].src; //  on cré la source en récupérant la proprité 'src' >> source.mp3 dans le tableau de propriété.
+              audio.controls = true; // on paramètre le controls du médias pour pouvoir le récupérer et le designer sois-même
+              audio.loop = false; // DÉSACTIVER LE LOOP car c'est par défaut
+              //audio.crossorigin = "anonymous";
+
+              // DECLARATION DES VARIABLES QUI VONT ETRE UTILISÉS
+              var canvas, ctx, source, context, analyser, fbc_array, bars, bar_x, bar_width, bar_height;
+
+              // APPELLE DE LA FONCTION INIALISATRICE DU MP3
+              window.addEventListener("load", initMP3, true);
+
+
+              function initMP3(){
+              // on récupère de l'id de l'audio_box
+              document.getElementById('audio_box').appendChild(audio).setAttribute('id', 'audioOscilo');
+
+              // CREATION DE L'AUDIOCONTEXT
+              window.AudioContext = window.AudioContext ||
+                          window.webkitAudioContext;
+              context = new AudioContext();
+
+              analyser = context.createAnalyser();
+              canvas = document.getElementById('analyser_render');
+              ctx = canvas.getContext('2d');
+
+              // CONNEXION DE DE LA SOURCE VERS L'ANALYSEUR
+              source = context.createMediaElementSource(audio);
+              source.connect(analyser);
+              // on connect l'analyseur à la destination
+              analyser.connect(context.destination);
+              playRandom(); // intègre les options de lecture
+              frameLooper();
+              };
+
+              // APPELER FRAME
+              function frameLooper(){
+
+              // ON REQUETE SUR LE CADRE DE L'ANIMATION.
+              // webkit pour l'adaption des diff browsers
+              //
+              window.requestAnimFrame = (function(){
+              return  window.requestAnimationFrame       ||
+              window.webkitRequestAnimationFrame ||
+              window.mozRequestAnimationFrame    ||
+              function( callback ){
+                window.setTimeout(callback, 1000 / 60); // rappel
+              };
+              })();
+
+
+              window.requestAnimationFrame(frameLooper);
+              fbc_array = new Uint8Array(analyser.frequencyBinCount);
+              analyser.getByteFrequencyData(fbc_array);
+
+
+              ctx.clearRect(0, 0, canvas.width, canvas.height);
+              // création du style
+              ctx.fillStyle = "#ff6666";
+              // création du diagramme en bars.
+              bars = 50; // nombre de bars sur l'abscisse
+              for (var i = 0; i < bars; i++){
+              bar_x = i * 10;
+              bar_width = 8; // largeur des bars
+              bar_height = -(fbc_array[i]/2);
+              ctx.fillRect(bar_x, canvas.height, bar_width, bar_height);
+              };
+              };
+              /*---------------- PLAYRANDOM---------- */
+                    </code>
+                  </pre>
+                </div>
+        </div> <!-- #tab-content4 -->
+
+    </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+      <script type="text/javascript" src="assets/random_oscilo.js"></script>
+    <script src="../assets/prism.js" type="text/javascript"></script>
+    <script src="../assets/script.js" type="text/javascript"></script>
+  </body>
 </html>
