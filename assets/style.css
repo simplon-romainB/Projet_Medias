@@ -157,6 +157,7 @@ body a {
         }
             /* --------- Div Video ------------ */
             #video img {
+                width: 30%;
                 font-size: 3em;
                 color: #fff;
                 position: absolute;
