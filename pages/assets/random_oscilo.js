@@ -114,7 +114,7 @@ function playRandom(){
           document.getElementById('audioOscilo').setAttribute('src', prevTrack);
 
           // remplacer les valeur
-          document.getElementById('titre').innerHTML= PlayList[PlayList.length-1].title;
+          document.getElementById('titremusic').innerHTML= PlayList[PlayList.length-1].title;
           document.getElementById('artiste').innerHTML=PlayList[PlayList.length-1].artist;
           document.getElementById('album').innerHTML=PlayList[PlayList.length-1].album;
         }
@@ -127,7 +127,7 @@ function playRandom(){
           document.getElementById('audioOscilo').setAttribute('src', prevTrack);
 
           // remplacer les valeur
-          document.getElementById('titre').innerHTML= PlayList[i-1].title;
+          document.getElementById('titremusic').innerHTML= PlayList[i-1].title;
           document.getElementById('artiste').innerHTML= PlayList[i-1].artist;
           document.getElementById('album').innerHTML= PlayList[i-1].album;
           console.log(PlayList[i-1].title);
@@ -185,7 +185,7 @@ function playRandom(){
 
     // Remplacer la ressource SRC par nouvelle SRC RANDOM
     document.getElementById('audioOscilo').setAttribute('src', randomSrc);
-    document.getElementById('titre').innerHTML= PlayList[index].title;
+    document.getElementById('titremusic').innerHTML= PlayList[index].title;
     document.getElementById('artiste').innerHTML= PlayList[index].artist;
     document.getElementById('album').innerHTML= PlayList[index].album;
     console.log(PlayList[index].title, "\n------");
@@ -213,7 +213,7 @@ function playRandom(){
 
             document.getElementById('audioOscilo').setAttribute('src', nextTrack);
             // remplacer les valeur
-            document.getElementById('titre').innerHTML= PlayList[0].title;
+            document.getElementById('titremusic').innerHTML= PlayList[0].title;
             document.getElementById('artiste').innerHTML=PlayList[0].artist;
             document.getElementById('album').innerHTML=PlayList[0].album;
           }
@@ -222,7 +222,7 @@ function playRandom(){
             nextTrack = PlayList[i+1].src;
             // ON remplace toutes les valeurs de l'audio TOFIXED ON aurait pu creer un constructeur Audio
             document.getElementById('audioOscilo').setAttribute('src', nextTrack);
-            document.getElementById('titre').innerHTML= PlayList[i+1].title;
+            document.getElementById('titremusic').innerHTML= PlayList[i+1].title;
             document.getElementById('artiste').innerHTML= PlayList[i+1].artist;
             document.getElementById('album').innerHTML= PlayList[i+1].album;
           }
