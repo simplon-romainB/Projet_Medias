@@ -22,7 +22,7 @@ console.log(audio.src);
 audio.controls = true;
 audio.loop = false;
 
-document.getElementById('titre').innerHTML= PlayList[0].title;
+document.getElementById('titremusic').innerHTML= PlayList[0].title;
 document.getElementById('artiste').innerHTML=PlayList[0].artist;
 document.getElementById('album').innerHTML=PlayList[0].album;
 //audio.crossorigin = "anonymous";

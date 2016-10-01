@@ -13,7 +13,7 @@ header {
   background: linear-gradient(to left,#005C97 , #363795);
 }
 #titreAtelier {
-    
+
 }
 .dropdown:hover .dropdown-content  {
   display: block;
@@ -324,3 +324,18 @@ ul.tabs .label a.active
   list-style: none !important;
 }
 .tabs ul li{ }
+
+/* UP */
+#remonter p {
+    text-align: center;
+    margin-bottom: 2%;
+    color: #8E0E00;
+    font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+    background:#005C97;
+    background: -webkit-linear-gradient(to left,#005C97 , #363795);
+    background: linear-gradient(to left,#005C97 , #363795);
+}
